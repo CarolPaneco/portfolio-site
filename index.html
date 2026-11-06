@@ -44,21 +44,6 @@
             headline: ["'Space Grotesk'", "sans-serif"],
             body: ["'Manrope'", "sans-serif"],
             mono: ["'JetBrains Mono'", "monospace"]
-          },
-          animation: {
-            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'float': 'float 6s ease-in-out infinite',
-            'glow': 'glow 3s ease-in-out infinite alternate',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-8px)' },
-            },
-            glow: {
-              '0%': { boxShadow: '0 0 15px rgba(255, 59, 122, 0.2)' },
-              '100%': { boxShadow: '0 0 35px rgba(0, 212, 236, 0.3)' }
-            }
           }
         }
       }
@@ -74,7 +59,6 @@
       justify-content: center;
     }
 
-    /* Custom Gradients & Glassmorphism */
     .tech-gradient {
       background: linear-gradient(135deg, #ff3b7a 0%, #a855f7 50%, #00d4ec 100%);
     }
@@ -90,7 +74,6 @@
       -webkit-backdrop-filter: blur(16px);
     }
 
-    /* Grid Texture */
     .dark .bg-tech-grid {
       background-size: 36px 36px;
       background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
@@ -101,7 +84,6 @@
       background-image: radial-gradient(circle, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
     }
 
-    /* Smooth transitions */
     * {
       transition: background-color 0.25s ease, border-color 0.25s ease;
     }
@@ -269,7 +251,6 @@
 
       <!-- Right Column: Interactive Profile Card -->
       <div class="lg:col-span-5 relative flex justify-center">
-        <!-- Ambient Ambient Glows -->
         <div class="absolute -top-10 -right-10 w-72 h-72 bg-brand-pink/15 rounded-full blur-[100px] pointer-events-none"></div>
         <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-brand-cyan/15 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -280,10 +261,9 @@
             <div class="relative rounded-2xl overflow-hidden aspect-[4/5] border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
               <img src="pages/assets/img/eu.jpeg" alt="Caroline Paneco" class="w-full h-full object-cover grayscale-[25%] hover:grayscale-0 transition-all duration-700 hover:scale-105" />
               
-              <!-- Floating Pill Tag -->
               <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl backdrop-blur-md bg-black/60 border border-white/10 flex items-center justify-between text-white">
                 <div>
-                  <p class="font-headline text-xs font-bold">Caroline Paneco</p>
+                  <p class="font-headline text-xs font-bold">Caroline Vitória Paneco</p>
                   <p class="text-[11px] text-slate-300 font-mono">Olímpia, SP • Brasil</p>
                 </div>
                 <span class="px-2.5 py-1 rounded bg-brand-pink/80 text-[10px] font-mono font-bold uppercase">.NET • AgTech</span>
@@ -323,7 +303,7 @@
           <span class="font-mono text-xs uppercase tracking-widest text-brand-pink" data-i18n="tagProjectsSection">Portfólio de Software</span>
         </div>
         <h2 class="font-headline text-4xl sm:text-5xl font-black tracking-tight" data-i18n="titleProjectsSection">
-          Projetos & Aplicações em Produção
+          Estudos de Caso & Aplicações
         </h2>
       </div>
 
@@ -345,384 +325,607 @@
     </div>
 
     <!-- Projects Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
       <!-- ============================================== -->
-      <!-- 1. PAULA PRESENTES (E-COMMERCE COM VÍDEO & PDF) -->
+      <!-- 1. PAULA PRESENTES (E-COMMERCE MVC)            -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="web-dotnet">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="web-dotnet">
+        <div class="space-y-5">
           
-          <!-- Media Player Slot: Video & Screenshots -->
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-black relative aspect-video shadow-inner">
-            <video class="w-full h-full object-cover" controls playsinline preload="metadata">
-              <source src="videos/video.mp4" type="video/mp4">
-              Seu navegador não suporta reprodução de vídeos.
-            </video>
-            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
+          <!-- Media Hub: Video & Screenshots -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-black relative aspect-video shadow-inner">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+                <source src="videos/video.mp4" type="video/mp4">
+                Seu navegador não suporta reprodução de vídeos.
+              </video>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
+              </div>
+            </div>
+
+            <!-- Screenshots Strip -->
+            <div class="grid grid-cols-3 gap-2">
+              <img src="img/inicial.png" alt="Tela Inicial" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+              <img src="img/detalhe.png" alt="Detalhe do Produto" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+              <img src="img/image.png" alt="Painel Admin" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
             </div>
           </div>
 
           <!-- Badges -->
-          <div class="flex flex-wrap gap-2 pt-1">
+          <div class="flex flex-wrap gap-2">
             <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">ASP.NET Core MVC</span>
             <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">PostgreSQL</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-[10px] font-mono font-semibold uppercase">Tailwind CSS</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-mono font-semibold uppercase">Entity Framework</span>
           </div>
 
-          <!-- Title & Description -->
           <h3 class="font-headline text-2xl font-bold">Paula Presentes E-commerce</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descPaulaPresentes">
-            Plataforma comercial profissional de e-commerce desenvolvida em ASP.NET Core MVC e PostgreSQL. Conta com catálogo dinâmico de produtos, autenticação de usuários, carrinho de compras, galeria com carrossel moderno e painel administrativo completo de controle de produtos, estoque, vendas e caixa.
-          </p>
 
-          <!-- Screenshots Preview Strip -->
-          <div class="grid grid-cols-3 gap-2 pt-2">
-            <img src="img/inicial.png" alt="Tela Inicial" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
-            <img src="img/detalhe.png" alt="Detalhe do Produto" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
-            <img src="img/image.png" alt="Painel Admin" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+          <!-- Deep Case Study Sections -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="paulaIntent">
+                Automatizar e profissionalizar as operações de vendas online de artigos para presentes, substituindo pedidos manuais por um fluxo transacional centralizado, seguro e com gestão em tempo real.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="paulaHow">
+                Estruturei o projeto no padrão MVC com separação em camadas, modelagem relacional no PostgreSQL com Entity Framework Core, autenticação com proteção CSRF, carrinho persistido por sessão e painel administrativo para controle de vendas, estoque e fechamento de caixa.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="paulaSkills">
+                C# • ASP.NET Core MVC • EF Core • PostgreSQL • Modelagem Relacional • Segurança (CSRF/Auth) • Arquitetura em Camadas • Tailwind CSS.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- Action Links: Documentação e Contato (Sem link do site, como solicitado) -->
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between gap-3">
-          <a href="docs/documentacao_tecnica_paulapresentes.pdf" target="_blank" class="flex-1 px-4 py-2.5 rounded-xl border border-brand-pink/40 bg-brand-pink/10 hover:bg-brand-pink hover:text-white transition-all text-xs font-headline font-bold text-brand-pink text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">description</span>
-            <span data-i18n="btnTechnicalDocs">Ver Documentação (PDF)</span>
-          </a>
-          <a href="https://wa.me/5517991734669" target="_blank" class="px-4 py-2.5 rounded-xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder hover:border-emerald-500 hover:text-emerald-400 transition-all text-xs font-headline font-bold text-center flex items-center gap-1" title="Falar no WhatsApp">
-            <span class="material-symbols-outlined text-sm">chat</span>
-          </a>
         </div>
       </div>
 
       <!-- ============================================== -->
-      <!-- 2. DÉBORA DOCES (E-COMMERCE & GESTÃO ADMIN)    -->
+      <!-- 2. DÉBORA DOCES (E-COMMERCE & GESTÃO)          -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="web-dotnet">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="web-dotnet">
+        <div class="space-y-5">
           
-          <!-- Mockup/Media Slot for Débora Doces -->
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-amber-500/10 via-brand-darkSurface to-brand-pink/10 relative aspect-video flex flex-col items-center justify-center p-6 text-center group-hover:scale-[1.01] transition-transform">
-            <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">cake</span>
-            <p class="font-headline font-bold text-sm">Débora Doces • Confeitaria Artesanal</p>
-            <span class="text-[11px] font-mono text-slate-400">E-commerce de Encomendas & Painel de Gestão</span>
-            <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-black/60 text-[9px] font-mono text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Produção Ativa
+          <!-- Media Hub: Video & Screenshots Slot -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-amber-500/10 via-brand-darkSurface to-brand-pink/10 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+              <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">cake</span>
+              <p class="font-headline font-bold text-sm">Débora Doces • Confeitaria Artesanal</p>
+              <span class="text-[11px] font-mono text-slate-400">Vídeo de Demonstração & Painel Administrativo</span>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-cyan font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span> Vídeo & Telas
+              </div>
+            </div>
+
+            <!-- Screenshots Strip Slot -->
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-cyan">shopping_cart</span>
+                <span>Tela Pedido</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-pink">restaurant_menu</span>
+                <span>Cardápio</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-purple-400">dashboard</span>
+                <span>Painel Admin</span>
+              </div>
             </div>
           </div>
 
           <!-- Badges -->
-          <div class="flex flex-wrap gap-2 pt-1">
-            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[10px] font-mono font-semibold uppercase">E-commerce & Pedidos</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Gestão Administrativa</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[10px] font-mono font-semibold uppercase">E-commerce & Encomendas</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Painel de Gestão</span>
             <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-mono font-semibold uppercase">Fluxo Personalizado</span>
           </div>
 
-          <!-- Title & Description -->
           <h3 class="font-headline text-2xl font-bold">Débora Doces</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descDeboraDoces">
-            Solução completa para confeitaria artesanal unindo loja virtual voltada ao cliente e sistema administrativo. Possui catálogo dinâmico de doces e sobremesas, tela de montagem personalizada de pedidos (escolha de massas, recheios, coberturas e agendamento de data/hora), carrinho de compras e painel administrativo com controle em tempo real de pedidos, status de produção, ficha de clientes e estoque de insumos.
-          </p>
 
-          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs space-y-1">
-            <p class="font-headline font-semibold text-brand-cyan flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-sm">check_circle</span>
-              <span data-i18n="deboraHighlight1">Tela de pedidos customizados interativa</span>
-            </p>
-            <p class="font-headline font-semibold text-brand-pink flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-sm">dashboard_customize</span>
-              <span data-i18n="deboraHighlight2">Painel administrativo completo de pedidos e caixa</span>
-            </p>
+          <!-- Deep Case Study Sections -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="deboraIntent">
+                Eliminar a fricção e os erros no atendimento via WhatsApp, permitindo que os clientes montem bolos artesanais com combinações personalizadas e automatizando a esteira de pedidos da confeitaria.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="deboraHow">
+                Realizei análise de requisitos com a cliente, projetei um fluxo interativo para seleção de massas, múltiplos recheios, coberturas e agendamento de data de entrega. Construí o painel administrativo de controle de pedidos, ficha de clientes e estoque de insumos.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="deboraSkills">
+                JavaScript (ES6+) • Lógica de Precificação Dinâmica • UX/UI para Pedidos Customizados • Gestão de Estoque e Fluxo de Produção • Validação de Dados.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- Action Links: Visitar Site da Cliente & Espaço de Mídia -->
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center gap-3">
-          <a href="https://deboradoces.com" target="_blank" class="flex-1 px-4 py-2.5 rounded-xl border border-brand-cyan/40 bg-brand-cyan/10 hover:bg-brand-cyan hover:text-black transition-all text-xs font-headline font-bold text-brand-cyan text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">open_in_new</span>
-            <span data-i18n="btnVisitClientSite">Acessar Site da Cliente</span>
-          </a>
         </div>
       </div>
 
       <!-- ============================================== -->
-      <!-- 3. ALEVS (STREETWEAR AUTORAL FULL-STACK)       -->
+      <!-- 3. ALEVS (STREETWEAR FULL-STACK)               -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-purple/50 hover:shadow-[0_10px_40px_rgba(168,85,247,0.15)] transition-all duration-500" data-category="web-dotnet">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-purple/50 hover:shadow-[0_10px_40px_rgba(168,85,247,0.15)] transition-all duration-500" data-category="web-dotnet">
+        <div class="space-y-5">
           
-          <!-- Mockup/Media Slot for Alevs -->
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-purple-900/30 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
-            <span class="material-symbols-outlined text-5xl text-purple-400 mb-2">apparel</span>
-            <h4 class="font-headline font-black text-lg tracking-widest text-white">ALEVS</h4>
-            <span class="text-[11px] font-mono text-purple-300">Streetwear Autoral E-commerce</span>
-            <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-purple-400">
-              TanStack Start • React 19
+          <!-- Media Hub: Video & Screenshots Slot -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-purple-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+              <span class="material-symbols-outlined text-5xl text-purple-400 mb-2">apparel</span>
+              <p class="font-headline font-bold text-sm">ALEVS • Streetwear Autoral</p>
+              <span class="text-[11px] font-mono text-purple-300">Storefront Contínua & Checkout Simulado</span>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-purple-400 font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span> Vídeo & Mockups
+              </div>
+            </div>
+
+            <!-- Screenshots Strip Slot -->
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-purple-400">storefront</span>
+                <span>Coleções</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-cyan">straighten</span>
+                <span>Medidas</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-emerald-400">payments</span>
+                <span>Checkout</span>
+              </div>
             </div>
           </div>
 
           <!-- Badges -->
-          <div class="flex flex-wrap gap-2 pt-1">
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 border border-purple-500/20 text-[10px] font-mono font-semibold uppercase">React 19</span>
-            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Supabase</span>
-            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-semibold uppercase">Tailwind v4</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 border border-purple-500/20 text-[10px] font-mono font-semibold uppercase">React 19 & TanStack Start</span>
+            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Supabase & Drizzle</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-semibold uppercase">Tailwind v4</span>
           </div>
 
-          <!-- Title & Description -->
           <h3 class="font-headline text-2xl font-bold">ALEVS Streetwear</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descAlevs">
-            Loja virtual autoral de streetwear desenvolvida com TanStack Start, React 19, Tailwind CSS v4 e Supabase. Conta com storefront contínua com filtros dinâmicos de categorias, modal de visualização rápida com seletor de tamanho e medidas, carrinho com persistência em localStorage, suporte a cupons promocionais e fluxo simulado de checkout em 3 etapas (Pix, Cartão e Boleto).
-          </p>
 
-          <div class="grid grid-cols-2 gap-2 text-xs font-mono text-slate-400 pt-1">
-            <span class="flex items-center gap-1"><span class="text-brand-pink">✓</span> Drizzle ORM</span>
-            <span class="flex items-center gap-1"><span class="text-brand-pink">✓</span> Validação Zod</span>
-            <span class="flex items-center gap-1"><span class="text-brand-pink">✓</span> Testes Vitest</span>
-            <span class="flex items-center gap-1"><span class="text-brand-pink">✓</span> Nitro / Vite 8</span>
+          <!-- Deep Case Study Sections -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="alevsIntent">
+                Criar uma loja virtual autoral com navegação contínua e ultraveloz para o público jovem de streetwear, garantindo carregamento instantâneo, guia interativa de tamanhos e experiência de compra fluida.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="alevsHow">
+                Utilizei TanStack Start com React 19 e Vite 8 para Server-Side Rendering de alta performance. Modelei o banco no Supabase via Drizzle ORM com tipagem fim a fim, implementei busca com debounce, carrinho persistente no localStorage, cupons promocionais e checkout simulado em 3 etapas com validação Zod.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="alevsSkills">
+                React 19 • TanStack Start & Router • Supabase • Drizzle ORM • Zod Schemas • Vitest • Radix UI • Tailwind CSS v4.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
-          <a href="https://github.com/CarolPaneco/alevs" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-purple/40 bg-brand-purple/10 hover:bg-brand-purple hover:text-white transition-all text-xs font-headline font-bold text-purple-400 text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            <span>GitHub Repository</span>
-          </a>
         </div>
       </div>
 
       <!-- ============================================== -->
       <!-- 4. PORTAL DE IA (IA NOSSA - GEMINI & OPENAI)   -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="ai-data">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="ai-data">
+        <div class="space-y-5">
           
-          <!-- Mockup/Media Slot for IA Nossa -->
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-cyan-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
-            <span class="material-symbols-outlined text-5xl text-brand-cyan mb-2">smart_toy</span>
-            <h4 class="font-headline font-black text-lg text-white">Portal de IA</h4>
-            <span class="text-[11px] font-mono text-cyan-300">API Corporativa Gemini & OpenAI</span>
-            <div class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-brand-cyan">
-              SSE Streaming • Zero Client Keys
+          <!-- Media Hub: Video & Screenshots Slot -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-cyan-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+              <span class="material-symbols-outlined text-5xl text-brand-cyan mb-2">smart_toy</span>
+              <p class="font-headline font-bold text-sm">Portal de IA • IA Nossa</p>
+              <span class="text-[11px] font-mono text-cyan-300">Gateway Corporativo Gemini & OpenAI</span>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-cyan font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span> Vídeo & Streaming
+              </div>
+            </div>
+
+            <!-- Screenshots Strip Slot -->
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-cyan">chat</span>
+                <span>Chat Realtime</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-emerald-400">lock</span>
+                <span>Zero Leak</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-purple-400">tune</span>
+                <span>Model Switch</span>
+              </div>
             </div>
           </div>
 
           <!-- Badges -->
-          <div class="flex flex-wrap gap-2 pt-1">
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Google Gemini</span>
-            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-semibold uppercase">Node.js</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Google Gemini SDK</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-semibold uppercase">Node.js & SSE</span>
             <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-mono font-semibold uppercase">OpenAI Spec</span>
           </div>
 
-          <!-- Title & Description -->
           <h3 class="font-headline text-2xl font-bold">Portal de IA (IA Nossa)</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descIaNossa">
-            Portal web corporativo em Node.js para conversação com provedores de Inteligência Artificial aprovados. Suporta a API oficial Gemini (generateContent) e endpoints compatíveis com OpenAI. Arquitetura orientada à segurança onde as chaves e credenciais sensíveis residem estritamente no servidor, eliminando vazamento de tokens no navegador.
-          </p>
 
-          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono text-slate-400">
-            <span class="text-emerald-400 font-bold">Deploy:</span> Render Web Service • Suporte a variáveis seguras
+          <!-- Deep Case Study Sections -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="iaIntent">
+                Viabilizar o uso corporativo de Inteligência Artificial sem expor chaves de API nem violar políticas de segurança de dados, garantindo privacidade e controle centralizado.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="iaHow">
+                Construí um gateway seguro em Node.js isolando as credenciais no servidor. Implementei streaming token a token via Server-Sent Events (SSE) para respostas em tempo real e criei suporte unificado tanto para o SDK oficial Gemini quanto para modelos compatíveis com OpenAI.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="iaSkills">
+                Node.js • Express • Google Gemini API • Server-Sent Events (SSE) • Streaming HTTP • Segurança de Chaves no Servidor • Deploy em Nuvem.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
-          <a href="https://github.com/CarolPaneco/ia_nossa" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-cyan/40 bg-brand-cyan/10 hover:bg-brand-cyan hover:text-black transition-all text-xs font-headline font-bold text-brand-cyan text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            <span>GitHub Repository</span>
-          </a>
         </div>
       </div>
 
       <!-- ============================================== -->
-      <!-- 5. IDEAFLOW / SPARK MINDFUL FLOW               -->
+      <!-- 5. IDEAFLOW (SPARK MINDFUL FLOW)               -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="ai-data">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="ai-data">
+        <div class="space-y-5">
           
-          <!-- Mockup/Media Slot for IdeaFlow -->
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-pink-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
-            <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">lightbulb</span>
-            <h4 class="font-headline font-black text-lg text-white">IdeaFlow</h4>
-            <span class="text-[11px] font-mono text-pink-300">Spark Mindful Flow • IA & Recharts</span>
-            <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-brand-pink">
-              Ação Imediata 15 min
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-pink-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+              <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">lightbulb</span>
+              <p class="font-headline font-bold text-sm">IdeaFlow • Spark Mindful Flow</p>
+              <span class="text-[11px] font-mono text-pink-300">Decomposição por IA & Métricas Recharts</span>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo & Gráficos
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-pink">analytics</span>
+                <span>Funil 5 Fases</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-cyan">route</span>
+                <span>Pivôs/Motivos</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-emerald-400">calendar_month</span>
+                <span>Calendar Sync</span>
+              </div>
             </div>
           </div>
 
-          <!-- Badges -->
-          <div class="flex flex-wrap gap-2 pt-1">
-            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">IA Ideação</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">React 19 & TanStack</span>
             <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Recharts</span>
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-mono font-semibold uppercase">Google Calendar</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-mono font-semibold uppercase">AI Task Breakdown</span>
           </div>
 
-          <!-- Title & Description -->
           <h3 class="font-headline text-2xl font-bold">IdeaFlow</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descIdeaFlow">
-            Sistema inteligente para ideação e execução de projetos. Transforma ideias brutas em passos acionáveis com IA, gera planos com ação imediata em 15 minutos para quebrar procrastinação, mantém histórico de motivos de mudança de escopo (pivôs), analisa métricas visuais com Recharts e exporta agendamentos para o Google Calendar e arquivo .ics.
-          </p>
 
-          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs space-y-1">
-            <p class="font-mono text-slate-400">✓ Funil de 5 estágios: Faísca ➔ Realidade</p>
-            <p class="font-mono text-slate-400">✓ Diagnóstico com IA Coach & Desbloqueio</p>
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="ideaIntent">
+                Acabar com a sobrecarga de ideias acumuladas e a procrastinação inicial, decompondo ideias complexas em ações imediatas de 15 minutos e rastreando o histórico de decisões.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="ideaHow">
+                Modelei um funil em 5 estágios, criei engenharia de prompts para geração de micro-ações com IA, implementei a linha do tempo de mudanças de rota (pivôs) com campos de motivo, desenvolvi dashboards comparativos em Recharts e sincronização com Google Calendar / exportação .ics.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="ideaSkills">
+                React 19 • Recharts • Engenharia de Prompts • Gestão de Estado Reativo • Integração de Calendários (.ics) • Vaul Drawers.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
-          <a href="https://github.com/CarolPaneco/spark-mindful-flow" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-pink/40 bg-brand-pink/10 hover:bg-brand-pink hover:text-white transition-all text-xs font-headline font-bold text-brand-pink text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            <span>GitHub Repository</span>
-          </a>
         </div>
       </div>
 
       <!-- ============================================== -->
-      <!-- 6. TELEMETRIA AGRÍCOLA (MODULAR & INDEXEDDB)   -->
+      <!-- 6. TELEMETRIA AGRÍCOLA (INDEXEDDB)             -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-emerald-500/50 hover:shadow-[0_10px_40px_rgba(16,185,129,0.15)] transition-all duration-500" data-category="ai-data">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-emerald-500/50 hover:shadow-[0_10px_40px_rgba(16,185,129,0.15)] transition-all duration-500" data-category="ai-data">
+        <div class="space-y-5">
           
-          <!-- Mockup/Media Slot for Telemetria -->
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-emerald-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
-            <span class="material-symbols-outlined text-5xl text-emerald-400 mb-2">precision_manufacturing</span>
-            <h4 class="font-headline font-black text-lg text-white">Telemetria Agrícola</h4>
-            <span class="text-[11px] font-mono text-emerald-300">Colhedora • Tratos • Plantadora</span>
-            <div class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-emerald-400">
-              IndexedDB Incremental Offline
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-emerald-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+              <span class="material-symbols-outlined text-5xl text-emerald-400 mb-2">precision_manufacturing</span>
+              <p class="font-headline font-bold text-sm">Telemetria Agrícola • Frotas</p>
+              <span class="text-[11px] font-mono text-emerald-300">Colhedora, Tratos, Plantadora & IndexedDB</span>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Vídeo & Dashboards
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-emerald-400">agriculture</span>
+                <span>Colhedora</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-amber-400">water_drop</span>
+                <span>Chuva/Bases</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-cyan">storage</span>
+                <span>IndexedDB</span>
+              </div>
             </div>
           </div>
 
-          <!-- Badges -->
-          <div class="flex flex-wrap gap-2 pt-1">
+          <div class="flex flex-wrap gap-2">
             <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-semibold uppercase">AgTech</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">IndexedDB</span>
-            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-mono font-semibold uppercase">Bases Compartilhadas</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">IndexedDB Offline-First</span>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-mono font-semibold uppercase">Modular Architecture</span>
           </div>
 
-          <!-- Title & Description -->
           <h3 class="font-headline text-2xl font-bold">Telemetria Agrícola</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descTelemetria">
-            Arquitetura modular de software para controle e análise de telemetria de frotas agrícolas (Colhedora, Tratos e Plantadora). Armazenamento incremental no IndexedDB do navegador, permitindo a ingestão diária de novos arquivos de dados sem sobrescrever o histórico, com relatórios de produtividade de cana, blocos e dados pluviométricos.
-          </p>
 
-          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono text-slate-400 space-y-1">
-            <p>✓ Filtragem temporal por equipamento e talhão</p>
-            <p>✓ Módulos integrados: Colhedora, Plantadora e Tratos</p>
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="telemetriaIntent">
+                Permitir o processamento diário e análise de telemetria de frotas agrícolas pesadas diretamente no navegador em campo, sem depender de internet e sem perder o histórico anterior de dados.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="telemetriaHow">
+                Desenvolvi uma arquitetura modular com persistência incremental no IndexedDB, permitindo adição diária de logs por equipamento. Modelei o cruzamento de velocidade, motor, blocos de cana e registros pluviométricos.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="telemetriaSkills">
+                JavaScript Moderno • IndexedDB (NoSQL Local) • Arquitetura Modular • Análise de Telemetria de Campo • Offline-First Design.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
-          <a href="https://github.com/CarolPaneco/projeto-telemetria" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500 hover:text-white transition-all text-xs font-headline font-bold text-emerald-400 text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            <span>GitHub Repository</span>
-          </a>
         </div>
       </div>
 
       <!-- ============================================== -->
       <!-- 7. ROBÔ LEITOR (OCR EM PYTHON & FLASK)         -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="ai-data">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="ai-data">
+        <div class="space-y-5">
           
-          <!-- Mockup/Media Slot for Robô Leitor -->
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-blue-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
-            <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">document_scanner</span>
-            <h4 class="font-headline font-black text-lg text-white">Robô Leitor</h4>
-            <span class="text-[11px] font-mono text-blue-300">OCR & Extração Automatizada de PDFs</span>
-            <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-blue-400">
-              Python • Tesseract OCR
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-blue-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+              <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">document_scanner</span>
+              <p class="font-headline font-bold text-sm">Robô Leitor • OCR em Lote</p>
+              <span class="text-[11px] font-mono text-blue-300">Tesseract OCR • Python & Flask</span>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-blue-400 font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Vídeo & OCR
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-blue-400">picture_as_pdf</span>
+                <span>PDF / Scan</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-cyan">filter_vintage</span>
+                <span>Binarização</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-emerald-400">table_view</span>
+                <span>CSV / Excel</span>
+              </div>
             </div>
           </div>
 
-          <!-- Badges -->
-          <div class="flex flex-wrap gap-2 pt-1">
+          <div class="flex flex-wrap gap-2">
             <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Python & Flask</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Tesseract OCR</span>
-            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-semibold uppercase">PDF & Imagens</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Tesseract OCR (PT-BR)</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-semibold uppercase">Estruturação de Dados</span>
           </div>
 
-          <!-- Title & Description -->
           <h3 class="font-headline text-2xl font-bold">Robô Leitor (OCR)</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descRoboLeitor">
-            Aplicação web em Python/Flask para ingestão e extração automatizada de texto em PDFs e imagens (PNG, JPG, TIFF) via Tesseract OCR em português. Arquitetura preparada para leitura de tabelas, extração de campos estruturados em lote para planilhas CSV/Excel e suporte a pipelines de IA para leitura de documentos.
-          </p>
 
-          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono text-slate-400">
-            Formatos: PDF, PNG, JPG, JPEG, TIFF • Reconhecimento em PT-BR
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="roboIntent">
+                Automatizar a triagem e extração de dados de pilhas de documentos digitalizados e notas em PDF/imagem, reduzindo o tempo de digitação manual de horas para segundos.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="roboHow">
+                Construí a aplicação em Flask, integrando o motor Tesseract com modelos em português. Desenvolvi pipeline de pré-processamento de imagem para limpeza e contraste, com conversão em lote para planilhas e preparação para ingestão em pipelines de IA.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="roboSkills">
+                Python 3 • Flask • Tesseract OCR • Pillow (PIL) • Tratamento de Imagens • Parsing de PDFs • Automação de Processos.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
-          <a href="https://github.com/CarolPaneco/leitor-documentos" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-blue-500/40 bg-blue-500/10 hover:bg-blue-500 hover:text-white transition-all text-xs font-headline font-bold text-blue-400 text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            <span>GitHub Repository</span>
-          </a>
         </div>
       </div>
 
       <!-- ============================================== -->
       <!-- 8. CRUD API (SISTEMA WEB .NET & REACT)         -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="web-dotnet">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="web-dotnet">
+        <div class="space-y-5">
           
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-slate-900 via-black to-slate-950 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
-            <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">database</span>
-            <h4 class="font-headline font-black text-lg text-white">CRUD API</h4>
-            <span class="text-[11px] font-mono text-slate-400">ASP.NET Core • React • SQL Server</span>
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-slate-900 via-black to-slate-950 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+              <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">database</span>
+              <p class="font-headline font-bold text-sm">CRUD API • SistemaWeb</p>
+              <span class="text-[11px] font-mono text-slate-400">ASP.NET Core • React • SQL Server</span>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo & Telas
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-pink">api</span>
+                <span>REST API</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-cyan">web</span>
+                <span>React UI</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-purple-400">dns</span>
+                <span>SQL Server</span>
+              </div>
+            </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 pt-1">
-            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">ASP.NET Core</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">ASP.NET Core Web API</span>
             <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">React</span>
             <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan text-[10px] font-mono font-semibold uppercase">SQL Server</span>
           </div>
 
           <h3 class="font-headline text-2xl font-bold">CRUD API (SistemaWeb)</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descCrudApi">
-            Sistema de gerenciamento full-stack com API RESTful em ASP.NET Core e frontend moderno em React. Implementa operações completas de CRUD, modelagem relacional em SQL Server e integração de dados cliente-servidor de alta performance.
-          </p>
-        </div>
 
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
-          <a href="https://github.com/CarolPaneco/SistemaWeb" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-pink/40 bg-brand-pink/10 hover:bg-brand-pink hover:text-white transition-all text-xs font-headline font-bold text-brand-pink text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            <span>GitHub Repository</span>
-          </a>
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="crudIntent">
+                Fornecer uma espinha dorsal corporativa padronizada para gestão de inventário e produtos, aplicando arquitetura em camadas e desacoplamento entre frontend e backend.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="crudHow">
+                Estruturei a Web API com injeção de dependência nativa, validações de requisição com Data Annotations e tratamento global de exceções. Modelei o banco no SQL Server com EF Core e criei a interface cliente em React com hooks customizados.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="crudSkills">
+                C# • ASP.NET Core API • Entity Framework Core • SQL Server • React • Injeção de Dependência • RESTful Standards.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
       <!-- ============================================== -->
       <!-- 9. KANBAN APP (FLUTTER & DART)                 -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="mobile-embedded">
-        <div class="space-y-4">
+      <div class="project-card group rounded-3xl p-7 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="mobile-embedded">
+        <div class="space-y-5">
           
-          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-cyan-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
-            <span class="material-symbols-outlined text-5xl text-brand-cyan mb-2">view_kanban</span>
-            <h4 class="font-headline font-black text-lg text-white">Kanban App</h4>
-            <span class="text-[11px] font-mono text-cyan-300">Flutter • Dart • Drag & Drop UI</span>
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-cyan-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+              <span class="material-symbols-outlined text-5xl text-brand-cyan mb-2">view_kanban</span>
+              <p class="font-headline font-bold text-sm">Kanban App • Multiplataforma</p>
+              <span class="text-[11px] font-mono text-cyan-300">Flutter • Dart • Drag & Drop UI</span>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-cyan font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span> Vídeo & Telas
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-cyan">touch_app</span>
+                <span>Drag & Drop</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-brand-pink">devices</span>
+                <span>Mobile/Web</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-purple-400">sync</span>
+                <span>Estado Reativo</span>
+              </div>
+            </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 pt-1">
+          <div class="flex flex-wrap gap-2">
             <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Flutter</span>
             <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Dart</span>
-            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-mono font-semibold uppercase">Drag & Drop</span>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-mono font-semibold uppercase">Drag & Drop UI</span>
           </div>
 
           <h3 class="font-headline text-2xl font-bold">Kanban App</h3>
-          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descKanban">
-            Aplicação de gestão de tarefas e fluxos de trabalho inspirada na metodologia ágil Kanban. Desenvolvida em Flutter e Dart, conta com movimentação fluida de cards via Drag & Drop, persistência de estados e layout adaptado para telas mobile e desktop.
-          </p>
-        </div>
 
-        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
-          <a href="https://github.com/CarolPaneco/KANBAN" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-cyan/40 bg-brand-cyan/10 hover:bg-brand-cyan hover:text-black transition-all text-xs font-headline font-bold text-brand-cyan text-center flex items-center justify-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            <span>GitHub Repository</span>
-          </a>
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="kanbanIntent">
+                Entregar uma ferramenta de gestão ágil fluida e tátil para organização de tarefas diárias com movimentação interativa de cards e suporte consistente em smartphones e desktop.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="dark:text-slate-300 text-slate-700" data-i18n="kanbanHow">
+                Utilizei widgets nativos Draggable e DragTarget no Flutter para animação de arrasto sem engasgos. Estruturei gerenciamento de estado reativo para atualização imediata do modelo e persistência de dados local.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <span class="font-headline font-bold text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono dark:text-slate-400 text-slate-600" data-i18n="kanbanSkills">
+                Flutter • Dart • Gestão de Estado • Física de Drag & Drop • UI Multiplataforma • Layouts Adaptativos.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -1092,11 +1295,10 @@
   <footer class="py-12 px-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-brand-lightBg text-xs font-mono text-slate-500">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        © 2026 Caroline Paneco • Multiplatform Software Developer
+        © 2026 Caroline Vitória Paneco • Multiplatform Software Developer
       </div>
       <div class="flex items-center gap-6">
         <a href="#hero" class="hover:text-brand-pink transition-colors">Voltar ao topo ↑</a>
-        <a href="https://github.com/CarolPaneco/portfolio-site" target="_blank" class="hover:text-brand-cyan transition-colors">Código-Fonte no GitHub</a>
       </div>
     </div>
   </footer>
@@ -1117,7 +1319,6 @@
   <!-- JAVASCRIPT: THEME & BILINGUAL i18n ENGINE  -->
   <!-- ========================================== -->
   <script>
-    // Bilingual Dictionary
     const i18n = {
       pt: {
         badgeStatus: "Disponível para Projetos",
@@ -1138,24 +1339,41 @@
         statDegrees: "Graduações Tech",
         statExp: "Controle & Dados",
         tagProjectsSection: "Portfólio de Software",
-        titleProjectsSection: "Projetos & Aplicações em Produção",
+        titleProjectsSection: "Estudos de Caso & Aplicações",
         filterAll: "Todos",
         filterWebDotNet: ".NET & Web",
         filterAiData: "IA & Dados",
         filterMobileEmbedded: "Mobile & Embarcados",
-        descPaulaPresentes: "Plataforma comercial profissional de e-commerce desenvolvida em ASP.NET Core MVC e PostgreSQL. Conta com catálogo dinâmico de produtos, autenticação de usuários, carrinho de compras, galeria com carrossel moderno e painel administrativo completo de controle de produtos, estoque, vendas e caixa.",
-        btnTechnicalDocs: "Ver Documentação (PDF)",
-        descDeboraDoces: "Solução completa para confeitaria artesanal unindo loja virtual voltada ao cliente e sistema administrativo. Possui catálogo dinâmico de doces e sobremesas, tela de montagem personalizada de pedidos (escolha de massas, recheios, coberturas e agendamento de data/hora), carrinho de compras e painel administrativo com controle em tempo real de pedidos, status de produção, ficha de clientes e estoque de insumos.",
-        deboraHighlight1: "Tela de pedidos customizados interativa",
-        deboraHighlight2: "Painel administrativo completo de pedidos e caixa",
-        btnVisitClientSite: "Acessar Site da Cliente",
-        descAlevs: "Loja virtual autoral de streetwear desenvolvida com TanStack Start, React 19, Tailwind CSS v4 e Supabase. Conta com storefront contínua com filtros dinâmicos de categorias, modal de visualização rápida com seletor de tamanho e medidas, carrinho com persistência em localStorage, suporte a cupons promocionais e fluxo simulado de checkout em 3 etapas (Pix, Cartão e Boleto).",
-        descIaNossa: "Portal web corporativo em Node.js para conversação com provedores de Inteligência Artificial aprovados. Suporta a API oficial Gemini (generateContent) e endpoints compatíveis com OpenAI. Arquitetura orientada à segurança onde as chaves e credenciais sensíveis residem estritamente no servidor, eliminando vazamento de tokens no navegador.",
-        descIdeaFlow: "Sistema inteligente para ideação e execução de projetos. Transforma ideias brutas em passos acionáveis com IA, gera planos com ação imediata em 15 minutos para quebrar procrastinação, mantém histórico de motivos de mudança de escopo (pivôs), analisa métricas visuais com Recharts e exporta agendamentos para o Google Calendar e arquivo .ics.",
-        descTelemetria: "Arquitetura modular de software para controle e análise de telemetria de frotas agrícolas (Colhedora, Tratos e Plantadora). Armazenamento incremental no IndexedDB do navegador, permitindo a ingestão diária de novos arquivos de dados sem sobrescrever o histórico, com relatórios de produtividade de cana, blocos e dados pluviométricos.",
-        descRoboLeitor: "Aplicação web em Python/Flask para ingestão e extração automatizada de texto em PDFs e imagens (PNG, JPG, TIFF) via Tesseract OCR em português. Arquitetura preparada para leitura de tabelas, extração de campos estruturados em lote para planilhas CSV/Excel e suporte a pipelines de IA para leitura de documentos.",
-        descCrudApi: "Sistema de gerenciamento full-stack com API RESTful em ASP.NET Core e frontend moderno em React. Implementa operações completas de CRUD, modelagem relacional em SQL Server e integração de dados cliente-servidor de alta performance.",
-        descKanban: "Aplicação de gestão de tarefas e fluxos de trabalho inspirada na metodologia ágil Kanban. Desenvolvida em Flutter e Dart, conta com movimentação fluida de cards via Drag & Drop, persistência de estados e layout adaptado para telas mobile e desktop.",
+        labelIntent: "🎯 Intenção & Problema Resolvido",
+        labelHow: "⚙️ Como Eu Fiz (Arquitetura & Métodos)",
+        labelSkillsMastered: "🚀 Habilidades & Tecnologias Dominadas",
+        paulaIntent: "Automatizar e profissionalizar as operações de vendas online de artigos para presentes, substituindo pedidos manuais por um fluxo transacional centralizado, seguro e com gestão em tempo real.",
+        paulaHow: "Estruturei o projeto no padrão MVC com separação em camadas, modelagem relacional no PostgreSQL com Entity Framework Core, autenticação com proteção CSRF, carrinho persistido por sessão e painel administrativo para controle de vendas, estoque e fechamento de caixa.",
+        paulaSkills: "C# • ASP.NET Core MVC • EF Core • PostgreSQL • Modelagem Relacional • Segurança (CSRF/Auth) • Arquitetura em Camadas • Tailwind CSS.",
+        deboraIntent: "Eliminar a fricção e os erros no atendimento via WhatsApp, permitindo que os clientes montem bolos artesanais com combinações personalizadas e automatizando a esteira de pedidos da confeitaria.",
+        deboraHow: "Realizei análise de requisitos com a cliente, projetei um fluxo interativo para seleção de massas, múltiplos recheios, coberturas e agendamento de data de entrega. Construí o painel administrativo de controle de pedidos, ficha de clientes e estoque de insumos.",
+        deboraSkills: "JavaScript (ES6+) • Lógica de Precificação Dinâmica • UX/UI para Pedidos Customizados • Gestão de Estoque e Fluxo de Produção • Validação de Dados.",
+        alevsIntent: "Criar uma loja virtual autoral com navegação contínua e ultraveloz para o público jovem de streetwear, garantindo carregamento instantâneo, guia interativa de tamanhos e experiência de compra fluida.",
+        alevsHow: "Utilizei TanStack Start com React 19 e Vite 8 para Server-Side Rendering de alta performance. Modelei o banco no Supabase via Drizzle ORM com tipagem fim a fim, implementei busca com debounce, carrinho persistente no localStorage, cupons promocionais e checkout simulado em 3 etapas com validação Zod.",
+        alevsSkills: "React 19 • TanStack Start & Router • Supabase • Drizzle ORM • Zod Schemas • Vitest • Radix UI • Tailwind CSS v4.",
+        iaIntent: "Viabilizar o uso corporativo de Inteligência Artificial sem expor chaves de API nem violar políticas de segurança de dados, garantindo privacidade e controle centralizado.",
+        iaHow: "Construí um gateway seguro em Node.js isolando as credenciais no servidor. Implementei streaming token a token via Server-Sent Events (SSE) para respostas em tempo real e criei suporte unificado tanto para o SDK oficial Gemini quanto para modelos compatíveis com OpenAI.",
+        iaSkills: "Node.js • Express • Google Gemini API • Server-Sent Events (SSE) • Streaming HTTP • Segurança de Chaves no Servidor • Deploy em Nuvem.",
+        ideaIntent: "Acabar com a sobrecarga de ideias acumuladas e a procrastinação inicial, decompondo ideias complexas em ações imediatas de 15 minutos e rastreando o histórico de decisões.",
+        ideaHow: "Modelei um funil em 5 estágios, criei engenharia de prompts para geração de micro-ações com IA, implementei a linha do tempo de mudanças de rota (pivôs) com campos de motivo, desenvolvi dashboards comparativos em Recharts e sincronização com Google Calendar / exportação .ics.",
+        ideaSkills: "React 19 • Recharts • Engenharia de Prompts • Gestão de Estado Reativo • Integração de Calendários (.ics) • Vaul Drawers.",
+        telemetriaIntent: "Permitir o processamento diário e análise de telemetria de frotas agrícolas pesadas diretamente no navegador em campo, sem depender de internet e sem perder o histórico anterior de dados.",
+        telemetriaHow: "Desenvolvi uma arquitetura modular com persistência incremental no IndexedDB, permitindo adição diária de logs por equipamento. Modelei o cruzamento de velocidade, motor, blocos de cana e registros pluviométricos.",
+        telemetriaSkills: "JavaScript Moderno • IndexedDB (NoSQL Local) • Arquitetura Modular • Análise de Telemetria de Campo • Offline-First Design.",
+        roboIntent: "Automatizar a triagem e extração de dados de pilhas de documentos digitalizados e notas em PDF/imagem, reduzindo o tempo de digitação manual de horas para segundos.",
+        roboHow: "Construí a aplicação em Flask, integrando o motor Tesseract com modelos em português. Desenvolvi pipeline de pré-processamento de imagem para limpeza e contraste, com conversão em lote para planilhas e preparação para ingestão em pipelines de IA.",
+        roboSkills: "Python 3 • Flask • Tesseract OCR • Pillow (PIL) • Tratamento de Imagens • Parsing de PDFs • Automação de Processos.",
+        crudIntent: "Fornecer uma espinha dorsal corporativa padronizada para gestão de inventário e produtos, aplicando arquitetura em camadas e desacoplamento entre frontend e backend.",
+        crudHow: "Estruturei a Web API com injeção de dependência nativa, validações de requisição com Data Annotations e tratamento global de exceções. Modelei o banco no SQL Server com EF Core e criei a interface cliente em React com hooks customizados.",
+        crudSkills: "C# • ASP.NET Core API • Entity Framework Core • SQL Server • React • Injeção de Dependência • RESTful Standards.",
+        kanbanIntent: "Entregar uma ferramenta de gestão ágil fluida e tátil para organização de tarefas diárias com movimentação interativa de cards e suporte consistente em smartphones e desktop.",
+        kanbanHow: "Utilizei widgets nativos Draggable e DragTarget no Flutter para animação de arrasto sem engasgos. Estruturei gerenciamento de estado reativo para atualização imediata do modelo e persistência de dados local.",
+        kanbanSkills: "Flutter • Dart • Gestão de Estado • Física de Drag & Drop • UI Multiplataforma • Layouts Adaptativos.",
         tagSkills: "Competências Técnicas",
         titleSkills: "Stack Tecnológica & Arsenal de Engenharia",
         subSkills: "Tecnologias, linguagens e frameworks aplicados na construção de arquiteturas escaláveis, desde o backend .NET a modelos de dados, telemetria e interfaces reativas.",
@@ -1222,24 +1440,41 @@
         statDegrees: "Tech Degrees",
         statExp: "Control & Data",
         tagProjectsSection: "Software Portfolio",
-        titleProjectsSection: "Production Projects & Applications",
+        titleProjectsSection: "Case Studies & Applications",
         filterAll: "All",
         filterWebDotNet: ".NET & Web",
         filterAiData: "AI & Data",
         filterMobileEmbedded: "Mobile & Embedded",
-        descPaulaPresentes: "Full-scale commercial online sales platform built with ASP.NET Core MVC and PostgreSQL. Features dynamic product catalog, user authentication, shopping cart, modern carousel gallery, and an administrative dashboard for inventory, orders, and cash flow control.",
-        btnTechnicalDocs: "View Technical Docs (PDF)",
-        descDeboraDoces: "Comprehensive artisan confectionery platform combining customer-facing e-commerce and administrative management. Features dynamic sweets catalog, interactive custom order flow (cake base, fillings, toppings, and scheduled delivery), shopping cart, and an admin dashboard tracking real-time orders, production status, client profiles, and inventory.",
-        deboraHighlight1: "Interactive custom cake and sweets order flow",
-        deboraHighlight2: "Complete administrative panel for orders and finances",
-        btnVisitClientSite: "Visit Client Website",
-        descAlevs: "Authorial streetwear online store built with TanStack Start, React 19, Tailwind CSS v4, and Supabase. Features continuous storefront navigation, instant category filtering, quick-view modal with sizing guide, persistent localStorage cart, dynamic discount coupons, and a 3-step checkout simulation (Pix, Credit Card, Bank Slip).",
-        descIaNossa: "Secure corporate portal built in Node.js for interacting with enterprise-approved AI models. Supports official Gemini API (generateContent) and OpenAI-compatible endpoints. Engineered with zero-client-leakage server-side token management, real-time SSE streaming, and dynamic model switching.",
-        descIdeaFlow: "Productivity and intentional execution system. Breaks down raw concepts into actionable steps with AI, generates immediate 15-minute action plans to eliminate procrastination, maintains timeline of scope pivots with rationale history, displays visual metrics via Recharts, and exports to Google Calendar and .ics files.",
-        descTelemetria: "Modular software architecture for agricultural fleet telemetry control and analysis (Harvesters, Field Treatments, and Planters). Features offline-first incremental browser IndexedDB storage allowing daily data ingestion without history loss, correlated with sugarcane yield and rainfall records.",
-        descRoboLeitor: "Python/Flask web application for intelligent physical and digital document processing. Automates text extraction from PDFs and images (PNG, JPG, TIFF) via Tesseract OCR in Portuguese, batch structures data for CSV/Excel export, and feeds LLM document ingestion pipelines.",
-        descCrudApi: "Full-stack enterprise management system developed with ASP.NET Core RESTful API and responsive React frontend. Implements complete CRUD operations, SQL Server relational modeling, and high-performance client-server data synchronization.",
-        descKanban: "Agile workflow management application built with Flutter and Dart. Features fluid drag-and-drop task card movement across stages, state persistence, and responsive UI tailored for both mobile and desktop screens.",
+        labelIntent: "🎯 Intent & Problem Solved",
+        labelHow: "⚙️ How I Engineered It (Architecture & Methods)",
+        labelSkillsMastered: "🚀 Mastered Skills & Technologies",
+        paulaIntent: "Automate and scale commercial online sales of personalized gift products, replacing manual messaging with a centralized, secure, and real-time transactional workflow.",
+        paulaHow: "Structured using ASP.NET Core MVC with clean layer separation, PostgreSQL relational modeling via Entity Framework Core, CSRF-protected authentication, session-persisted cart, and an admin dashboard for sales, inventory adjustments, and cash flow tracking.",
+        paulaSkills: "C# • ASP.NET Core MVC • EF Core • PostgreSQL • Relational Modeling • Security (CSRF/Auth) • Layered Architecture • Tailwind CSS.",
+        deboraIntent: "Eliminate intake errors and overhead in manual WhatsApp cake orders, enabling customers to configure custom artisan cake combinations and automating the kitchen production pipeline.",
+        deboraHow: "Conducted direct client requirements discovery, designed an interactive step-by-step customizer for cake base, multiple fillings, toppings, and delivery scheduling. Built an admin board tracking real-time order status, customer records, and inventory.",
+        deboraSkills: "JavaScript (ES6+) • Dynamic Pricing Logic • Custom Order UX/UI • Production Pipeline Management • Data Validation.",
+        alevsIntent: "Create an authorial online storefront with continuous, ultra-fast navigation for youth streetwear culture, delivering instantaneous page loads, sizing guides, and zero checkout friction.",
+        alevsHow: "Utilized TanStack Start with React 19 and Vite 8 for high-performance Server-Side Rendering. Modeled data in Supabase via Drizzle ORM with end-to-end type safety, implemented debounced search, persistent localStorage cart, dynamic discount codes, and a 3-step checkout with Zod validation.",
+        alevsSkills: "React 19 • TanStack Start & Router • Supabase • Drizzle ORM • Zod Schemas • Vitest • Radix UI • Tailwind CSS v4.",
+        iaIntent: "Enable secure corporate AI usage without exposing private API keys or violating data compliance guidelines, guaranteeing strict privacy and centralized governance.",
+        iaHow: "Engineered a secure Node.js proxy gateway with credentials restricted to the server. Implemented token-by-token streaming via Server-Sent Events (SSE) for low latency, providing dual compatibility for the official Gemini SDK and OpenAI-compliant models.",
+        iaSkills: "Node.js • Express • Google Gemini API • Server-Sent Events (SSE) • HTTP Streaming • Server Secret Governance • Cloud Deployment.",
+        ideaIntent: "Eliminate idea overwhelm and initial friction, transforming raw concepts into 15-minute immediate execution steps while tracking strategic decision pivots.",
+        ideaHow: "Designed a 5-stage funnel, engineered prompts for micro-action generation with AI, created a visual scope pivot timeline with rationale fields, built comparative Recharts analytics, and integrated calendar export (.ics & Google Calendar).",
+        ideaSkills: "React 19 • Recharts • Prompt Engineering • Reactive State Management • Calendar Integration (.ics) • Vaul Drawers.",
+        telemetriaIntent: "Enable daily processing and analysis of heavy agricultural fleet telemetry directly in browser on field, with zero internet reliance and zero data loss.",
+        telemetriaHow: "Engineered a modular architecture with incremental browser IndexedDB persistence, allowing daily telemetry ingestion per machine without overwriting past data, correlating speed, engine loads, cane yield blocks, and rainfall.",
+        telemetriaSkills: "Modern JavaScript • IndexedDB (Local NoSQL) • Modular Architecture • Fleet Telemetry Parsing • Offline-First Design.",
+        roboIntent: "Automate ingestion and data extraction from scanned documents and PDF receipts, reducing manual data entry time from hours to seconds.",
+        roboHow: "Built in Python and Flask integrating Tesseract OCR with Portuguese models. Developed an image pre-processing pipeline for binarization and contrast, with batch structured export into CSV/Excel and LLM pipeline preparation.",
+        roboSkills: "Python 3 • Flask • Tesseract OCR • Pillow (PIL) • Image Pre-processing • PDF Parsing • Process Automation.",
+        crudIntent: "Provide a standardized corporate backbone for entity and inventory management, enforcing clean layered separation between frontend and backend.",
+        crudHow: "Engineered ASP.NET Core Web API with native dependency injection, Data Annotations validation, and centralized exception handling. Modeled SQL Server with EF Core and built a React client with custom hooks.",
+        crudSkills: "C# • ASP.NET Core API • Entity Framework Core • SQL Server • React • Dependency Injection • RESTful Standards.",
+        kanbanIntent: "Deliver a fluid, tactile agile management tool for task coordination with drag-and-drop mechanics across smartphones and desktop monitors.",
+        kanbanHow: "Utilized Flutter Draggable and DragTarget primitives for stutter-free dragging physics. Structured reactive state management for immediate local updates and persistence.",
+        kanbanSkills: "Flutter • Dart • State Management • Drag & Drop Physics • Multiplatform UI • Adaptive Layouts.",
         tagSkills: "Technical Competencies",
         titleSkills: "Tech Stack & Engineering Arsenal",
         subSkills: "Technologies, languages, and frameworks applied in building scalable architectures, from .NET backend to data models, telemetry, and reactive interfaces.",
@@ -1289,17 +1524,14 @@
       }
     };
 
-    // Current State
     let currentLang = localStorage.getItem('site_lang') || 'pt';
     let currentTheme = localStorage.getItem('site_theme') || 'dark';
 
-    // Apply Language
     function setLanguage(lang) {
       currentLang = lang;
       localStorage.setItem('site_lang', lang);
       document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
 
-      // Update All Translatable Elements
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (i18n[lang] && i18n[lang][key]) {
@@ -1307,7 +1539,6 @@
         }
       });
 
-      // Update Button Styles in Header
       const ptBtn = document.getElementById('langPtBtn');
       const enBtn = document.getElementById('langEnBtn');
       if (lang === 'pt') {
@@ -1319,7 +1550,6 @@
       }
     }
 
-    // Apply Theme (Dark / Light)
     function applyTheme(theme) {
       currentTheme = theme;
       localStorage.setItem('site_theme', theme);
@@ -1341,7 +1571,6 @@
       applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
     }
 
-    // Filter Projects
     function filterProjects(category) {
       document.querySelectorAll('.filter-btn').forEach(btn => {
         if (btn.getAttribute('data-filter') === category) {
@@ -1360,14 +1589,12 @@
       });
     }
 
-    // Mobile Menu
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('hidden');
       menu.classList.toggle('flex');
     }
 
-    // Image Modal
     function openImageModal(src) {
       const modal = document.getElementById('imageModal');
       const modalImg = document.getElementById('modalImg');
@@ -1382,7 +1609,6 @@
       modal.classList.remove('flex');
     }
 
-    // Initialize On Load
     document.addEventListener('DOMContentLoaded', () => {
       applyTheme(currentTheme);
       setLanguage(currentLang);

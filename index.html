@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#490013",
+            "on-secondary-fixed": "#500086",
+            "on-primary-fixed": "#000000",
+            "inverse-surface": "#fcf9f8",
+            "outline": "#767575",
+            "error-dim": "#d73357",
+            "on-tertiary-fixed": "#003840",
+            "surface-container": "#1a1a1a",
+            "primary-dim": "#e30071",
+            "primary": "#ff89ab",
+            "secondary": "#c47fff",
+            "primary-fixed": "#ff709e",
+            "outline-variant": "#484847",
+            "primary-container": "#ff709e",
+            "surface-container-highest": "#262626",
+            "inverse-primary": "#bc005c",
+            "secondary-dim": "#a533ff",
+            "secondary-container": "#8c00e5",
+            "surface-bright": "#2c2c2c",
+            "surface-variant": "#262626",
+            "on-error-container": "#ffb2b9",
+            "on-secondary-fixed-variant": "#7900c6",
+            "on-primary-container": "#4c0021",
+            "surface-dim": "#0e0e0e",
+            "on-primary-fixed-variant": "#5d002a",
+            "inverse-on-surface": "#565555",
+            "on-surface-variant": "#adaaaa",
+            "error": "#ff6e84",
+            "surface-container-low": "#131313",
+            "on-surface": "#ffffff",
+            "surface-tint": "#ff89ab",
+            "secondary-fixed-dim": "#ddb3ff",
+            "on-secondary-container": "#fff5ff",
+            "surface-container-lowest": "#000000",
+            "on-tertiary-container": "#004d57",
+            "surface-container-high": "#20201f",
+            "surface": "#0e0e0e",
+            "error-container": "#a70138",
+            "on-secondary": "#340059",
+            "tertiary-fixed": "#00e3fd",
+            "tertiary": "#81ecff",
+            "primary-fixed-dim": "#ff5290",
+            "secondary-fixed": "#e7c5ff",
+            "on-tertiary-fixed-variant": "#005762",
+            "on-tertiary": "#005762",
+            "on-background": "#ffffff",
+            "tertiary-fixed-dim": "#00d4ec",
+            "background": "#0e0e0e",
+            "on-primary": "#62002d",
+            "tertiary-dim": "#00d4ec",
+            "tertiary-container": "#00e3fd"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Space Grotesk"],
+            "body": ["Manrope"],
+            "label": ["Space Grotesk"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #ffffff;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .technical-gradient {
+      background: linear-gradient(135deg, #ff89ab 0%, #e30071 100%);
+    }
+
+    .glass-panel {
+      background: rgba(26, 26, 26, 0.6);
+      backdrop-filter: blur(20px);
+    }
+
+    .neon-glow-primary {
+      box-shadow: 0 0 30px rgba(255, 137, 171, 0.15);
+    }
+
+    .neon-glow-tertiary {
+      box-shadow: 0 0 30px rgba(129, 236, 255, 0.15);
+    }
+  </style>
+</head>
+
+<body class="selection:bg-primary selection:text-on-primary">
+  <!-- Top Navigation Bar -->
+  <header
+    class="sticky top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl border-b border-[#484847]/15 shadow-[0_0_20px_rgba(255,137,171,0.1)] transition-all duration-300 ease-in-out flex items-center justify-between">
+    <nav class="flex justify-between items-center w-full px-8 py-4 max-w-full mx-auto">
+      <button onclick="toggleMenu()" class="md:hidden text-white text-2xl flex items-center h-10">
+        ☰
+      </button>
+      <div id="mobileMenu"
+        class="fixed inset-0 bg-black/90 backdrop-blur-lg hidden flex-col items-center justify-center gap-8 z-50 transition-all duration-300">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white text-3xl">
+          ✕
+        </button>
+
+        <a class="text-[#81ecff] border-b-2 border-[#81ecff] pb-1 transition-colors" href="index.html">Sobre Mim</a>
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/skills.html">Habilidades</a>
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/projects.html">Projetos</a>
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/hobbies.html">Hobbies</a>
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/contact.html">Contato</a>
+
+      </div>
+      <div class="text-2xl font-black tracking-tighter text-[#ff89ab] dark:text-[#ff89ab] font-['Space_Grotesk']">
+        Caroline Paneco
+      </div>
+      <div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight text-sm uppercase">
+        <a class="text-[#81ecff] border-b-2 border-[#81ecff] pb-1 transition-colors" href="index.html">Sobre Mim</a>
+
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/skills.html">Habilidades</a>
+
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/projects.html">Projetos</a>
+
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/hobbies.html">Hobbies</a>
+
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/contact.html">Contato</a>
+      </div>
+      <button
+        class="bg-[#ff89ab] text-[#4c0021] font-['Space_Grotesk'] font-bold text-xs uppercase px-6 py-2 rounded-md hover:bg-[#e30071] transition-all">
+        <a href="https://www.linkedin.com/in/caroline-paneco-6942641b5/" target="_blank">
+          Conecte-se comigo
+        </a>
+      </button>
+    </nav>
+  </header>
+  <main class="relative overflow-hidden" id="about">
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-12 px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <div class="flex-1 order-2 md:order-1">
+        <div
+          class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-sm border-l-2 border-tertiary">
+          <span class="font-headline text-[10px] tracking-[0.2em] text-tertiary uppercase">Desenvolvedora de Software /
+            Junior</span>
+        </div>
+        <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mb-6">
+          Construindo arquiteturas <br />
+          <span class="text-transparent bg-clip-text technical-gradient">Digitais.</span>
+        </h1>
+        <p class="font-body text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+        <p class="font-body text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+          Desenvolvedora de Software brasileira, 21 anos, atualmente cursando minha segunda graduação na área de
+          Tecnologia. <br>
+          Desenvolvedora de Software com foco na resolução de problemas. Seja em aplicações web, mobile ou sistemas
+          embarcados,
+          desenvolvo soluções eficientes integrando hardware, software e experiência do usuário para otimizar processos
+          e desempenho. </p>
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button onclick="window.location.href='pages/contact.html'"
+            class="technical-gradient text-on-primary-container px-8 py-4 font-headline font-bold uppercase tracking-wider rounded-md text-sm neon-glow-primary hover:scale-[1.02] transition-transform">
+            Contato
+          </button>
+          <button onclick="window.location.href='pages/projects.html'"
+            class="glass-panel border border-secondary/30 text-secondary px-8 py-4 font-headline font-bold uppercase tracking-wider rounded-md text-sm hover:bg-secondary/10 transition-colors">
+            Explore meus projetos
+          </button>
+        </div>
+      </div>
+      <div class="flex-shrink-0 w-full md:w-2/5 order-1 md:order-2 relative">
+        <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-tertiary/10 rounded-full blur-[80px]"></div>
+        <div
+          class="relative z-10 p-2 bg-gradient-to-br from-primary/20 via-surface-container to-tertiary/20 rounded-xl">
+          <img
+            class="w-full h-auto rounded-lg grayscale-[40%] hover:grayscale-0 transition-all duration-700 object-cover aspect-[4/5] shadow-2xl"
+            data-alt="Professional portrait of a software engineer in a dark techwear jacket, minimalist lighting, blue and pink ambient rim light, high-tech background"
+            src="pages/assets/img/eu.jpeg" />
+          <!-- Floating Status Badge -->
+          <div
+            class="absolute -bottom-6 -right-6 glass-panel p-4 rounded-xl border border-outline-variant/15 neon-glow-tertiary max-w-[180px]">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="w-2 h-2 rounded-full bg-[#81ecff] animate-pulse"></span>
+              <span class="font-headline text-[10px] tracking-widest text-on-surface uppercase">Status do sistema</span>
+            </div>
+            <p class="font-body text-[11px] text-on-surface-variant leading-tight">Otimizando a latência em clusters
+              de nós distribuídos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Technical Arsenal (Bento Grid Style) -->
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+        <div>
+          <h2 class="font-headline text-4xl font-bold tracking-tight mb-2">TECH STACK</h2>
+          <div class="h-1 w-24 technical-gradient"></div>
+        </div>
+        <p class="font-body text-on-surface-variant max-w-md text-sm uppercase tracking-widest">
+          Tecnologias e ferramentas que uso para construir soluções para o mundo real.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+        <!-- C++ / Embedded -->
+        <div
+          class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border-l-4 border-primary relative overflow-hidden group hover:bg-surface-container transition-colors">
+          <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+            <span class="material-symbols-outlined text-8xl">memory</span>
+          </div>
+          <div class="relative z-10">
+            <span class="font-headline text-xs font-bold text-primary tracking-[0.3em] uppercase mb-4 block">
+              Sistemas Embarcados
+            </span>
+            <h3 class="font-headline text-3xl font-black mb-4">C++</h3>
+            <p class="font-body text-on-surface-variant mb-6">
+              Desenvolvimento de sistemas embarcados para automação, integrando hardware e software para aplicações do
+              mundo real.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="bg-surface-container-high px-3 py-1 rounded-sm text-[10px] font-headline font-bold text-secondary tracking-widest">ARDUINO</span>
+              <span
+                class="bg-surface-container-high px-3 py-1 rounded-sm text-[10px] font-headline font-bold text-secondary tracking-widest">AUTOMAÇÃO</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend / C# -->
+        <div
+          class="bg-surface-container-low p-8 rounded-xl border-l-4 border-tertiary hover:bg-surface-container transition-colors">
+          <span class="font-headline text-xs font-bold text-tertiary tracking-[0.3em] uppercase mb-4 block">
+            Desenvolvimento Backend
+          </span>
+          <h3 class="font-headline text-2xl font-black mb-4">C# / .NET</h3>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+            Construindo sistemas backend, APIs, e aplicações desktop com foco em performance e manutenabilidade.
+          </p>
+          <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+            <div class="h-full bg-tertiary w-[85%]"></div>
+          </div>
+        </div>
+
+        <!-- Infrastructure -->
+        <div
+          class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-tertiary/40 transition-colors">
+          <div class="mb-4 text-tertiary">
+            <span class="material-symbols-outlined">hub</span>
+          </div>
+          <h3 class="font-headline text-xl font-bold mb-2">INFRAESTRUTURA DE TI</h3>
+          <p class="font-body text-xs text-on-surface-variant uppercase tracking-wider mb-4">
+            SUPORTE / NETWORKS / PROTHEUS
+          </p>
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-tertiary"></div>
+            <span class="text-[10px] font-headline font-medium text-tertiary">ATIVO</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div
+          class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary hover:bg-surface-container transition-colors relative overflow-hidden group">
+          <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
+          <div class="flex justify-between items-start">
+            <div class="max-w-md">
+              <span class="font-headline text-xs font-bold text-secondary tracking-[0.3em] uppercase mb-4 block">
+                Desenvolvimento Frontend
+              </span>
+              <h3 class="font-headline text-3xl font-black mb-4">HTML / CSS / JS / REACT</h3>
+              <p class="font-body text-on-surface-variant mb-4">
+                Desenvolvimento de interfaces responsivas e interativas focadas na usabilidade e experiência do usuário.
+              </p>
+            </div>
+            <div class="hidden md:block">
+              <span class="material-symbols-outlined text-4xl text-on-surface-variant">layers</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <div class="bg-surface-container-high px-4 py-2 rounded flex items-center gap-2">
+              <div class="w-1 h-3 bg-secondary"></div>
+              <span class="font-headline text-xs font-bold uppercase tracking-widest text-on-surface">JAVASCRIPT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div
+          class="md:col-span-2 bg-surface-container p-8 rounded-xl flex flex-col justify-center border border-primary/10 hover:border-primary/40 transition-colors">
+          <div class="flex items-center gap-6">
+            <div class="p-4 bg-surface-container-highest rounded-lg">
+              <span class="material-symbols-outlined text-primary text-3xl">database</span>
+            </div>
+            <div>
+              <h3 class="font-headline text-2xl font-bold mb-1">BANCO DE DADOS</h3>
+              <p class="font-body text-on-surface-variant">
+                Experiência com MySQL and SQL Server para modelagem de dados, queries, e integração com o sistema.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+        <div>
+          <h2 class="font-headline text-4xl font-bold tracking-tight mb-2">ESCOLARIDADE E LÍNGUAS</h2>
+          <div class="h-1 w-24 technical-gradient"></div>
+        </div>
+        <p class="font-body text-on-surface-variant max-w-md text-sm uppercase tracking-widest">
+          Formação acadêmica, certificações e habilidades de comunicação.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+        <!-- Faculdade -->
+        <div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border-l-4 border-primary">
+          <span class="font-headline text-xs font-bold text-primary tracking-[0.3em] uppercase mb-4 block">
+            ENSINO SUPERIOR
+          </span>
+          <h3 class="font-headline text-2xl font-black mb-4">
+            Tecnólogo
+          </h3>
+          <p class="font-body text-on-surface-variant mb-4">
+            Tenho um diploma em Análise e Desenvolvimento de Sistemas pela UNIP (Universidade Paulista).
+            Atualmente, estou cursando Desenvolvimento de Software Multiplataforma na FATEC de Olímpia.
+          </p>
+          <div class="flex gap-2">
+            <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase">Duas faculdades</span>
+            <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase">Em processo</span>
+          </div>
+        </div>
+
+        <!-- Certificados -->
+        <div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-tertiary">
+          <span class="font-headline text-xs font-bold text-tertiary tracking-[0.3em] uppercase mb-4 block">
+            Certificados
+          </span>
+          <h3 class="font-headline text-xl font-bold mb-4">Cursos e Treinamentos</h3>
+          <p class="font-body text-sm text-on-surface-variant mb-6">
+            Aprendizado contínuo por cursos onlines em programação, engenharia de software, e tecnologia.
+            Atualmente estou em busca da minha certificação AWS foundation e certificação de proficiência em Inglês.
+          </p>
+          <div class="w-full bg-surface-container-high h-1.5 rounded-full">
+            <div class="h-full bg-tertiary w-[80%]"></div>
+          </div>
+        </div>
+
+        <!-- Idiomas -->
+        <div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary">
+          <span class="font-headline text-xs font-bold text-secondary tracking-[0.3em] uppercase mb-4 block">
+            Línguas
+          </span>
+          <h3 class="font-headline text-2xl font-black mb-4">Comunicação</h3>
+
+          <div class="space-y-3 text-sm">
+            <p>🇧🇷 Português — Nativa</p>
+            <p>🇺🇸 Inglês — Avançado</p>
+            <p>🇪🇸 Espanhol — Intermediário</p>
+            <p>🇨🇳 Mandarim — Iniciante</p>
+            <p>🇰🇷 Coreano — Iniciante</p>
+            <p>🇯🇵 Japônes — Iniciante</p>
+          </div>
+        </div>
+
+        <!-- Vídeo / inglês -->
+        <div
+          class="md:col-span-2 bg-surface-container p-8 rounded-xl border border-primary/10 hover:border-primary/40 transition-colors">
+          <div class="flex items-center gap-6">
+            <div class="p-4 bg-surface-container-highest rounded-lg">
+              <span class="material-symbols-outlined text-primary text-3xl">videocam</span>
+            </div>
+            <div>
+              <h3 class="font-headline text-xl font-bold mb-1">Comunicação em Inglês</h3>
+              <p class="font-body text-on-surface-variant mb-3">
+                Este vídeo apresenta uma explicação de "Phishing Attacks", desenvolvido como parte do meu curso
+                extracurricular
+                em Segurança da Informação,
+                conduzida inteiramente em Inglês. Ele reflete o aprendizado contínuo no meu conhecimento em
+                cybersegurança e minha habilidade de
+                me comunicar de forma técnica em uma visão global.
+              </p>
+
+              <!-- COLOCA SEU LINK AQUI -->
+              <a href="https://youtu.be/mBUZn6vqdWA" target="_blank"
+                class="text-primary text-sm font-bold uppercase tracking-widest hover:underline">
+                Assista o vídeo →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- About Content / Editorial -->
+    <section class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div class="md:col-span-7">
+        <h2 class="font-headline text-5xl font-black tracking-tight mb-12">
+          Decodificando a<br /><span class="text-secondary">DESENVOLVEDORA.</span>
+        </h2>
+
+        <div class="space-y-8 font-body text-on-surface-variant text-lg leading-relaxed">
+
+          <p>
+            Encaro a engenharia de software como uma forma de resolver <strong class="text-on-surface">problemas do
+              mundo real</strong>. Meu trabalho se concentra em desenvolver soluções práticas e eficientes, conectando
+            software, hardware e a experiência do usuário.
+          </p>
+
+          <p>
+            Minha trajetória começou no suporte técnico e na infraestrutura de TI, onde construí uma base sólida em
+            resolução de problemas, sistemas e experiência do usuário. Hoje, aplico esse conhecimento no desenvolvimento
+            de software, evoluindo de automação e sistemas embarcados para o <strong
+              class="text-on-surface">desenvolvimento de software multiplataforma</strong>.
+          </p>
+
+          <p>
+            Tenho experiência no desenvolvimento de soluções embarcadas em C++ para ambientes agrícolas, além da
+            construção de sistemas web e backend. Atualmente, meu foco está na criação de aplicações escaláveis e
+            adaptáveis que funcionam em múltiplas plataformas, sempre buscando transformar problemas complexos em
+            soluções simples e eficazes.
+          </p>
+
+          <div class="pt-8">
+            <div class="flex items-center gap-4 group cursor-pointer">
+              <div
+                class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+                <a href="pages/assets/pdf/resume.pdf" download <span class="material-symbols-outlined">download</span>
+                </a>
+              </div>
+              <span class="font-headline font-bold uppercase tracking-widest text-sm text-on-surface">
+                Baixar Currículo (PDF)
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="md:col-span-5 flex flex-col justify-center">
+        <div class="bg-surface-container-high p-10 rounded-2xl relative border border-outline-variant/15">
+
+          <div
+            class="absolute -top-4 -left-4 w-12 h-12 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+            <span class="material-symbols-outlined text-on-primary">terminal</span>
+          </div>
+
+          <div class="space-y-6">
+
+            <div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
+              <span class="font-headline text-xs text-on-surface-variant uppercase tracking-widest">
+                Base de operações
+              </span>
+              <span class="font-body text-on-surface">Brasil / Remoto</span>
+            </div>
+
+            <div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
+              <span class="font-headline text-xs text-on-surface-variant uppercase tracking-widest">
+                Foco atual
+              </span>
+              <span class="font-body text-on-surface text-tertiary">
+                Desenvolvimento de Software Multiplataforma
+              </span>
+            </div>
+
+            <div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
+              <span class="font-headline text-xs text-on-surface-variant uppercase tracking-widest">
+                Experiência
+              </span>
+              <span class="font-body text-on-surface">Começo de carreira</span>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <span class="font-headline text-xs text-on-surface-variant uppercase tracking-widest">
+                Disponibilidade
+              </span>
+              <span
+                class="px-2 py-0.5 bg-tertiary/10 text-tertiary rounded text-[10px] font-bold uppercase tracking-tighter">
+                Aberta a oportunidades
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Background Noise / Texture (Purely CSS) -->
+    <div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[1]">
+      <svg height="100%" width="100%">
+        <filter id="noise">
+          <feturbulence basefrequency="0.6" numoctaves="3" stitchtiles="stitch" type="fractalNoise"></feturbulence>
+        </filter>
+        <rect filter="url(#noise)" height="100%" width="100%"></rect>
+      </svg>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full py-12 px-8 bg-[#0e0e0e] border-t border-[#484847]/15 no-shadows">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-6 w-full opacity-80 hover:opacity-100 transition-all duration-300">
+      <div class="font-['Manrope'] text-xs tracking-widest uppercase text-[#adaaaa]">
+        © 2024 NEON ARCHITECT // CAROLINE PANECO
+      </div>
+      <div class="flex gap-8 font-['Manrope'] text-xs tracking-widest uppercase">
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="mailto:cpaneco@gmail.com">Email</a>
+        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors"
+          href="https://www.linkedin.com/in/caroline-paneco-6942641b5/">LinkedIn</a>
+      </div>
+      <div class="text-[#81ecff] font-['Space_Grotesk'] text-[10px] tracking-[0.3em] font-bold">
+        STATUS: CRIPTOGRAFADO
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+</body>
+
+</html>

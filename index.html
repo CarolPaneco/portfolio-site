@@ -1,551 +1,1394 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
+<html class="dark" lang="pt-BR">
 
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Caroline Paneco | Multiplatform Software Developer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
+  <script>
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
-          "colors": {
-            "on-error": "#490013",
-            "on-secondary-fixed": "#500086",
-            "on-primary-fixed": "#000000",
-            "inverse-surface": "#fcf9f8",
-            "outline": "#767575",
-            "error-dim": "#d73357",
-            "on-tertiary-fixed": "#003840",
-            "surface-container": "#1a1a1a",
-            "primary-dim": "#e30071",
-            "primary": "#ff89ab",
-            "secondary": "#c47fff",
-            "primary-fixed": "#ff709e",
-            "outline-variant": "#484847",
-            "primary-container": "#ff709e",
-            "surface-container-highest": "#262626",
-            "inverse-primary": "#bc005c",
-            "secondary-dim": "#a533ff",
-            "secondary-container": "#8c00e5",
-            "surface-bright": "#2c2c2c",
-            "surface-variant": "#262626",
-            "on-error-container": "#ffb2b9",
-            "on-secondary-fixed-variant": "#7900c6",
-            "on-primary-container": "#4c0021",
-            "surface-dim": "#0e0e0e",
-            "on-primary-fixed-variant": "#5d002a",
-            "inverse-on-surface": "#565555",
-            "on-surface-variant": "#adaaaa",
-            "error": "#ff6e84",
-            "surface-container-low": "#131313",
-            "on-surface": "#ffffff",
-            "surface-tint": "#ff89ab",
-            "secondary-fixed-dim": "#ddb3ff",
-            "on-secondary-container": "#fff5ff",
-            "surface-container-lowest": "#000000",
-            "on-tertiary-container": "#004d57",
-            "surface-container-high": "#20201f",
-            "surface": "#0e0e0e",
-            "error-container": "#a70138",
-            "on-secondary": "#340059",
-            "tertiary-fixed": "#00e3fd",
-            "tertiary": "#81ecff",
-            "primary-fixed-dim": "#ff5290",
-            "secondary-fixed": "#e7c5ff",
-            "on-tertiary-fixed-variant": "#005762",
-            "on-tertiary": "#005762",
-            "on-background": "#ffffff",
-            "tertiary-fixed-dim": "#00d4ec",
-            "background": "#0e0e0e",
-            "on-primary": "#62002d",
-            "tertiary-dim": "#00d4ec",
-            "tertiary-container": "#00e3fd"
+          colors: {
+            brand: {
+              pink: "#ff3b7a",
+              pinkHover: "#e02866",
+              cyan: "#00d4ec",
+              cyanGlow: "rgba(0, 212, 236, 0.35)",
+              purple: "#a855f7",
+              darkBg: "#08090d",
+              darkSurface: "#10131c",
+              darkSurfaceHigh: "#161b26",
+              darkBorder: "rgba(255, 255, 255, 0.08)",
+              lightBg: "#f8fafc",
+              lightSurface: "#ffffff",
+              lightSurfaceHigh: "#f1f5f9",
+              lightBorder: "rgba(0, 0, 0, 0.09)"
+            }
           },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
+          fontFamily: {
+            headline: ["'Space Grotesk'", "sans-serif"],
+            body: ["'Manrope'", "sans-serif"],
+            mono: ["'JetBrains Mono'", "monospace"]
           },
-          "fontFamily": {
-            "headline": ["Space Grotesk"],
-            "body": ["Manrope"],
-            "label": ["Space Grotesk"]
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 3s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 15px rgba(255, 59, 122, 0.2)' },
+              '100%': { boxShadow: '0 0 35px rgba(0, 212, 236, 0.3)' }
+            }
           }
-        },
-      },
+        }
+      }
     }
   </script>
+
   <style>
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-flex;
+      vertical-align: middle;
+      align-items: center;
+      justify-content: center;
     }
 
-    body {
-      background-color: #0e0e0e;
-      color: #ffffff;
-      font-family: 'Manrope', sans-serif;
+    /* Custom Gradients & Glassmorphism */
+    .tech-gradient {
+      background: linear-gradient(135deg, #ff3b7a 0%, #a855f7 50%, #00d4ec 100%);
     }
 
-    .technical-gradient {
-      background: linear-gradient(135deg, #ff89ab 0%, #e30071 100%);
+    .tech-gradient-text {
+      background: linear-gradient(135deg, #ff3b7a 0%, #c084fc 50%, #00d4ec 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .glass-panel {
-      background: rgba(26, 26, 26, 0.6);
-      backdrop-filter: blur(20px);
+    .glass-header {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
-    .neon-glow-primary {
-      box-shadow: 0 0 30px rgba(255, 137, 171, 0.15);
+    /* Grid Texture */
+    .dark .bg-tech-grid {
+      background-size: 36px 36px;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     }
 
-    .neon-glow-tertiary {
-      box-shadow: 0 0 30px rgba(129, 236, 255, 0.15);
+    .light .bg-tech-grid {
+      background-size: 36px 36px;
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+    }
+
+    /* Smooth transitions */
+    * {
+      transition: background-color 0.25s ease, border-color 0.25s ease;
     }
   </style>
 </head>
 
-<body class="selection:bg-primary selection:text-on-primary">
-  <!-- Top Navigation Bar -->
-  <header
-    class="sticky top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl border-b border-[#484847]/15 shadow-[0_0_20px_rgba(255,137,171,0.1)] transition-all duration-300 ease-in-out flex items-center justify-between">
-    <nav class="flex justify-between items-center w-full px-8 py-4 max-w-full mx-auto">
-      <button onclick="toggleMenu()" class="md:hidden text-white text-2xl flex items-center h-10">
-        ☰
-      </button>
-      <div id="mobileMenu"
-        class="fixed inset-0 bg-black/90 backdrop-blur-lg hidden flex-col items-center justify-center gap-8 z-50 transition-all duration-300">
-        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white text-3xl">
-          ✕
+<body class="bg-brand-darkBg text-slate-100 font-body transition-colors duration-300 selection:bg-brand-pink selection:text-white dark:bg-brand-darkBg dark:text-slate-100 bg-brand-lightBg text-slate-900">
+
+  <!-- ========================================== -->
+  <!-- TOP NAVBAR                                 -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 w-full z-50 glass-header border-b border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg/80 dark:bg-brand-darkBg/80 bg-brand-lightBg/90">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo & Live Pulse -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl tech-gradient p-[2px] transition-transform duration-300 group-hover:scale-105">
+          <div class="w-full h-full bg-brand-darkBg dark:bg-brand-darkBg bg-brand-lightBg rounded-[10px] flex items-center justify-center">
+            <span class="font-headline font-black text-lg tech-gradient-text">CP</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-headline font-extrabold text-lg tracking-tight block text-white dark:text-white text-slate-900">
+            Caroline Paneco
+          </span>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="text-[10px] font-mono tracking-widest text-emerald-400 uppercase" data-i18n="badgeStatus">
+              Disponível para Projetos
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 font-headline text-sm font-semibold tracking-wide">
+        <a href="#projetos" class="hover:text-brand-pink transition-colors dark:text-slate-300 text-slate-700 hover:scale-105 transform" data-i18n="navProjects">
+          Projetos
+        </a>
+        <a href="#habilidades" class="hover:text-brand-pink transition-colors dark:text-slate-300 text-slate-700 hover:scale-105 transform" data-i18n="navSkills">
+          Habilidades
+        </a>
+        <a href="#experiencia" class="hover:text-brand-pink transition-colors dark:text-slate-300 text-slate-700 hover:scale-105 transform" data-i18n="navExperience">
+          Experiência
+        </a>
+        <a href="#contato" class="hover:text-brand-pink transition-colors dark:text-slate-300 text-slate-700 hover:scale-105 transform" data-i18n="navContact">
+          Contato
+        </a>
+      </nav>
+
+      <!-- Control Center: Theme Toggle & Language Toggle & Connect -->
+      <div class="hidden sm:flex items-center gap-4">
+        
+        <!-- Language Switcher (PT / EN) -->
+        <div class="flex items-center p-1 rounded-xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface shadow-sm">
+          <button id="langPtBtn" onclick="setLanguage('pt')" class="px-2.5 py-1 rounded-lg text-xs font-headline font-bold transition-all bg-brand-pink text-white" title="Português">
+            PT
+          </button>
+          <button id="langEnBtn" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-lg text-xs font-headline font-bold transition-all text-slate-400 hover:text-white" title="English">
+            EN
+          </button>
+        </div>
+
+        <!-- Theme Toggle (Dark / Light) -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="w-10 h-10 rounded-xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex items-center justify-center text-slate-300 dark:text-slate-300 text-slate-700 hover:text-brand-cyan hover:border-brand-cyan transition-all shadow-sm" title="Alternar Tema Claro / Escuro">
+          <span id="themeIcon" class="material-symbols-outlined text-xl">light_mode</span>
         </button>
 
-        <a class="text-[#81ecff] border-b-2 border-[#81ecff] pb-1 transition-colors" href="index.html">Sobre Mim</a>
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/skills.html">Habilidades</a>
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/projects.html">Projetos</a>
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/hobbies.html">Hobbies</a>
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/contact.html">Contato</a>
-
-      </div>
-      <div class="text-2xl font-black tracking-tighter text-[#ff89ab] dark:text-[#ff89ab] font-['Space_Grotesk']">
-        Caroline Paneco
-      </div>
-      <div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight text-sm uppercase">
-        <a class="text-[#81ecff] border-b-2 border-[#81ecff] pb-1 transition-colors" href="index.html">Sobre Mim</a>
-
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/skills.html">Habilidades</a>
-
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/projects.html">Projetos</a>
-
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/hobbies.html">Hobbies</a>
-
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="pages/contact.html">Contato</a>
-      </div>
-      <button
-        class="bg-[#ff89ab] text-[#4c0021] font-['Space_Grotesk'] font-bold text-xs uppercase px-6 py-2 rounded-md hover:bg-[#e30071] transition-all">
-        <a href="https://www.linkedin.com/in/caroline-paneco-6942641b5/" target="_blank">
-          Conecte-se comigo
+        <!-- CTA Connect -->
+        <a href="https://www.linkedin.com/in/caroline-paneco-6942641b5/" target="_blank" class="tech-gradient text-white text-xs font-headline font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl hover:opacity-95 hover:shadow-[0_0_20px_rgba(255,59,122,0.4)] transition-all flex items-center gap-2">
+          <span class="material-symbols-outlined text-sm">handshake</span>
+          <span data-i18n="btnConnect">Conectar</span>
         </a>
+      </div>
+
+      <!-- Mobile Menu Hamburger Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-lg flex items-center justify-center border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-slate-200 dark:text-slate-200 text-slate-800">
+        <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
-    </nav>
-  </header>
-  <main class="relative overflow-hidden" id="about">
-    <!-- Hero Section -->
-    <section class="relative pt-24 pb-12 px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-      <div class="flex-1 order-2 md:order-1">
-        <div
-          class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-sm border-l-2 border-tertiary">
-          <span class="font-headline text-[10px] tracking-[0.2em] text-tertiary uppercase">Desenvolvedora de Software /
-            Junior</span>
-        </div>
-        <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mb-6">
-          Construindo arquiteturas <br />
-          <span class="text-transparent bg-clip-text technical-gradient">Digitais.</span>
-        </h1>
-        <p class="font-body text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-        <p class="font-body text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-          Desenvolvedora de Software brasileira, 21 anos, atualmente cursando minha segunda graduação na área de
-          Tecnologia. <br>
-          Desenvolvedora de Software com foco na resolução de problemas. Seja em aplicações web, mobile ou sistemas
-          embarcados,
-          desenvolvo soluções eficientes integrando hardware, software e experiência do usuário para otimizar processos
-          e desempenho. </p>
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <button onclick="window.location.href='pages/contact.html'"
-            class="technical-gradient text-on-primary-container px-8 py-4 font-headline font-bold uppercase tracking-wider rounded-md text-sm neon-glow-primary hover:scale-[1.02] transition-transform">
-            Contato
-          </button>
-          <button onclick="window.location.href='pages/projects.html'"
-            class="glass-panel border border-secondary/30 text-secondary px-8 py-4 font-headline font-bold uppercase tracking-wider rounded-md text-sm hover:bg-secondary/10 transition-colors">
-            Explore meus projetos
-          </button>
-        </div>
-      </div>
-      <div class="flex-shrink-0 w-full md:w-2/5 order-1 md:order-2 relative">
-        <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
-        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-tertiary/10 rounded-full blur-[80px]"></div>
-        <div
-          class="relative z-10 p-2 bg-gradient-to-br from-primary/20 via-surface-container to-tertiary/20 rounded-xl">
-          <img
-            class="w-full h-auto rounded-lg grayscale-[40%] hover:grayscale-0 transition-all duration-700 object-cover aspect-[4/5] shadow-2xl"
-            data-alt="Professional portrait of a software engineer in a dark techwear jacket, minimalist lighting, blue and pink ambient rim light, high-tech background"
-            src="pages/assets/img/eu.jpeg" />
-          <!-- Floating Status Badge -->
-          <div
-            class="absolute -bottom-6 -right-6 glass-panel p-4 rounded-xl border border-outline-variant/15 neon-glow-tertiary max-w-[180px]">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="w-2 h-2 rounded-full bg-[#81ecff] animate-pulse"></span>
-              <span class="font-headline text-[10px] tracking-widest text-on-surface uppercase">Status do sistema</span>
-            </div>
-            <p class="font-body text-[11px] text-on-surface-variant leading-tight">Otimizando a latência em clusters
-              de nós distribuídos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Technical Arsenal (Bento Grid Style) -->
-    <section class="py-24 px-8 max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-        <div>
-          <h2 class="font-headline text-4xl font-bold tracking-tight mb-2">TECH STACK</h2>
-          <div class="h-1 w-24 technical-gradient"></div>
-        </div>
-        <p class="font-body text-on-surface-variant max-w-md text-sm uppercase tracking-widest">
-          Tecnologias e ferramentas que uso para construir soluções para o mundo real.
-        </p>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-        <!-- C++ / Embedded -->
-        <div
-          class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border-l-4 border-primary relative overflow-hidden group hover:bg-surface-container transition-colors">
-          <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-            <span class="material-symbols-outlined text-8xl">memory</span>
-          </div>
-          <div class="relative z-10">
-            <span class="font-headline text-xs font-bold text-primary tracking-[0.3em] uppercase mb-4 block">
-              Sistemas Embarcados
-            </span>
-            <h3 class="font-headline text-3xl font-black mb-4">C++</h3>
-            <p class="font-body text-on-surface-variant mb-6">
-              Desenvolvimento de sistemas embarcados para automação, integrando hardware e software para aplicações do
-              mundo real.
-            </p>
-            <div class="flex gap-2">
-              <span
-                class="bg-surface-container-high px-3 py-1 rounded-sm text-[10px] font-headline font-bold text-secondary tracking-widest">ARDUINO</span>
-              <span
-                class="bg-surface-container-high px-3 py-1 rounded-sm text-[10px] font-headline font-bold text-secondary tracking-widest">AUTOMAÇÃO</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Backend / C# -->
-        <div
-          class="bg-surface-container-low p-8 rounded-xl border-l-4 border-tertiary hover:bg-surface-container transition-colors">
-          <span class="font-headline text-xs font-bold text-tertiary tracking-[0.3em] uppercase mb-4 block">
-            Desenvolvimento Backend
-          </span>
-          <h3 class="font-headline text-2xl font-black mb-4">C# / .NET</h3>
-          <p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
-            Construindo sistemas backend, APIs, e aplicações desktop com foco em performance e manutenabilidade.
-          </p>
-          <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
-            <div class="h-full bg-tertiary w-[85%]"></div>
-          </div>
-        </div>
-
-        <!-- Infrastructure -->
-        <div
-          class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-tertiary/40 transition-colors">
-          <div class="mb-4 text-tertiary">
-            <span class="material-symbols-outlined">hub</span>
-          </div>
-          <h3 class="font-headline text-xl font-bold mb-2">INFRAESTRUTURA DE TI</h3>
-          <p class="font-body text-xs text-on-surface-variant uppercase tracking-wider mb-4">
-            SUPORTE / NETWORKS / PROTHEUS
-          </p>
-          <div class="flex items-center gap-2">
-            <div class="w-2 h-2 rounded-full bg-tertiary"></div>
-            <span class="text-[10px] font-headline font-medium text-tertiary">ATIVO</span>
-          </div>
-        </div>
-
-        <!-- Frontend -->
-        <div
-          class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary hover:bg-surface-container transition-colors relative overflow-hidden group">
-          <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
-          <div class="flex justify-between items-start">
-            <div class="max-w-md">
-              <span class="font-headline text-xs font-bold text-secondary tracking-[0.3em] uppercase mb-4 block">
-                Desenvolvimento Frontend
-              </span>
-              <h3 class="font-headline text-3xl font-black mb-4">HTML / CSS / JS / REACT</h3>
-              <p class="font-body text-on-surface-variant mb-4">
-                Desenvolvimento de interfaces responsivas e interativas focadas na usabilidade e experiência do usuário.
-              </p>
-            </div>
-            <div class="hidden md:block">
-              <span class="material-symbols-outlined text-4xl text-on-surface-variant">layers</span>
-            </div>
-          </div>
-          <div class="flex flex-wrap gap-3 mt-4">
-            <div class="bg-surface-container-high px-4 py-2 rounded flex items-center gap-2">
-              <div class="w-1 h-3 bg-secondary"></div>
-              <span class="font-headline text-xs font-bold uppercase tracking-widest text-on-surface">JAVASCRIPT</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Database -->
-        <div
-          class="md:col-span-2 bg-surface-container p-8 rounded-xl flex flex-col justify-center border border-primary/10 hover:border-primary/40 transition-colors">
-          <div class="flex items-center gap-6">
-            <div class="p-4 bg-surface-container-highest rounded-lg">
-              <span class="material-symbols-outlined text-primary text-3xl">database</span>
-            </div>
-            <div>
-              <h3 class="font-headline text-2xl font-bold mb-1">BANCO DE DADOS</h3>
-              <p class="font-body text-on-surface-variant">
-                Experiência com MySQL and SQL Server para modelagem de dados, queries, e integração com o sistema.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section class="py-24 px-8 max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-        <div>
-          <h2 class="font-headline text-4xl font-bold tracking-tight mb-2">ESCOLARIDADE E LÍNGUAS</h2>
-          <div class="h-1 w-24 technical-gradient"></div>
-        </div>
-        <p class="font-body text-on-surface-variant max-w-md text-sm uppercase tracking-widest">
-          Formação acadêmica, certificações e habilidades de comunicação.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-        <!-- Faculdade -->
-        <div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border-l-4 border-primary">
-          <span class="font-headline text-xs font-bold text-primary tracking-[0.3em] uppercase mb-4 block">
-            ENSINO SUPERIOR
-          </span>
-          <h3 class="font-headline text-2xl font-black mb-4">
-            Tecnólogo
-          </h3>
-          <p class="font-body text-on-surface-variant mb-4">
-            Tenho um diploma em Análise e Desenvolvimento de Sistemas pela UNIP (Universidade Paulista).
-            Atualmente, estou cursando Desenvolvimento de Software Multiplataforma na FATEC de Olímpia.
-          </p>
-          <div class="flex gap-2">
-            <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase">Duas faculdades</span>
-            <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase">Em processo</span>
-          </div>
-        </div>
-
-        <!-- Certificados -->
-        <div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-tertiary">
-          <span class="font-headline text-xs font-bold text-tertiary tracking-[0.3em] uppercase mb-4 block">
-            Certificados
-          </span>
-          <h3 class="font-headline text-xl font-bold mb-4">Cursos e Treinamentos</h3>
-          <p class="font-body text-sm text-on-surface-variant mb-6">
-            Aprendizado contínuo por cursos onlines em programação, engenharia de software, e tecnologia.
-            Atualmente estou em busca da minha certificação AWS foundation e certificação de proficiência em Inglês.
-          </p>
-          <div class="w-full bg-surface-container-high h-1.5 rounded-full">
-            <div class="h-full bg-tertiary w-[80%]"></div>
-          </div>
-        </div>
-
-        <!-- Idiomas -->
-        <div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary">
-          <span class="font-headline text-xs font-bold text-secondary tracking-[0.3em] uppercase mb-4 block">
-            Línguas
-          </span>
-          <h3 class="font-headline text-2xl font-black mb-4">Comunicação</h3>
-
-          <div class="space-y-3 text-sm">
-            <p>🇧🇷 Português — Nativa</p>
-            <p>🇺🇸 Inglês — Avançado</p>
-            <p>🇪🇸 Espanhol — Intermediário</p>
-            <p>🇨🇳 Mandarim — Iniciante</p>
-            <p>🇰🇷 Coreano — Iniciante</p>
-            <p>🇯🇵 Japônes — Iniciante</p>
-          </div>
-        </div>
-
-        <!-- Vídeo / inglês -->
-        <div
-          class="md:col-span-2 bg-surface-container p-8 rounded-xl border border-primary/10 hover:border-primary/40 transition-colors">
-          <div class="flex items-center gap-6">
-            <div class="p-4 bg-surface-container-highest rounded-lg">
-              <span class="material-symbols-outlined text-primary text-3xl">videocam</span>
-            </div>
-            <div>
-              <h3 class="font-headline text-xl font-bold mb-1">Comunicação em Inglês</h3>
-              <p class="font-body text-on-surface-variant mb-3">
-                Este vídeo apresenta uma explicação de "Phishing Attacks", desenvolvido como parte do meu curso
-                extracurricular
-                em Segurança da Informação,
-                conduzida inteiramente em Inglês. Ele reflete o aprendizado contínuo no meu conhecimento em
-                cybersegurança e minha habilidade de
-                me comunicar de forma técnica em uma visão global.
-              </p>
-
-              <!-- COLOCA SEU LINK AQUI -->
-              <a href="https://youtu.be/mBUZn6vqdWA" target="_blank"
-                class="text-primary text-sm font-bold uppercase tracking-widest hover:underline">
-                Assista o vídeo →
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- About Content / Editorial -->
-    <section class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
-      <div class="md:col-span-7">
-        <h2 class="font-headline text-5xl font-black tracking-tight mb-12">
-          Decodificando a<br /><span class="text-secondary">DESENVOLVEDORA.</span>
-        </h2>
-
-        <div class="space-y-8 font-body text-on-surface-variant text-lg leading-relaxed">
-
-          <p>
-            Encaro a engenharia de software como uma forma de resolver <strong class="text-on-surface">problemas do
-              mundo real</strong>. Meu trabalho se concentra em desenvolver soluções práticas e eficientes, conectando
-            software, hardware e a experiência do usuário.
-          </p>
-
-          <p>
-            Minha trajetória começou no suporte técnico e na infraestrutura de TI, onde construí uma base sólida em
-            resolução de problemas, sistemas e experiência do usuário. Hoje, aplico esse conhecimento no desenvolvimento
-            de software, evoluindo de automação e sistemas embarcados para o <strong
-              class="text-on-surface">desenvolvimento de software multiplataforma</strong>.
-          </p>
-
-          <p>
-            Tenho experiência no desenvolvimento de soluções embarcadas em C++ para ambientes agrícolas, além da
-            construção de sistemas web e backend. Atualmente, meu foco está na criação de aplicações escaláveis e
-            adaptáveis que funcionam em múltiplas plataformas, sempre buscando transformar problemas complexos em
-            soluções simples e eficazes.
-          </p>
-
-          <div class="pt-8">
-            <div class="flex items-center gap-4 group cursor-pointer">
-              <div
-                class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
-                <a href="pages/assets/pdf/resume.pdf" download <span class="material-symbols-outlined">download</span>
-                </a>
-              </div>
-              <span class="font-headline font-bold uppercase tracking-widest text-sm text-on-surface">
-                Baixar Currículo (PDF)
-              </span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="md:col-span-5 flex flex-col justify-center">
-        <div class="bg-surface-container-high p-10 rounded-2xl relative border border-outline-variant/15">
-
-          <div
-            class="absolute -top-4 -left-4 w-12 h-12 bg-primary flex items-center justify-center rounded-lg shadow-lg">
-            <span class="material-symbols-outlined text-on-primary">terminal</span>
-          </div>
-
-          <div class="space-y-6">
-
-            <div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
-              <span class="font-headline text-xs text-on-surface-variant uppercase tracking-widest">
-                Base de operações
-              </span>
-              <span class="font-body text-on-surface">Brasil / Remoto</span>
-            </div>
-
-            <div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
-              <span class="font-headline text-xs text-on-surface-variant uppercase tracking-widest">
-                Foco atual
-              </span>
-              <span class="font-body text-on-surface text-tertiary">
-                Desenvolvimento de Software Multiplataforma
-              </span>
-            </div>
-
-            <div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
-              <span class="font-headline text-xs text-on-surface-variant uppercase tracking-widest">
-                Experiência
-              </span>
-              <span class="font-body text-on-surface">Começo de carreira</span>
-            </div>
-
-            <div class="flex justify-between items-center">
-              <span class="font-headline text-xs text-on-surface-variant uppercase tracking-widest">
-                Disponibilidade
-              </span>
-              <span
-                class="px-2 py-0.5 bg-tertiary/10 text-tertiary rounded text-[10px] font-bold uppercase tracking-tighter">
-                Aberta a oportunidades
-              </span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Background Noise / Texture (Purely CSS) -->
-    <div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[1]">
-      <svg height="100%" width="100%">
-        <filter id="noise">
-          <feturbulence basefrequency="0.6" numoctaves="3" stitchtiles="stitch" type="fractalNoise"></feturbulence>
-        </filter>
-        <rect filter="url(#noise)" height="100%" width="100%"></rect>
-      </svg>
     </div>
-  </main>
-  <!-- Footer -->
-  <footer class="w-full py-12 px-8 bg-[#0e0e0e] border-t border-[#484847]/15 no-shadows">
-    <div
-      class="flex flex-col md:flex-row justify-between items-center gap-6 w-full opacity-80 hover:opacity-100 transition-all duration-300">
-      <div class="font-['Manrope'] text-xs tracking-widest uppercase text-[#adaaaa]">
-        © 2024 NEON ARCHITECT // CAROLINE PANECO
+
+    <!-- Mobile Drawer Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface/95 dark:bg-brand-darkSurface/95 bg-brand-lightSurface/95 px-6 py-6 flex-col gap-5">
+      <nav class="flex flex-col gap-4 font-headline text-base font-semibold">
+        <a href="#projetos" onclick="toggleMobileMenu()" class="text-slate-300 dark:text-slate-300 text-slate-700 hover:text-brand-pink" data-i18n="navProjects">Projetos</a>
+        <a href="#habilidades" onclick="toggleMobileMenu()" class="text-slate-300 dark:text-slate-300 text-slate-700 hover:text-brand-pink" data-i18n="navSkills">Habilidades</a>
+        <a href="#experiencia" onclick="toggleMobileMenu()" class="text-slate-300 dark:text-slate-300 text-slate-700 hover:text-brand-pink" data-i18n="navExperience">Experiência</a>
+        <a href="#contato" onclick="toggleMobileMenu()" class="text-slate-300 dark:text-slate-300 text-slate-700 hover:text-brand-pink" data-i18n="navContact">Contato</a>
+      </nav>
+      
+      <div class="pt-4 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono text-slate-400">Idioma:</span>
+          <button onclick="setLanguage('pt')" class="px-3 py-1 rounded bg-brand-pink text-white text-xs font-bold">PT</button>
+          <button onclick="setLanguage('en')" class="px-3 py-1 rounded border border-brand-darkBorder text-slate-300 text-xs font-bold">EN</button>
+        </div>
+        <button onclick="toggleTheme()" class="px-3 py-1 rounded border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center gap-1.5 text-xs text-slate-300 dark:text-slate-300 text-slate-700">
+          <span class="material-symbols-outlined text-sm">brightness_medium</span>
+          <span data-i18n="btnTheme">Tema</span>
+        </button>
       </div>
-      <div class="flex gap-8 font-['Manrope'] text-xs tracking-widest uppercase">
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors" href="mailto:cpaneco@gmail.com">Email</a>
-        <a class="text-[#adaaaa] hover:text-[#ff89ab] transition-colors"
-          href="https://www.linkedin.com/in/caroline-paneco-6942641b5/">LinkedIn</a>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION                               -->
+  <!-- ========================================== -->
+  <section id="hero" class="relative pt-20 pb-28 px-6 max-w-7xl mx-auto bg-tech-grid overflow-hidden">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Copy & CTAs -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- High-tech Role Pill -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+          <span class="font-mono text-xs font-semibold uppercase tracking-widest text-brand-cyan" data-i18n="heroRole">
+            Multiplatform Software Developer | .NET MVC
+          </span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="font-headline text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]">
+          <span data-i18n="heroTitle1">Construindo</span> <br />
+          <span class="tech-gradient-text" data-i18n="heroTitle2">Arquiteturas Digitais</span> <br />
+          <span class="dark:text-white text-slate-900" data-i18n="heroTitle3">de Alta Performance.</span>
+        </h1>
+
+        <!-- Professional Summary from new CV -->
+        <p class="font-body text-base sm:text-lg dark:text-slate-400 text-slate-600 leading-relaxed max-w-2xl" data-i18n="heroSummary">
+          Desenvolvedora de software multiplataforma com foco em arquitetura .NET e desenvolvimento de aplicações, com experiência prática em ASP.NET Core MVC, aplicações web e mobile, APIs REST e soluções orientadas a banco de dados. Atuação adicional em sistemas embarcados, análise de dados agrícolas, telemetria e automação de processos.
+        </p>
+
+        <!-- CTAs & Action Hub -->
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#projetos" class="tech-gradient text-white px-8 py-4 rounded-xl font-headline font-bold text-sm uppercase tracking-wider hover:shadow-[0_0_30px_rgba(255,59,122,0.4)] transition-all flex items-center gap-3">
+            <span class="material-symbols-outlined text-lg">code</span>
+            <span data-i18n="btnExploreProjects">Explorar Projetos</span>
+          </a>
+
+          <a href="pages/assets/pdf/resume.pdf" download class="px-7 py-4 rounded-xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface hover:border-brand-cyan hover:text-brand-cyan transition-all font-headline font-bold text-sm uppercase tracking-wider flex items-center gap-2 shadow-sm">
+            <span class="material-symbols-outlined text-lg">download</span>
+            <span data-i18n="btnDownloadResume">Baixar Currículo (PDF)</span>
+          </a>
+        </div>
+
+        <!-- Quick Stats Grid -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder max-w-xl">
+          <div>
+            <span class="font-headline text-3xl font-black text-brand-pink block">+9</span>
+            <span class="text-xs font-mono dark:text-slate-400 text-slate-500 uppercase" data-i18n="statProjects">Projetos Reais</span>
+          </div>
+          <div>
+            <span class="font-headline text-3xl font-black text-brand-cyan block">2</span>
+            <span class="text-xs font-mono dark:text-slate-400 text-slate-500 uppercase" data-i18n="statDegrees">Graduações Tech</span>
+          </div>
+          <div>
+            <span class="font-headline text-3xl font-black text-brand-purple block">Tereos</span>
+            <span class="text-xs font-mono dark:text-slate-400 text-slate-500 uppercase" data-i18n="statExp">Controle & Dados</span>
+          </div>
+        </div>
+
       </div>
-      <div class="text-[#81ecff] font-['Space_Grotesk'] text-[10px] tracking-[0.3em] font-bold">
-        STATUS: CRIPTOGRAFADO
+
+      <!-- Right Column: Interactive Profile Card -->
+      <div class="lg:col-span-5 relative flex justify-center">
+        <!-- Ambient Ambient Glows -->
+        <div class="absolute -top-10 -right-10 w-72 h-72 bg-brand-pink/15 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-brand-cyan/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="relative w-full max-w-md rounded-3xl p-1 bg-gradient-to-br from-brand-pink/40 via-brand-purple/20 to-brand-cyan/40 shadow-2xl">
+          <div class="bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface rounded-[22px] overflow-hidden p-6 space-y-6">
+            
+            <!-- Portrait Image -->
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/5] border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+              <img src="pages/assets/img/eu.jpeg" alt="Caroline Paneco" class="w-full h-full object-cover grayscale-[25%] hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+              
+              <!-- Floating Pill Tag -->
+              <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl backdrop-blur-md bg-black/60 border border-white/10 flex items-center justify-between text-white">
+                <div>
+                  <p class="font-headline text-xs font-bold">Caroline Paneco</p>
+                  <p class="text-[11px] text-slate-300 font-mono">Olímpia, SP • Brasil</p>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-brand-pink/80 text-[10px] font-mono font-bold uppercase">.NET • AgTech</span>
+              </div>
+            </div>
+
+            <!-- Terminal Info Box -->
+            <div class="rounded-xl p-4 bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-red-400"></span><span class="w-2 h-2 rounded-full bg-yellow-400"></span><span class="w-2 h-2 rounded-full bg-emerald-400"></span> terminal</span>
+                <span class="text-brand-cyan">zsh // active</span>
+              </div>
+              <p class="font-mono text-xs text-brand-pink">
+                &gt; stack = [.NET MVC, C#, Python, React 19, Supabase, Power BI]
+              </p>
+              <p class="font-mono text-[11px] text-slate-400 dark:text-slate-400 text-slate-600">
+                // Foco: Eficiência, escalabilidade e valor comercial real.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PROJECTS SHOWCASE SECTION                  -->
+  <!-- ========================================== -->
+  <section id="projetos" class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+    
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-3 h-3 rounded-full bg-brand-pink"></span>
+          <span class="font-mono text-xs uppercase tracking-widest text-brand-pink" data-i18n="tagProjectsSection">Portfólio de Software</span>
+        </div>
+        <h2 class="font-headline text-4xl sm:text-5xl font-black tracking-tight" data-i18n="titleProjectsSection">
+          Projetos & Aplicações em Produção
+        </h2>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap gap-2 p-1.5 rounded-2xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface">
+        <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all bg-brand-pink text-white" data-filter="all" data-i18n="filterAll">
+          Todos
+        </button>
+        <button onclick="filterProjects('web-dotnet')" class="filter-btn px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all dark:text-slate-400 text-slate-600 hover:text-white" data-filter="web-dotnet" data-i18n="filterWebDotNet">
+          .NET & Web
+        </button>
+        <button onclick="filterProjects('ai-data')" class="filter-btn px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all dark:text-slate-400 text-slate-600 hover:text-white" data-filter="ai-data" data-i18n="filterAiData">
+          IA & Dados
+        </button>
+        <button onclick="filterProjects('mobile-embedded')" class="filter-btn px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all dark:text-slate-400 text-slate-600 hover:text-white" data-filter="mobile-embedded" data-i18n="filterMobileEmbedded">
+          Mobile & Embarcados
+        </button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- ============================================== -->
+      <!-- 1. PAULA PRESENTES (E-COMMERCE COM VÍDEO & PDF) -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="web-dotnet">
+        <div class="space-y-4">
+          
+          <!-- Media Player Slot: Video & Screenshots -->
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-black relative aspect-video shadow-inner">
+            <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+              <source src="videos/video.mp4" type="video/mp4">
+              Seu navegador não suporta reprodução de vídeos.
+            </video>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">ASP.NET Core MVC</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">PostgreSQL</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-[10px] font-mono font-semibold uppercase">Tailwind CSS</span>
+          </div>
+
+          <!-- Title & Description -->
+          <h3 class="font-headline text-2xl font-bold">Paula Presentes E-commerce</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descPaulaPresentes">
+            Plataforma comercial profissional de e-commerce desenvolvida em ASP.NET Core MVC e PostgreSQL. Conta com catálogo dinâmico de produtos, autenticação de usuários, carrinho de compras, galeria com carrossel moderno e painel administrativo completo de controle de produtos, estoque, vendas e caixa.
+          </p>
+
+          <!-- Screenshots Preview Strip -->
+          <div class="grid grid-cols-3 gap-2 pt-2">
+            <img src="img/inicial.png" alt="Tela Inicial" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+            <img src="img/detalhe.png" alt="Detalhe do Produto" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+            <img src="img/image.png" alt="Painel Admin" class="rounded-lg border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+          </div>
+        </div>
+
+        <!-- Action Links: Documentação e Contato (Sem link do site, como solicitado) -->
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between gap-3">
+          <a href="docs/documentacao_tecnica_paulapresentes.pdf" target="_blank" class="flex-1 px-4 py-2.5 rounded-xl border border-brand-pink/40 bg-brand-pink/10 hover:bg-brand-pink hover:text-white transition-all text-xs font-headline font-bold text-brand-pink text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">description</span>
+            <span data-i18n="btnTechnicalDocs">Ver Documentação (PDF)</span>
+          </a>
+          <a href="https://wa.me/5517991734669" target="_blank" class="px-4 py-2.5 rounded-xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder hover:border-emerald-500 hover:text-emerald-400 transition-all text-xs font-headline font-bold text-center flex items-center gap-1" title="Falar no WhatsApp">
+            <span class="material-symbols-outlined text-sm">chat</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 2. DÉBORA DOCES (E-COMMERCE & GESTÃO ADMIN)    -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="web-dotnet">
+        <div class="space-y-4">
+          
+          <!-- Mockup/Media Slot for Débora Doces -->
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-amber-500/10 via-brand-darkSurface to-brand-pink/10 relative aspect-video flex flex-col items-center justify-center p-6 text-center group-hover:scale-[1.01] transition-transform">
+            <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">cake</span>
+            <p class="font-headline font-bold text-sm">Débora Doces • Confeitaria Artesanal</p>
+            <span class="text-[11px] font-mono text-slate-400">E-commerce de Encomendas & Painel de Gestão</span>
+            <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-black/60 text-[9px] font-mono text-emerald-400 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Produção Ativa
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[10px] font-mono font-semibold uppercase">E-commerce & Pedidos</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Gestão Administrativa</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-mono font-semibold uppercase">Fluxo Personalizado</span>
+          </div>
+
+          <!-- Title & Description -->
+          <h3 class="font-headline text-2xl font-bold">Débora Doces</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descDeboraDoces">
+            Solução completa para confeitaria artesanal unindo loja virtual voltada ao cliente e sistema administrativo. Possui catálogo dinâmico de doces e sobremesas, tela de montagem personalizada de pedidos (escolha de massas, recheios, coberturas e agendamento de data/hora), carrinho de compras e painel administrativo com controle em tempo real de pedidos, status de produção, ficha de clientes e estoque de insumos.
+          </p>
+
+          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs space-y-1">
+            <p class="font-headline font-semibold text-brand-cyan flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm">check_circle</span>
+              <span data-i18n="deboraHighlight1">Tela de pedidos customizados interativa</span>
+            </p>
+            <p class="font-headline font-semibold text-brand-pink flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm">dashboard_customize</span>
+              <span data-i18n="deboraHighlight2">Painel administrativo completo de pedidos e caixa</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Action Links: Visitar Site da Cliente & Espaço de Mídia -->
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center gap-3">
+          <a href="https://deboradoces.com" target="_blank" class="flex-1 px-4 py-2.5 rounded-xl border border-brand-cyan/40 bg-brand-cyan/10 hover:bg-brand-cyan hover:text-black transition-all text-xs font-headline font-bold text-brand-cyan text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">open_in_new</span>
+            <span data-i18n="btnVisitClientSite">Acessar Site da Cliente</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 3. ALEVS (STREETWEAR AUTORAL FULL-STACK)       -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-purple/50 hover:shadow-[0_10px_40px_rgba(168,85,247,0.15)] transition-all duration-500" data-category="web-dotnet">
+        <div class="space-y-4">
+          
+          <!-- Mockup/Media Slot for Alevs -->
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-purple-900/30 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+            <span class="material-symbols-outlined text-5xl text-purple-400 mb-2">apparel</span>
+            <h4 class="font-headline font-black text-lg tracking-widest text-white">ALEVS</h4>
+            <span class="text-[11px] font-mono text-purple-300">Streetwear Autoral E-commerce</span>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-purple-400">
+              TanStack Start • React 19
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 border border-purple-500/20 text-[10px] font-mono font-semibold uppercase">React 19</span>
+            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Supabase</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-semibold uppercase">Tailwind v4</span>
+          </div>
+
+          <!-- Title & Description -->
+          <h3 class="font-headline text-2xl font-bold">ALEVS Streetwear</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descAlevs">
+            Loja virtual autoral de streetwear desenvolvida com TanStack Start, React 19, Tailwind CSS v4 e Supabase. Conta com storefront contínua com filtros dinâmicos de categorias, modal de visualização rápida com seletor de tamanho e medidas, carrinho com persistência em localStorage, suporte a cupons promocionais e fluxo simulado de checkout em 3 etapas (Pix, Cartão e Boleto).
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 text-xs font-mono text-slate-400 pt-1">
+            <span class="flex items-center gap-1"><span class="text-brand-pink">✓</span> Drizzle ORM</span>
+            <span class="flex items-center gap-1"><span class="text-brand-pink">✓</span> Validação Zod</span>
+            <span class="flex items-center gap-1"><span class="text-brand-pink">✓</span> Testes Vitest</span>
+            <span class="flex items-center gap-1"><span class="text-brand-pink">✓</span> Nitro / Vite 8</span>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
+          <a href="https://github.com/CarolPaneco/alevs" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-purple/40 bg-brand-purple/10 hover:bg-brand-purple hover:text-white transition-all text-xs font-headline font-bold text-purple-400 text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 4. PORTAL DE IA (IA NOSSA - GEMINI & OPENAI)   -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="ai-data">
+        <div class="space-y-4">
+          
+          <!-- Mockup/Media Slot for IA Nossa -->
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-cyan-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+            <span class="material-symbols-outlined text-5xl text-brand-cyan mb-2">smart_toy</span>
+            <h4 class="font-headline font-black text-lg text-white">Portal de IA</h4>
+            <span class="text-[11px] font-mono text-cyan-300">API Corporativa Gemini & OpenAI</span>
+            <div class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-brand-cyan">
+              SSE Streaming • Zero Client Keys
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Google Gemini</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-semibold uppercase">Node.js</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-mono font-semibold uppercase">OpenAI Spec</span>
+          </div>
+
+          <!-- Title & Description -->
+          <h3 class="font-headline text-2xl font-bold">Portal de IA (IA Nossa)</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descIaNossa">
+            Portal web corporativo em Node.js para conversação com provedores de Inteligência Artificial aprovados. Suporta a API oficial Gemini (generateContent) e endpoints compatíveis com OpenAI. Arquitetura orientada à segurança onde as chaves e credenciais sensíveis residem estritamente no servidor, eliminando vazamento de tokens no navegador.
+          </p>
+
+          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono text-slate-400">
+            <span class="text-emerald-400 font-bold">Deploy:</span> Render Web Service • Suporte a variáveis seguras
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
+          <a href="https://github.com/CarolPaneco/ia_nossa" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-cyan/40 bg-brand-cyan/10 hover:bg-brand-cyan hover:text-black transition-all text-xs font-headline font-bold text-brand-cyan text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 5. IDEAFLOW / SPARK MINDFUL FLOW               -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="ai-data">
+        <div class="space-y-4">
+          
+          <!-- Mockup/Media Slot for IdeaFlow -->
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-pink-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+            <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">lightbulb</span>
+            <h4 class="font-headline font-black text-lg text-white">IdeaFlow</h4>
+            <span class="text-[11px] font-mono text-pink-300">Spark Mindful Flow • IA & Recharts</span>
+            <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-brand-pink">
+              Ação Imediata 15 min
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">IA Ideação</span>
+            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Recharts</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-mono font-semibold uppercase">Google Calendar</span>
+          </div>
+
+          <!-- Title & Description -->
+          <h3 class="font-headline text-2xl font-bold">IdeaFlow</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descIdeaFlow">
+            Sistema inteligente para ideação e execução de projetos. Transforma ideias brutas em passos acionáveis com IA, gera planos com ação imediata em 15 minutos para quebrar procrastinação, mantém histórico de motivos de mudança de escopo (pivôs), analisa métricas visuais com Recharts e exporta agendamentos para o Google Calendar e arquivo .ics.
+          </p>
+
+          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs space-y-1">
+            <p class="font-mono text-slate-400">✓ Funil de 5 estágios: Faísca ➔ Realidade</p>
+            <p class="font-mono text-slate-400">✓ Diagnóstico com IA Coach & Desbloqueio</p>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
+          <a href="https://github.com/CarolPaneco/spark-mindful-flow" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-pink/40 bg-brand-pink/10 hover:bg-brand-pink hover:text-white transition-all text-xs font-headline font-bold text-brand-pink text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 6. TELEMETRIA AGRÍCOLA (MODULAR & INDEXEDDB)   -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-emerald-500/50 hover:shadow-[0_10px_40px_rgba(16,185,129,0.15)] transition-all duration-500" data-category="ai-data">
+        <div class="space-y-4">
+          
+          <!-- Mockup/Media Slot for Telemetria -->
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-emerald-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+            <span class="material-symbols-outlined text-5xl text-emerald-400 mb-2">precision_manufacturing</span>
+            <h4 class="font-headline font-black text-lg text-white">Telemetria Agrícola</h4>
+            <span class="text-[11px] font-mono text-emerald-300">Colhedora • Tratos • Plantadora</span>
+            <div class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-emerald-400">
+              IndexedDB Incremental Offline
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-semibold uppercase">AgTech</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">IndexedDB</span>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-mono font-semibold uppercase">Bases Compartilhadas</span>
+          </div>
+
+          <!-- Title & Description -->
+          <h3 class="font-headline text-2xl font-bold">Telemetria Agrícola</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descTelemetria">
+            Arquitetura modular de software para controle e análise de telemetria de frotas agrícolas (Colhedora, Tratos e Plantadora). Armazenamento incremental no IndexedDB do navegador, permitindo a ingestão diária de novos arquivos de dados sem sobrescrever o histórico, com relatórios de produtividade de cana, blocos e dados pluviométricos.
+          </p>
+
+          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono text-slate-400 space-y-1">
+            <p>✓ Filtragem temporal por equipamento e talhão</p>
+            <p>✓ Módulos integrados: Colhedora, Plantadora e Tratos</p>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
+          <a href="https://github.com/CarolPaneco/projeto-telemetria" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500 hover:text-white transition-all text-xs font-headline font-bold text-emerald-400 text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 7. ROBÔ LEITOR (OCR EM PYTHON & FLASK)         -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="ai-data">
+        <div class="space-y-4">
+          
+          <!-- Mockup/Media Slot for Robô Leitor -->
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-blue-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+            <span class="material-symbols-outlined text-5xl text-blue-400 mb-2">document_scanner</span>
+            <h4 class="font-headline font-black text-lg text-white">Robô Leitor</h4>
+            <span class="text-[11px] font-mono text-blue-300">OCR & Extração Automatizada de PDFs</span>
+            <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-black/70 text-[9px] font-mono text-blue-400">
+              Python • Tesseract OCR
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Python & Flask</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Tesseract OCR</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-semibold uppercase">PDF & Imagens</span>
+          </div>
+
+          <!-- Title & Description -->
+          <h3 class="font-headline text-2xl font-bold">Robô Leitor (OCR)</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descRoboLeitor">
+            Aplicação web em Python/Flask para ingestão e extração automatizada de texto em PDFs e imagens (PNG, JPG, TIFF) via Tesseract OCR em português. Arquitetura preparada para leitura de tabelas, extração de campos estruturados em lote para planilhas CSV/Excel e suporte a pipelines de IA para leitura de documentos.
+          </p>
+
+          <div class="p-3 rounded-xl bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono text-slate-400">
+            Formatos: PDF, PNG, JPG, JPEG, TIFF • Reconhecimento em PT-BR
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
+          <a href="https://github.com/CarolPaneco/leitor-documentos" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-blue-500/40 bg-blue-500/10 hover:bg-blue-500 hover:text-white transition-all text-xs font-headline font-bold text-blue-400 text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 8. CRUD API (SISTEMA WEB .NET & REACT)         -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.15)] transition-all duration-500" data-category="web-dotnet">
+        <div class="space-y-4">
+          
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-slate-900 via-black to-slate-950 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+            <span class="material-symbols-outlined text-5xl text-brand-pink mb-2">database</span>
+            <h4 class="font-headline font-black text-lg text-white">CRUD API</h4>
+            <span class="text-[11px] font-mono text-slate-400">ASP.NET Core • React • SQL Server</span>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">ASP.NET Core</span>
+            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">React</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan text-[10px] font-mono font-semibold uppercase">SQL Server</span>
+          </div>
+
+          <h3 class="font-headline text-2xl font-bold">CRUD API (SistemaWeb)</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descCrudApi">
+            Sistema de gerenciamento full-stack com API RESTful em ASP.NET Core e frontend moderno em React. Implementa operações completas de CRUD, modelagem relacional em SQL Server e integração de dados cliente-servidor de alta performance.
+          </p>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
+          <a href="https://github.com/CarolPaneco/SistemaWeb" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-pink/40 bg-brand-pink/10 hover:bg-brand-pink hover:text-white transition-all text-xs font-headline font-bold text-brand-pink text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 9. KANBAN APP (FLUTTER & DART)                 -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-6 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-[0_10px_40px_rgba(0,212,236,0.15)] transition-all duration-500" data-category="mobile-embedded">
+        <div class="space-y-4">
+          
+          <div class="rounded-2xl overflow-hidden border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-gradient-to-br from-cyan-950/40 via-black to-slate-900 relative aspect-video flex flex-col items-center justify-center p-6 text-center">
+            <span class="material-symbols-outlined text-5xl text-brand-cyan mb-2">view_kanban</span>
+            <h4 class="font-headline font-black text-lg text-white">Kanban App</h4>
+            <span class="text-[11px] font-mono text-cyan-300">Flutter • Dart • Drag & Drop UI</span>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">Flutter</span>
+            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Dart</span>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-mono font-semibold uppercase">Drag & Drop</span>
+          </div>
+
+          <h3 class="font-headline text-2xl font-bold">Kanban App</h3>
+          <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descKanban">
+            Aplicação de gestão de tarefas e fluxos de trabalho inspirada na metodologia ágil Kanban. Desenvolvida em Flutter e Dart, conta com movimentação fluida de cards via Drag & Drop, persistência de estados e layout adaptado para telas mobile e desktop.
+          </p>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder flex items-center justify-between">
+          <a href="https://github.com/CarolPaneco/KANBAN" target="_blank" class="w-full px-4 py-2.5 rounded-xl border border-brand-cyan/40 bg-brand-cyan/10 hover:bg-brand-cyan hover:text-black transition-all text-xs font-headline font-bold text-brand-cyan text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- TECHNICAL SKILLS ARSENAL                   -->
+  <!-- ========================================== -->
+  <section id="habilidades" class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 text-brand-cyan text-xs font-mono uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+        <span data-i18n="tagSkills">Competências Técnicas</span>
+      </div>
+      <h2 class="font-headline text-4xl sm:text-5xl font-black tracking-tight" data-i18n="titleSkills">
+        Stack Tecnológica & Arsenal de Engenharia
+      </h2>
+      <p class="text-sm sm:text-base dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="subSkills">
+        Tecnologias, linguagens e frameworks aplicados na construção de arquiteturas escaláveis, desde o backend .NET a modelos de dados, telemetria e interfaces reativas.
+      </p>
+    </div>
+
+    <!-- Skills Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1. .NET & Backend -->
+      <div class="p-8 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface space-y-5 hover:border-brand-pink/40 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-brand-pink/10 text-brand-pink border border-brand-pink/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">terminal</span>
+        </div>
+        <h3 class="font-headline text-xl font-bold" data-i18n="skillCatDotNet">.NET & Backend Architecture</h3>
+        <p class="text-xs dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="skillCatDotNetDesc">
+          Foco em robustez, alta disponibilidade e padrões arquiteturais corporativos.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">C#</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">ASP.NET Core MVC</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Entity Framework Core</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">RESTful APIs</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Python</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">C++</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">POO & Clean Code</span>
+        </div>
+      </div>
+
+      <!-- 2. Web & Mobile -->
+      <div class="p-8 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface space-y-5 hover:border-brand-cyan/40 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">devices</span>
+        </div>
+        <h3 class="font-headline text-xl font-bold" data-i18n="skillCatWebMobile">Web & Multiplataforma</h3>
+        <p class="text-xs dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="skillCatWebMobileDesc">
+          Aplicações reativas, interfaces adaptativas e desenvolvimento mobile nativo/híbrido.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">React 19</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Flutter & Dart</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Tailwind CSS v4</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">TanStack Start & Router</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">JavaScript (ES6+)</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Android Studio</span>
+        </div>
+      </div>
+
+      <!-- 3. Dados & IA -->
+      <div class="p-8 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface space-y-5 hover:border-purple-500/40 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">neurology</span>
+        </div>
+        <h3 class="font-headline text-xl font-bold" data-i18n="skillCatDataAi">Dados, IA & Telemetria</h3>
+        <p class="text-xs dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="skillCatDataAiDesc">
+          Decisões guiadas por dados, fluxos de OCR, inteligência generativa e telemetria.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Power BI</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Redes Neurais</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Soluções com IA</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Telemetria Agrícola</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Tesseract OCR</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Análise de Dados</span>
+        </div>
+      </div>
+
+      <!-- 4. Bancos de Dados -->
+      <div class="p-8 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface space-y-5 hover:border-emerald-500/40 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">database</span>
+        </div>
+        <h3 class="font-headline text-xl font-bold" data-i18n="skillCatDatabases">Bancos de Dados & Modelagem</h3>
+        <p class="text-xs dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="skillCatDatabasesDesc">
+          Persistência estruturada, normalização, consultas eficientes e integridade relacional.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">PostgreSQL</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">SQL Server</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">SQLite</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">IndexedDB</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Modelagem Relacional</span>
+        </div>
+      </div>
+
+      <!-- 5. DevOps & Práticas -->
+      <div class="p-8 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface space-y-5 hover:border-amber-500/40 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">integration_instructions</span>
+        </div>
+        <h3 class="font-headline text-xl font-bold" data-i18n="skillCatDevops">DevOps, Ferramentas & Práticas</h3>
+        <p class="text-xs dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="skillCatDevopsDesc">
+          Integração contínua, governança de código e entregas ágeis orientadas a valor.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Docker</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Azure DevOps</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Git & GitHub</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Power Automate</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Arduino & Embarcados</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Testes Unitários & Carga</span>
+          <span class="px-3 py-1.5 rounded-lg bg-brand-darkBg dark:bg-brand-darkBg bg-slate-100 border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder text-xs font-mono font-semibold">Scrum & Ágil</span>
+        </div>
+      </div>
+
+      <!-- 6. Idiomas & Diferenciais -->
+      <div class="p-8 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface space-y-5 hover:border-brand-pink/40 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-brand-pink/10 text-brand-pink border border-brand-pink/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">translate</span>
+        </div>
+        <h3 class="font-headline text-xl font-bold" data-i18n="skillCatLanguages">Comunicação & Diferenciais</h3>
+        <p class="text-xs dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="skillCatLanguagesDesc">
+          Mentalidade de dona, disciplina e comunicação técnica internacional.
+        </p>
+        <div class="space-y-3 pt-2 text-xs font-mono">
+          <div class="flex justify-between items-center border-b border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder pb-2">
+            <span>🇧🇷 Português</span>
+            <span class="text-brand-cyan font-bold" data-i18n="langNative">Nativo</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder pb-2">
+            <span>🇺🇸 Inglês</span>
+            <span class="text-brand-pink font-bold">B2 (Upper-Intermediate)</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder pb-2">
+            <span>🇪🇸 Espanhol</span>
+            <span class="text-purple-400 font-bold" data-i18n="langAdvanced">Avançado</span>
+          </div>
+          <div class="pt-2 text-[11px] text-slate-400 leading-relaxed">
+            <span class="text-brand-pink">★ Core:</span> Continuous learning • Ownership mindset • Disciplina • Resolução sistemática de problemas.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PROFESSIONAL EXPERIENCE & EDUCATION        -->
+  <!-- ========================================== -->
+  <section id="experiencia" class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Left Column: Professional Experience -->
+      <div class="lg:col-span-7 space-y-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-pink/30 bg-brand-pink/10 text-brand-pink text-xs font-mono uppercase tracking-widest mb-3">
+            <span class="w-2 h-2 rounded-full bg-brand-pink"></span>
+            <span data-i18n="tagExperience">Trajetória Profissional</span>
+          </div>
+          <h2 class="font-headline text-3xl sm:text-4xl font-black tracking-tight" data-i18n="titleExperience">
+            Experiência Profissional
+          </h2>
+        </div>
+
+        <!-- Experience Timeline -->
+        <div class="space-y-6 relative border-l-2 border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder pl-6 ml-2">
+          
+          <!-- Experience 1: Tereos -->
+          <div class="relative space-y-3">
+            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-cyan border-4 border-brand-darkBg dark:border-brand-darkBg border-brand-lightBg"></span>
+            
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="font-headline text-xl font-bold text-white dark:text-white text-slate-900" data-i18n="expTereosRole">
+                Estagiária de Controle Agrícola — Análise de Dados & Melhoria Contínua
+              </h3>
+              <span class="px-3 py-1 rounded-full bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-xs font-mono font-bold" data-i18n="expTereosPeriod">
+                Ago 2026 – Presente
+              </span>
+            </div>
+
+            <p class="text-sm font-headline font-semibold text-brand-pink">Tereos</p>
+
+            <ul class="text-sm dark:text-slate-400 text-slate-600 space-y-2 list-disc list-inside leading-relaxed">
+              <li data-i18n="expTereosTask1">Desenvolvimento de soluções tecnológicas para suporte ao controle agrícola, análise de dados e melhoria contínua de processos.</li>
+              <li data-i18n="expTereosTask2">Utilização de Power BI e Python para apoiar a criação de relatórios, fluxos analíticos e geração de insights operacionais estratégicos.</li>
+              <li data-i18n="expTereosTask3">Exploração de abordagens baseadas em Inteligência Artificial para aprimorar rotinas e fundamentar decisões orientadas por dados.</li>
+            </ul>
+          </div>
+
+          <!-- Experience 2: AGTech -->
+          <div class="relative space-y-3 pt-6">
+            <span class="absolute -left-[31px] top-7.5 w-4 h-4 rounded-full bg-brand-pink border-4 border-brand-darkBg dark:border-brand-darkBg border-brand-lightBg"></span>
+            
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="font-headline text-xl font-bold text-white dark:text-white text-slate-900" data-i18n="expAgtechRole">
+                Desenvolvedora Júnior
+              </h3>
+              <span class="px-3 py-1 rounded-full bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-xs font-mono font-bold" data-i18n="expAgtechPeriod">
+                Fev 2025 – Mar 2026
+              </span>
+            </div>
+
+            <p class="text-sm font-headline font-semibold text-brand-cyan">AGTech</p>
+
+            <ul class="text-sm dark:text-slate-400 text-slate-600 space-y-2 list-disc list-inside leading-relaxed">
+              <li data-i18n="expAgtechTask1">Desenvolvimento e sustentação de soluções em sistemas embarcados envolvendo eletrônica, Arduino, tecnologias Bosch e C++.</li>
+              <li data-i18n="expAgtechTask2">Aplicação rigorosa de Programação Orientada a Objetos (POO) colaborando ativamente em rotinas orientadas a Scrum.</li>
+              <li data-i18n="expAgtechTask3">Uso contínuo do Azure DevOps para gestão de backlog de tarefas, controle de versão e integração em time.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Education & Academic Credentials -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-xs font-mono uppercase tracking-widest mb-3">
+            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+            <span data-i18n="tagEducation">Formação Acadêmica</span>
+          </div>
+          <h2 class="font-headline text-3xl sm:text-4xl font-black tracking-tight" data-i18n="titleEducation">
+            Ensino Superior
+          </h2>
+        </div>
+
+        <div class="space-y-6">
+          
+          <!-- Education 1: FATEC -->
+          <div class="p-6 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface space-y-2 hover:border-brand-cyan/40 transition-all">
+            <div class="flex justify-between items-start">
+              <span class="px-2.5 py-0.5 rounded bg-brand-cyan/10 text-brand-cyan text-[10px] font-mono font-bold uppercase" data-i18n="eduFatecStatus">
+                Em Andamento (Previsão 2028)
+              </span>
+              <span class="text-xs font-mono text-slate-400">2026 – 2028</span>
+            </div>
+            <h4 class="font-headline text-lg font-bold" data-i18n="eduFatecTitle">
+              Tecnólogo em Desenvolvimento de Software Multiplataforma
+            </h4>
+            <p class="text-xs font-headline font-semibold text-brand-cyan">FATEC de Olímpia</p>
+            <p class="text-xs dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="eduFatecDesc">
+              Foco em arquitetura web, mobile, computação em nuvem, metodologias ágeis e desenvolvimento multiplataforma moderno.
+            </p>
+          </div>
+
+          <!-- Education 2: UNIP -->
+          <div class="p-6 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface space-y-2 hover:border-brand-pink/40 transition-all">
+            <div class="flex justify-between items-start">
+              <span class="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-bold uppercase" data-i18n="eduUnipStatus">
+                Graduação Concluída
+              </span>
+              <span class="text-xs font-mono text-slate-400">2023 – 2024</span>
+            </div>
+            <h4 class="font-headline text-lg font-bold" data-i18n="eduUnipTitle">
+              Tecnólogo em Análise e Desenvolvimento de Sistemas
+            </h4>
+            <p class="text-xs font-headline font-semibold text-brand-pink">Universidade Paulista (UNIP)</p>
+            <p class="text-xs dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="eduUnipDesc">
+              Formação sólida em algoritmos, modelagem de banco de dados relacional, engenharia de software e arquitetura de sistemas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- CONTACT SECTION                            -->
+  <!-- ========================================== -->
+  <section id="contato" class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Contact Info -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 text-brand-cyan text-xs font-mono uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+          <span data-i18n="tagContact">Vamos Conversar</span>
+        </div>
+        
+        <h2 class="font-headline text-4xl sm:text-5xl font-black tracking-tight" data-i18n="titleContact">
+          Pronta para Novos Desafios & Soluções.
+        </h2>
+        
+        <p class="text-sm dark:text-slate-400 text-slate-600 leading-relaxed" data-i18n="descContact">
+          Seja para uma oportunidade de desenvolvimento de software, consultoria em sistemas, automação ou uma troca técnica de ideias — entre em contato diretamente.
+        </p>
+
+        <div class="space-y-4 pt-4">
+          <a href="mailto:cpaneco@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface hover:border-brand-pink transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-brand-pink/10 text-brand-pink flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">mail</span>
+            </div>
+            <div>
+              <p class="text-xs font-mono text-slate-400" data-i18n="labelEmail">E-mail Direto</p>
+              <p class="font-headline font-bold text-sm text-white dark:text-white text-slate-900">cpaneco@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/caroline-paneco-6942641b5/" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface hover:border-brand-cyan transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-brand-cyan/10 text-brand-cyan flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">link</span>
+            </div>
+            <div>
+              <p class="text-xs font-mono text-slate-400">LinkedIn</p>
+              <p class="font-headline font-bold text-sm text-white dark:text-white text-slate-900">linkedin.com/in/caroline-paneco-6942641b5</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/CarolPaneco" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface hover:border-purple-500 transition-all group">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">terminal</span>
+            </div>
+            <div>
+              <p class="text-xs font-mono text-slate-400">GitHub</p>
+              <p class="font-headline font-bold text-sm text-white dark:text-white text-slate-900">github.com/CarolPaneco</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Functional Formspree Form -->
+      <div class="lg:col-span-7">
+        <div class="p-8 sm:p-10 rounded-3xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkSurface dark:bg-brand-darkSurface bg-brand-lightSurface shadow-2xl relative">
+          <h3 class="font-headline text-2xl font-bold mb-6" data-i18n="formTitle">Enviar Mensagem</h3>
+
+          <form action="https://formspree.io/f/xzdylnjr" method="POST" class="space-y-6">
+            <div class="space-y-2">
+              <label class="font-headline text-xs font-bold uppercase tracking-wider text-slate-300 dark:text-slate-300 text-slate-700" data-i18n="formName">Seu Nome</label>
+              <input type="text" name="name" required placeholder="Ex: Lucas Silva" class="w-full px-4 py-3.5 rounded-xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 text-sm focus:outline-none focus:border-brand-cyan transition-all" />
+            </div>
+
+            <div class="space-y-2">
+              <label class="font-headline text-xs font-bold uppercase tracking-wider text-slate-300 dark:text-slate-300 text-slate-700" data-i18n="formEmail">Seu E-mail</label>
+              <input type="email" name="email" required placeholder="seuemail@empresa.com" class="w-full px-4 py-3.5 rounded-xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 text-sm focus:outline-none focus:border-brand-cyan transition-all" />
+            </div>
+
+            <div class="space-y-2">
+              <label class="font-headline text-xs font-bold uppercase tracking-wider text-slate-300 dark:text-slate-300 text-slate-700" data-i18n="formMessage">Mensagem ou Proposta</label>
+              <textarea name="message" rows="4" required placeholder="Olá Caroline, gostaria de conversar sobre..." class="w-full px-4 py-3.5 rounded-xl border border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-slate-50 text-sm focus:outline-none focus:border-brand-cyan transition-all resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full tech-gradient text-white py-4 rounded-xl font-headline font-bold text-sm uppercase tracking-wider hover:opacity-95 hover:shadow-[0_0_30px_rgba(255,59,122,0.4)] transition-all flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-lg">send</span>
+              <span data-i18n="btnSendMessage">Enviar Mensagem</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="py-12 px-6 border-t border-brand-darkBorder dark:border-brand-darkBorder border-brand-lightBorder bg-brand-darkBg dark:bg-brand-darkBg bg-brand-lightBg text-xs font-mono text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 Caroline Paneco • Multiplatform Software Developer
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#hero" class="hover:text-brand-pink transition-colors">Voltar ao topo ↑</a>
+        <a href="https://github.com/CarolPaneco/portfolio-site" target="_blank" class="hover:text-brand-cyan transition-colors">Código-Fonte no GitHub</a>
       </div>
     </div>
   </footer>
+
+  <!-- ========================================== -->
+  <!-- IMAGE PREVIEW MODAL                        -->
+  <!-- ========================================== -->
+  <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeImageModal()">
+    <div class="relative max-w-4xl max-h-[90vh] overflow-hidden rounded-2xl border border-brand-darkBorder">
+      <img id="modalImg" src="" alt="Ampliado" class="w-full h-auto object-contain max-h-[85vh]" />
+      <button onclick="closeImageModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/70 text-white flex items-center justify-center hover:bg-brand-pink transition-colors">
+        ✕
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT: THEME & BILINGUAL i18n ENGINE  -->
+  <!-- ========================================== -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("mobileMenu");
-      menu.classList.toggle("hidden");
+    // Bilingual Dictionary
+    const i18n = {
+      pt: {
+        badgeStatus: "Disponível para Projetos",
+        navProjects: "Projetos",
+        navSkills: "Habilidades",
+        navExperience: "Experiência",
+        navContact: "Contato",
+        btnConnect: "Conectar",
+        btnTheme: "Tema",
+        heroRole: "Multiplatform Software Developer | .NET MVC",
+        heroTitle1: "Construindo",
+        heroTitle2: "Arquiteturas Digitais",
+        heroTitle3: "de Alta Performance.",
+        heroSummary: "Desenvolvedora de software multiplataforma com foco em arquitetura .NET e desenvolvimento de aplicações, com experiência prática em ASP.NET Core MVC, aplicações web e mobile, APIs REST e soluções orientadas a banco de dados. Atuação adicional em sistemas embarcados, análise de dados agrícolas, telemetria e automação de processos.",
+        btnExploreProjects: "Explorar Projetos",
+        btnDownloadResume: "Baixar Currículo (PDF)",
+        statProjects: "Projetos Reais",
+        statDegrees: "Graduações Tech",
+        statExp: "Controle & Dados",
+        tagProjectsSection: "Portfólio de Software",
+        titleProjectsSection: "Projetos & Aplicações em Produção",
+        filterAll: "Todos",
+        filterWebDotNet: ".NET & Web",
+        filterAiData: "IA & Dados",
+        filterMobileEmbedded: "Mobile & Embarcados",
+        descPaulaPresentes: "Plataforma comercial profissional de e-commerce desenvolvida em ASP.NET Core MVC e PostgreSQL. Conta com catálogo dinâmico de produtos, autenticação de usuários, carrinho de compras, galeria com carrossel moderno e painel administrativo completo de controle de produtos, estoque, vendas e caixa.",
+        btnTechnicalDocs: "Ver Documentação (PDF)",
+        descDeboraDoces: "Solução completa para confeitaria artesanal unindo loja virtual voltada ao cliente e sistema administrativo. Possui catálogo dinâmico de doces e sobremesas, tela de montagem personalizada de pedidos (escolha de massas, recheios, coberturas e agendamento de data/hora), carrinho de compras e painel administrativo com controle em tempo real de pedidos, status de produção, ficha de clientes e estoque de insumos.",
+        deboraHighlight1: "Tela de pedidos customizados interativa",
+        deboraHighlight2: "Painel administrativo completo de pedidos e caixa",
+        btnVisitClientSite: "Acessar Site da Cliente",
+        descAlevs: "Loja virtual autoral de streetwear desenvolvida com TanStack Start, React 19, Tailwind CSS v4 e Supabase. Conta com storefront contínua com filtros dinâmicos de categorias, modal de visualização rápida com seletor de tamanho e medidas, carrinho com persistência em localStorage, suporte a cupons promocionais e fluxo simulado de checkout em 3 etapas (Pix, Cartão e Boleto).",
+        descIaNossa: "Portal web corporativo em Node.js para conversação com provedores de Inteligência Artificial aprovados. Suporta a API oficial Gemini (generateContent) e endpoints compatíveis com OpenAI. Arquitetura orientada à segurança onde as chaves e credenciais sensíveis residem estritamente no servidor, eliminando vazamento de tokens no navegador.",
+        descIdeaFlow: "Sistema inteligente para ideação e execução de projetos. Transforma ideias brutas em passos acionáveis com IA, gera planos com ação imediata em 15 minutos para quebrar procrastinação, mantém histórico de motivos de mudança de escopo (pivôs), analisa métricas visuais com Recharts e exporta agendamentos para o Google Calendar e arquivo .ics.",
+        descTelemetria: "Arquitetura modular de software para controle e análise de telemetria de frotas agrícolas (Colhedora, Tratos e Plantadora). Armazenamento incremental no IndexedDB do navegador, permitindo a ingestão diária de novos arquivos de dados sem sobrescrever o histórico, com relatórios de produtividade de cana, blocos e dados pluviométricos.",
+        descRoboLeitor: "Aplicação web em Python/Flask para ingestão e extração automatizada de texto em PDFs e imagens (PNG, JPG, TIFF) via Tesseract OCR em português. Arquitetura preparada para leitura de tabelas, extração de campos estruturados em lote para planilhas CSV/Excel e suporte a pipelines de IA para leitura de documentos.",
+        descCrudApi: "Sistema de gerenciamento full-stack com API RESTful em ASP.NET Core e frontend moderno em React. Implementa operações completas de CRUD, modelagem relacional em SQL Server e integração de dados cliente-servidor de alta performance.",
+        descKanban: "Aplicação de gestão de tarefas e fluxos de trabalho inspirada na metodologia ágil Kanban. Desenvolvida em Flutter e Dart, conta com movimentação fluida de cards via Drag & Drop, persistência de estados e layout adaptado para telas mobile e desktop.",
+        tagSkills: "Competências Técnicas",
+        titleSkills: "Stack Tecnológica & Arsenal de Engenharia",
+        subSkills: "Tecnologias, linguagens e frameworks aplicados na construção de arquiteturas escaláveis, desde o backend .NET a modelos de dados, telemetria e interfaces reativas.",
+        skillCatDotNet: ".NET & Arquitetura Backend",
+        skillCatDotNetDesc: "Foco em robustez, alta disponibilidade e padrões arquiteturais corporativos.",
+        skillCatWebMobile: "Web & Multiplataforma",
+        skillCatWebMobileDesc: "Aplicações reativas, interfaces adaptativas e desenvolvimento mobile nativo/híbrido.",
+        skillCatDataAi: "Dados, IA & Telemetria",
+        skillCatDataAiDesc: "Decisões guiadas por dados, fluxos de OCR, inteligência generativa e telemetria.",
+        skillCatDatabases: "Bancos de Dados & Modelagem",
+        skillCatDatabasesDesc: "Persistência estruturada, normalização, consultas eficientes e integridade relacional.",
+        skillCatDevops: "DevOps, Ferramentas & Práticas",
+        skillCatDevopsDesc: "Integração contínua, governança de código e entregas ágeis orientadas a valor.",
+        skillCatLanguages: "Comunicação & Diferenciais",
+        skillCatLanguagesDesc: "Mentalidade de dona, disciplina e comunicação técnica internacional.",
+        langNative: "Nativo",
+        langAdvanced: "Avançado",
+        tagExperience: "Trajetória Profissional",
+        titleExperience: "Experiência Profissional",
+        expTereosRole: "Estagiária de Controle Agrícola — Análise de Dados & Melhoria Contínua",
+        expTereosPeriod: "Ago 2026 – Presente",
+        expTereosTask1: "Desenvolvimento de soluções tecnológicas para suporte ao controle agrícola, análise de dados e melhoria contínua de processos.",
+        expTereosTask2: "Utilização de Power BI e Python para apoiar a criação de relatórios, fluxos analíticos e geração de insights operacionais estratégicos.",
+        expTereosTask3: "Exploração de abordagens baseadas em Inteligência Artificial para aprimorar rotinas e fundamentar decisões orientadas por dados.",
+        expAgtechRole: "Desenvolvedora Júnior",
+        expAgtechPeriod: "Fev 2025 – Mar 2026",
+        expAgtechTask1: "Desenvolvimento e sustentação de soluções em sistemas embarcados envolvendo eletrônica, Arduino, tecnologias Bosch e C++.",
+        expAgtechTask2: "Aplicação rigorosa de Programação Orientada a Objetos (POO) colaborando ativamente em rotinas orientadas a Scrum.",
+        expAgtechTask3: "Uso contínuo do Azure DevOps para gestão de backlog de tarefas, controle de versão e integração em time.",
+        tagEducation: "Formação Acadêmica",
+        titleEducation: "Ensino Superior",
+        eduFatecStatus: "Em Andamento (Previsão 2028)",
+        eduFatecTitle: "Tecnólogo em Desenvolvimento de Software Multiplataforma",
+        eduFatecDesc: "Foco em arquitetura web, mobile, computação em nuvem, metodologias ágeis e desenvolvimento multiplataforma moderno.",
+        eduUnipStatus: "Graduação Concluída",
+        eduUnipTitle: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+        eduUnipDesc: "Formação sólida em algoritmos, modelagem de banco de dados relacional, engenharia de software e arquitetura de sistemas.",
+        tagContact: "Vamos Conversar",
+        titleContact: "Pronta para Novos Desafios & Soluções.",
+        descContact: "Seja para uma oportunidade de desenvolvimento de software, consultoria em sistemas, automação ou uma troca técnica de ideias — entre em contato diretamente.",
+        labelEmail: "E-mail Direto",
+        formTitle: "Enviar Mensagem",
+        formName: "Seu Nome",
+        formEmail: "Seu E-mail",
+        formMessage: "Mensagem ou Proposta",
+        btnSendMessage: "Enviar Mensagem"
+      },
+      en: {
+        badgeStatus: "Available for Opportunities",
+        navProjects: "Projects",
+        navSkills: "Skills",
+        navExperience: "Experience",
+        navContact: "Contact",
+        btnConnect: "Connect",
+        btnTheme: "Theme",
+        heroRole: "Multiplatform Software Developer | .NET MVC",
+        heroTitle1: "Building",
+        heroTitle2: "Digital Architectures",
+        heroTitle3: "for High Performance.",
+        heroSummary: "Multiplatform software developer focused on .NET architecture and application development, with hands-on experience in ASP.NET Core MVC, web and mobile applications, REST APIs, and database-backed solutions. Additional experience in embedded systems, agricultural data analysis, telemetry, and process automation.",
+        btnExploreProjects: "Explore Projects",
+        btnDownloadResume: "Download Resume (PDF)",
+        statProjects: "Real Projects",
+        statDegrees: "Tech Degrees",
+        statExp: "Control & Data",
+        tagProjectsSection: "Software Portfolio",
+        titleProjectsSection: "Production Projects & Applications",
+        filterAll: "All",
+        filterWebDotNet: ".NET & Web",
+        filterAiData: "AI & Data",
+        filterMobileEmbedded: "Mobile & Embedded",
+        descPaulaPresentes: "Full-scale commercial online sales platform built with ASP.NET Core MVC and PostgreSQL. Features dynamic product catalog, user authentication, shopping cart, modern carousel gallery, and an administrative dashboard for inventory, orders, and cash flow control.",
+        btnTechnicalDocs: "View Technical Docs (PDF)",
+        descDeboraDoces: "Comprehensive artisan confectionery platform combining customer-facing e-commerce and administrative management. Features dynamic sweets catalog, interactive custom order flow (cake base, fillings, toppings, and scheduled delivery), shopping cart, and an admin dashboard tracking real-time orders, production status, client profiles, and inventory.",
+        deboraHighlight1: "Interactive custom cake and sweets order flow",
+        deboraHighlight2: "Complete administrative panel for orders and finances",
+        btnVisitClientSite: "Visit Client Website",
+        descAlevs: "Authorial streetwear online store built with TanStack Start, React 19, Tailwind CSS v4, and Supabase. Features continuous storefront navigation, instant category filtering, quick-view modal with sizing guide, persistent localStorage cart, dynamic discount coupons, and a 3-step checkout simulation (Pix, Credit Card, Bank Slip).",
+        descIaNossa: "Secure corporate portal built in Node.js for interacting with enterprise-approved AI models. Supports official Gemini API (generateContent) and OpenAI-compatible endpoints. Engineered with zero-client-leakage server-side token management, real-time SSE streaming, and dynamic model switching.",
+        descIdeaFlow: "Productivity and intentional execution system. Breaks down raw concepts into actionable steps with AI, generates immediate 15-minute action plans to eliminate procrastination, maintains timeline of scope pivots with rationale history, displays visual metrics via Recharts, and exports to Google Calendar and .ics files.",
+        descTelemetria: "Modular software architecture for agricultural fleet telemetry control and analysis (Harvesters, Field Treatments, and Planters). Features offline-first incremental browser IndexedDB storage allowing daily data ingestion without history loss, correlated with sugarcane yield and rainfall records.",
+        descRoboLeitor: "Python/Flask web application for intelligent physical and digital document processing. Automates text extraction from PDFs and images (PNG, JPG, TIFF) via Tesseract OCR in Portuguese, batch structures data for CSV/Excel export, and feeds LLM document ingestion pipelines.",
+        descCrudApi: "Full-stack enterprise management system developed with ASP.NET Core RESTful API and responsive React frontend. Implements complete CRUD operations, SQL Server relational modeling, and high-performance client-server data synchronization.",
+        descKanban: "Agile workflow management application built with Flutter and Dart. Features fluid drag-and-drop task card movement across stages, state persistence, and responsive UI tailored for both mobile and desktop screens.",
+        tagSkills: "Technical Competencies",
+        titleSkills: "Tech Stack & Engineering Arsenal",
+        subSkills: "Technologies, languages, and frameworks applied in building scalable architectures, from .NET backend to data models, telemetry, and reactive interfaces.",
+        skillCatDotNet: ".NET & Backend Architecture",
+        skillCatDotNetDesc: "Focused on robustness, high availability, and enterprise architectural patterns.",
+        skillCatWebMobile: "Web & Multiplatform",
+        skillCatWebMobileDesc: "Reactive applications, adaptive user interfaces, and hybrid/native mobile development.",
+        skillCatDataAi: "Data, AI & Telemetry",
+        skillCatDataAiDesc: "Data-driven decisions, OCR pipelines, generative intelligence, and telemetry.",
+        skillCatDatabases: "Databases & Modeling",
+        skillCatDatabasesDesc: "Structured persistence, normalization, efficient queries, and relational integrity.",
+        skillCatDevops: "DevOps, Tools & Practices",
+        skillCatDevopsDesc: "Continuous integration, code governance, and value-driven agile delivery.",
+        skillCatLanguages: "Communication & Strengths",
+        skillCatLanguagesDesc: "Ownership mindset, discipline, and international technical communication.",
+        langNative: "Native",
+        langAdvanced: "Advanced",
+        tagExperience: "Career Trajectory",
+        titleExperience: "Professional Experience",
+        expTereosRole: "Agricultural Control Intern — Data Analysis & Continuous Improvement",
+        expTereosPeriod: "Aug 2026 – Present",
+        expTereosTask1: "Developing technology-driven solutions to support agricultural control, data analysis, and continuous improvement.",
+        expTereosTask2: "Using Power BI and Python to support reporting, data workflows, and operational insights.",
+        expTereosTask3: "Exploring AI-based approaches to improve processes and support data-informed decisions.",
+        expAgtechRole: "Junior Developer",
+        expAgtechPeriod: "Feb 2025 – Mar 2026",
+        expAgtechTask1: "Developed and supported embedded-system solutions involving electronics, Arduino, Bosch technologies, and C++.",
+        expAgtechTask2: "Applied object-oriented programming and collaborated within Scrum-based development workflows.",
+        expAgtechTask3: "Used Azure DevOps to support development tasks and team collaboration.",
+        tagEducation: "Academic Background",
+        titleEducation: "Higher Education",
+        eduFatecStatus: "In Progress (Expected 2028)",
+        eduFatecTitle: "Associate Degree in Multiplatform Software Development",
+        eduFatecDesc: "Focus on web & mobile architecture, cloud computing, agile methods, and modern multiplatform software development.",
+        eduUnipStatus: "Completed Degree",
+        eduUnipTitle: "Degree in Systems Analysis and Development",
+        eduUnipDesc: "Solid foundation in algorithms, relational database modeling, software engineering, and systems architecture.",
+        tagContact: "Let's Connect",
+        titleContact: "Ready for New Challenges & Solutions.",
+        descContact: "Whether for a software development opportunity, systems consulting, automation, or technical exchange — get in touch directly.",
+        labelEmail: "Direct Email",
+        formTitle: "Send a Message",
+        formName: "Your Name",
+        formEmail: "Your Email",
+        formMessage: "Message or Opportunity",
+        btnSendMessage: "Send Message"
+      }
+    };
+
+    // Current State
+    let currentLang = localStorage.getItem('site_lang') || 'pt';
+    let currentTheme = localStorage.getItem('site_theme') || 'dark';
+
+    // Apply Language
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('site_lang', lang);
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
+      // Update All Translatable Elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang] && i18n[lang][key]) {
+          el.innerText = i18n[lang][key];
+        }
+      });
+
+      // Update Button Styles in Header
+      const ptBtn = document.getElementById('langPtBtn');
+      const enBtn = document.getElementById('langEnBtn');
+      if (lang === 'pt') {
+        ptBtn.className = "px-2.5 py-1 rounded-lg text-xs font-headline font-bold transition-all bg-brand-pink text-white";
+        enBtn.className = "px-2.5 py-1 rounded-lg text-xs font-headline font-bold transition-all text-slate-400 hover:text-white";
+      } else {
+        enBtn.className = "px-2.5 py-1 rounded-lg text-xs font-headline font-bold transition-all bg-brand-pink text-white";
+        ptBtn.className = "px-2.5 py-1 rounded-lg text-xs font-headline font-bold transition-all text-slate-400 hover:text-white";
+      }
     }
+
+    // Apply Theme (Dark / Light)
+    function applyTheme(theme) {
+      currentTheme = theme;
+      localStorage.setItem('site_theme', theme);
+      const htmlEl = document.documentElement;
+      const themeIcon = document.getElementById('themeIcon');
+
+      if (theme === 'dark') {
+        htmlEl.classList.add('dark');
+        htmlEl.classList.remove('light');
+        if (themeIcon) themeIcon.innerText = 'light_mode';
+      } else {
+        htmlEl.classList.remove('dark');
+        htmlEl.classList.add('light');
+        if (themeIcon) themeIcon.innerText = 'dark_mode';
+      }
+    }
+
+    function toggleTheme() {
+      applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    }
+
+    // Filter Projects
+    function filterProjects(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.className = "filter-btn active px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all bg-brand-pink text-white";
+        } else {
+          btn.className = "filter-btn px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all dark:text-slate-400 text-slate-600 hover:text-white";
+        }
+      });
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Mobile Menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    }
+
+    // Image Modal
+    function openImageModal(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modalImg.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Initialize On Load
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme(currentTheme);
+      setLanguage(currentLang);
+    });
   </script>
+
 </body>
 
 </html>

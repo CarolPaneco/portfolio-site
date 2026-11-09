@@ -300,7 +300,7 @@
             Exemplos de Softwares que Já Construí
           </h2>
           <p class="text-xs sm:text-base text-slate-400 mt-2 max-w-2xl">
-            Cada trabalho possui <strong class="text-white">duas demonstrações em vídeo (Web no computador e Mobile no celular)</strong>.
+            Projetos reais com demonstrações em vídeo em alta definição mostrando telas no computador e no celular.
           </p>
         </div>
 
@@ -329,11 +329,11 @@
           <div id="carouselProgressBar" class="h-full bg-gradient-to-r from-brand-pink to-brand-cyan w-0 carousel-progress-bar"></div>
         </div>
 
-        <!-- Slides Viewport (7 Real Projects) -->
+        <!-- Slides Viewport (8 Real Projects) -->
         <div id="slidesTrack" class="relative min-h-[580px] flex items-stretch">
           
           <!-- ========================================== -->
-          <!-- SLIDE 1: DÉBORA DOCES                     -->
+          <!-- SLIDE 1: DÉBORA DOCES (SÓ WEB)             -->
           <!-- ========================================== -->
           <div class="carousel-slide w-full shrink-0 p-5 sm:p-10 lg:p-12 flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
             <div class="lg:w-1/2 space-y-4 sm:space-y-5">
@@ -382,25 +382,19 @@
               </div>
             </div>
 
-            <!-- Slide Dual Video Viewer (Web + Mobile) -->
+            <!-- Web Video Mockup (Só Web) -->
             <div class="lg:w-1/2 w-full">
-              <!-- Switch Tabs -->
-              <div class="flex items-center justify-between bg-slate-900/90 p-1.5 rounded-xl border border-brand-darkBorder mb-3">
-                <div class="flex items-center gap-1">
-                  <button onclick="switchSlideMedia(0, 'web')" id="tab-web-0" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-brand-pink text-white flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">laptop_mac</span>
-                    <span>Vídeo Web</span>
-                  </button>
-                  <button onclick="switchSlideMedia(0, 'mobile')" id="tab-mob-0" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">smartphone</span>
-                    <span>Vídeo Mobile</span>
-                  </button>
-                </div>
-                <span class="text-[10px] font-mono text-slate-400 hidden sm:inline">2 Demonstrações</span>
+              <div class="flex items-center justify-between bg-slate-900/90 p-2 rounded-xl border border-brand-darkBorder mb-3">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-brand-pink/20 text-brand-pink border border-brand-pink/30 flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-sm">laptop_mac</span>
+                  <span>Vídeo Web</span>
+                </span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Demonstração Desktop
+                </span>
               </div>
 
-              <!-- Web View Mockup -->
-              <div id="media-web-0" class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
                 <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
                   <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
                   <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
@@ -409,30 +403,15 @@
                 </div>
                 <div class="relative aspect-video bg-brand-darkBg flex items-center justify-center overflow-hidden rounded-b-xl">
                   <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                    <source src="../videos/debora_web.mp4" type="video/mp4" />
-                    <source src="../videos/video.mp4" type="video/mp4" />
+                    <source src="../videos/deboradoces.mp4" type="video/mp4" />
                   </video>
                 </div>
-              </div>
-
-              <!-- Mobile View Mockup -->
-              <div id="media-mob-0" class="hidden rounded-2xl border border-brand-darkBorder bg-slate-900 p-4 shadow-2xl flex flex-col items-center justify-center">
-                <div class="mobile-mockup-frame w-full rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
-                  <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto mb-2"></div>
-                  <div class="aspect-[9/18] bg-brand-darkBg rounded-2xl overflow-hidden flex items-center justify-center">
-                    <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                      <source src="../videos/debora_mobile.mp4" type="video/mp4" />
-                      <source src="../videos/video.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
-                <span class="text-[11px] font-mono text-slate-400 mt-2">📱 Visualização Vertical no Celular</span>
               </div>
             </div>
           </div>
 
           <!-- ========================================== -->
-          <!-- SLIDE 2: ALEVS                             -->
+          <!-- SLIDE 2: ALEVS (WEB & MOBILE)              -->
           <!-- ========================================== -->
           <div class="carousel-slide w-full shrink-0 p-5 sm:p-10 lg:p-12 hidden flex-col lg:flex-row items-center gap-8 lg:gap-10">
             <div class="lg:w-1/2 space-y-4 sm:space-y-5">
@@ -494,7 +473,7 @@
                     <span>Vídeo Mobile</span>
                   </button>
                 </div>
-                <span class="text-[10px] font-mono text-slate-400 hidden sm:inline">2 Demonstrações</span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold hidden sm:inline">● 2 Demonstrações</span>
               </div>
 
               <div id="media-web-1" class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
@@ -506,19 +485,17 @@
                 </div>
                 <div class="relative aspect-video bg-brand-darkBg flex items-center justify-center overflow-hidden rounded-b-xl">
                   <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                    <source src="../videos/alevs_web.mp4" type="video/mp4" />
-                    <source src="../videos/video.mp4" type="video/mp4" />
+                    <source src="../videos/alevs.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
 
               <div id="media-mob-1" class="hidden rounded-2xl border border-brand-darkBorder bg-slate-900 p-4 shadow-2xl flex flex-col items-center justify-center">
-                <div class="mobile-mockup-frame w-full rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
+                <div class="mobile-mockup-frame w-full max-w-[260px] rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
                   <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto mb-2"></div>
                   <div class="aspect-[9/18] bg-brand-darkBg rounded-2xl overflow-hidden flex items-center justify-center">
                     <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                      <source src="../videos/alevs_mobile.mp4" type="video/mp4" />
-                      <source src="../videos/video.mp4" type="video/mp4" />
+                      <source src="../videos/alevsmobile.mp4" type="video/mp4" />
                     </video>
                   </div>
                 </div>
@@ -528,7 +505,7 @@
           </div>
 
           <!-- ========================================== -->
-          <!-- SLIDE 3: PAULA PRESENTES                  -->
+          <!-- SLIDE 3: PAULA PRESENTES (SÓ WEB)         -->
           <!-- ========================================== -->
           <div class="carousel-slide w-full shrink-0 p-5 sm:p-10 lg:p-12 hidden flex-col lg:flex-row items-center gap-8 lg:gap-10">
             <div class="lg:w-1/2 space-y-4 sm:space-y-5">
@@ -577,23 +554,19 @@
               </div>
             </div>
 
-            <!-- Dual Video Viewer (Paula Presentes has actual ../videos/video.mp4!) -->
+            <!-- Web Video Mockup (Só Web) -->
             <div class="lg:w-1/2 w-full">
-              <div class="flex items-center justify-between bg-slate-900/90 p-1.5 rounded-xl border border-brand-darkBorder mb-3">
-                <div class="flex items-center gap-1">
-                  <button onclick="switchSlideMedia(2, 'web')" id="tab-web-2" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-brand-pink text-white flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">laptop_mac</span>
-                    <span>Vídeo Web</span>
-                  </button>
-                  <button onclick="switchSlideMedia(2, 'mobile')" id="tab-mob-2" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">smartphone</span>
-                    <span>Vídeo Mobile</span>
-                  </button>
-                </div>
-                <span class="text-[10px] font-mono text-emerald-400 font-bold hidden sm:inline">● Vídeo Disponível</span>
+              <div class="flex items-center justify-between bg-slate-900/90 p-2 rounded-xl border border-brand-darkBorder mb-3">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-brand-pink/20 text-brand-pink border border-brand-pink/30 flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-sm">laptop_mac</span>
+                  <span>Vídeo Web</span>
+                </span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Demonstração Desktop
+                </span>
               </div>
 
-              <div id="media-web-2" class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
                 <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
                   <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
                   <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
@@ -602,28 +575,15 @@
                 </div>
                 <div class="relative aspect-video bg-brand-darkBg flex items-center justify-center overflow-hidden rounded-b-xl">
                   <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                    <source src="../videos/video.mp4" type="video/mp4" />
+                    <source src="../videos/paulapresentes.mp4" type="video/mp4" />
                   </video>
                 </div>
-              </div>
-
-              <div id="media-mob-2" class="hidden rounded-2xl border border-brand-darkBorder bg-slate-900 p-4 shadow-2xl flex flex-col items-center justify-center">
-                <div class="mobile-mockup-frame w-full rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
-                  <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto mb-2"></div>
-                  <div class="aspect-[9/18] bg-brand-darkBg rounded-2xl overflow-hidden flex items-center justify-center">
-                    <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                      <source src="../videos/paula_mobile.mp4" type="video/mp4" />
-                      <source src="../videos/video.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
-                <span class="text-[11px] font-mono text-slate-400 mt-2">📱 Visualização Vertical no Celular</span>
               </div>
             </div>
           </div>
 
           <!-- ========================================== -->
-          <!-- SLIDE 4: REMARTUR VIAGENS                 -->
+          <!-- SLIDE 4: REMARTUR VIAGENS (SÓ WEB)         -->
           <!-- ========================================== -->
           <div class="carousel-slide w-full shrink-0 p-5 sm:p-10 lg:p-12 hidden flex-col lg:flex-row items-center gap-8 lg:gap-10">
             <div class="lg:w-1/2 space-y-4 sm:space-y-5">
@@ -672,23 +632,19 @@
               </div>
             </div>
 
-            <!-- Dual Video Viewer -->
+            <!-- Web Video Mockup (Só Web) -->
             <div class="lg:w-1/2 w-full">
-              <div class="flex items-center justify-between bg-slate-900/90 p-1.5 rounded-xl border border-brand-darkBorder mb-3">
-                <div class="flex items-center gap-1">
-                  <button onclick="switchSlideMedia(3, 'web')" id="tab-web-3" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-brand-pink text-white flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">laptop_mac</span>
-                    <span>Vídeo Web</span>
-                  </button>
-                  <button onclick="switchSlideMedia(3, 'mobile')" id="tab-mob-3" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">smartphone</span>
-                    <span>Vídeo Mobile</span>
-                  </button>
-                </div>
-                <span class="text-[10px] font-mono text-slate-400 hidden sm:inline">2 Demonstrações</span>
+              <div class="flex items-center justify-between bg-slate-900/90 p-2 rounded-xl border border-brand-darkBorder mb-3">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-brand-pink/20 text-brand-pink border border-brand-pink/30 flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-sm">laptop_mac</span>
+                  <span>Vídeo Web</span>
+                </span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Demonstração Desktop
+                </span>
               </div>
 
-              <div id="media-web-3" class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
                 <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
                   <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
                   <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
@@ -697,29 +653,15 @@
                 </div>
                 <div class="relative aspect-video bg-brand-darkBg flex items-center justify-center overflow-hidden rounded-b-xl">
                   <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                    <source src="../videos/remartur_web.mp4" type="video/mp4" />
-                    <source src="../videos/video.mp4" type="video/mp4" />
+                    <source src="../videos/remartur.mp4" type="video/mp4" />
                   </video>
                 </div>
-              </div>
-
-              <div id="media-mob-3" class="hidden rounded-2xl border border-brand-darkBorder bg-slate-900 p-4 shadow-2xl flex flex-col items-center justify-center">
-                <div class="mobile-mockup-frame w-full rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
-                  <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto mb-2"></div>
-                  <div class="aspect-[9/18] bg-brand-darkBg rounded-2xl overflow-hidden flex items-center justify-center">
-                    <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                      <source src="../videos/remartur_mobile.mp4" type="video/mp4" />
-                      <source src="../videos/video.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
-                <span class="text-[11px] font-mono text-slate-400 mt-2">📱 Visualização Vertical no Celular</span>
               </div>
             </div>
           </div>
 
           <!-- ========================================== -->
-          <!-- SLIDE 5: FORNERIA CANTO D'ITÁLIA          -->
+          <!-- SLIDE 5: FORNERIA CANTO D'ITÁLIA (DUAL)   -->
           <!-- ========================================== -->
           <div class="carousel-slide w-full shrink-0 p-5 sm:p-10 lg:p-12 hidden flex-col lg:flex-row items-center gap-8 lg:gap-10">
             <div class="lg:w-1/2 space-y-4 sm:space-y-5">
@@ -757,7 +699,7 @@
 
               <!-- Price & CTA -->
               <div class="pt-3 flex flex-wrap items-center gap-3">
-                <button onclick="requestPlanWhatsApp('Forneria Canto D\'Itália', 'R$ 200,00 inicial + R$ 100,00 mensal')" class="tech-gradient text-white px-5 sm:px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
+                <button onclick="requestPlanWhatsApp('Forneria Canto D'Itália', 'R$ 200,00 inicial + R$ 100,00 mensal')" class="tech-gradient text-white px-5 sm:px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
                   <span>Quero um Cardápio Próprio</span>
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>
@@ -781,7 +723,7 @@
                     <span>Vídeo Mobile</span>
                   </button>
                 </div>
-                <span class="text-[10px] font-mono text-slate-400 hidden sm:inline">2 Demonstrações</span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold hidden sm:inline">● 2 Demonstrações</span>
               </div>
 
               <div id="media-web-4" class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
@@ -793,19 +735,17 @@
                 </div>
                 <div class="relative aspect-video bg-brand-darkBg flex items-center justify-center overflow-hidden rounded-b-xl">
                   <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                    <source src="../videos/forneria_web.mp4" type="video/mp4" />
-                    <source src="../videos/video.mp4" type="video/mp4" />
+                    <source src="../videos/cantoditalia.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
 
               <div id="media-mob-4" class="hidden rounded-2xl border border-brand-darkBorder bg-slate-900 p-4 shadow-2xl flex flex-col items-center justify-center">
-                <div class="mobile-mockup-frame w-full rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
+                <div class="mobile-mockup-frame w-full max-w-[260px] rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
                   <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto mb-2"></div>
                   <div class="aspect-[9/18] bg-brand-darkBg rounded-2xl overflow-hidden flex items-center justify-center">
                     <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                      <source src="../videos/forneria_mobile.mp4" type="video/mp4" />
-                      <source src="../videos/video.mp4" type="video/mp4" />
+                      <source src="../videos/cantodiatliamobile.mp4" type="video/mp4" />
                     </video>
                   </div>
                 </div>
@@ -815,7 +755,7 @@
           </div>
 
           <!-- ========================================== -->
-          <!-- SLIDE 6: HAYANÉ BEAUTY STUDIO             -->
+          <!-- SLIDE 6: HAYANÉ BEAUTY STUDIO (DUAL)       -->
           <!-- ========================================== -->
           <div class="carousel-slide w-full shrink-0 p-5 sm:p-10 lg:p-12 hidden flex-col lg:flex-row items-center gap-8 lg:gap-10">
             <div class="lg:w-1/2 space-y-4 sm:space-y-5">
@@ -877,7 +817,7 @@
                     <span>Vídeo Mobile</span>
                   </button>
                 </div>
-                <span class="text-[10px] font-mono text-slate-400 hidden sm:inline">2 Demonstrações</span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold hidden sm:inline">● 2 Demonstrações</span>
               </div>
 
               <div id="media-web-5" class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
@@ -889,19 +829,17 @@
                 </div>
                 <div class="relative aspect-video bg-brand-darkBg flex items-center justify-center overflow-hidden rounded-b-xl">
                   <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                    <source src="../videos/hayane_web.mp4" type="video/mp4" />
-                    <source src="../videos/video.mp4" type="video/mp4" />
+                    <source src="../videos/haynebeauty.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
 
               <div id="media-mob-5" class="hidden rounded-2xl border border-brand-darkBorder bg-slate-900 p-4 shadow-2xl flex flex-col items-center justify-center">
-                <div class="mobile-mockup-frame w-full rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
+                <div class="mobile-mockup-frame w-full max-w-[260px] rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
                   <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto mb-2"></div>
                   <div class="aspect-[9/18] bg-brand-darkBg rounded-2xl overflow-hidden flex items-center justify-center">
                     <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                      <source src="../videos/hayane_mobile.mp4" type="video/mp4" />
-                      <source src="../videos/video.mp4" type="video/mp4" />
+                      <source src="../videos/hayanemobile.mp4" type="video/mp4" />
                     </video>
                   </div>
                 </div>
@@ -911,7 +849,101 @@
           </div>
 
           <!-- ========================================== -->
-          <!-- SLIDE 7: ORDEM CERTA (CRM SOB MEDIDA)     -->
+          <!-- SLIDE 7: STUDIO CLARA ROMANO (DUAL)        -->
+          <!-- ========================================== -->
+          <div class="carousel-slide w-full shrink-0 p-5 sm:p-10 lg:p-12 hidden flex-col lg:flex-row items-center gap-8 lg:gap-10">
+            <div class="lg:w-1/2 space-y-4 sm:space-y-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/40 text-xs font-mono font-bold uppercase">
+                  Landing Page & Studio de Beleza
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+                  SSR & Gaveta de Serviços
+                </span>
+              </div>
+              <h3 class="font-headline text-2xl sm:text-4xl font-black text-white">
+                Studio Clara Romano — Nail Design & Agendamento Editorial
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Catálogo editorial de alta fidelidade para studio de luxo: carregamento ultrarrápido, gaveta lateral interativa estilo sacola de procedimentos para escolha múltipla de serviços, cálculo imediato e envio do agendamento pronto para o WhatsApp.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-3 pt-1">
+                <div class="p-3 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-1.5 text-rose-400 text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                    Sacola de Serviços
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Seleção múltipla sem recarregar tela</p>
+                </div>
+                <div class="p-3 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-1.5 text-brand-cyan text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">bolt</span>
+                    Velocidade Instantânea
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Navegação contínua no celular</p>
+                </div>
+              </div>
+
+              <!-- Price & CTA -->
+              <div class="pt-3 flex flex-wrap items-center gap-3">
+                <button onclick="requestPlanWhatsApp('Studio Clara Romano', 'R$ 200,00 inicial + R$ 100,00 mensal')" class="tech-gradient text-white px-5 sm:px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
+                  <span>Quero uma Página para Meu Studio</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <div class="text-xs font-mono">
+                  <span class="text-white font-bold">R$ 200,00 criação</span>
+                  <span class="text-emerald-400 font-bold block sm:inline"> + R$ 100,00 / mês</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Video Viewer -->
+            <div class="lg:w-1/2 w-full">
+              <div class="flex items-center justify-between bg-slate-900/90 p-1.5 rounded-xl border border-brand-darkBorder mb-3">
+                <div class="flex items-center gap-1">
+                  <button onclick="switchSlideMedia(6, 'web')" id="tab-web-6" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-brand-pink text-white flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-sm">laptop_mac</span>
+                    <span>Vídeo Web</span>
+                  </button>
+                  <button onclick="switchSlideMedia(6, 'mobile')" id="tab-mob-6" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-sm">smartphone</span>
+                    <span>Vídeo Mobile</span>
+                  </button>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold hidden sm:inline">● 2 Demonstrações</span>
+              </div>
+
+              <div id="media-web-6" class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <span class="ml-2 text-[10px]">studioclararomano.com.br • Versão Desktop / Web</span>
+                </div>
+                <div class="relative aspect-video bg-brand-darkBg flex items-center justify-center overflow-hidden rounded-b-xl">
+                  <video controls playsinline preload="metadata" class="w-full h-full object-cover">
+                    <source src="../videos/studio.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+
+              <div id="media-mob-6" class="hidden rounded-2xl border border-brand-darkBorder bg-slate-900 p-4 shadow-2xl flex flex-col items-center justify-center">
+                <div class="mobile-mockup-frame w-full max-w-[260px] rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
+                  <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto mb-2"></div>
+                  <div class="aspect-[9/18] bg-brand-darkBg rounded-2xl overflow-hidden flex items-center justify-center">
+                    <video controls playsinline preload="metadata" class="w-full h-full object-cover">
+                      <source src="../videos/studiomobile.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+                <span class="text-[11px] font-mono text-slate-400 mt-2">📱 Visualização Vertical no Celular</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- SLIDE 8: ORDEM CERTA (CRM SOB MEDIDA - WEB)-->
           <!-- ========================================== -->
           <div class="carousel-slide w-full shrink-0 p-5 sm:p-10 lg:p-12 hidden flex-col lg:flex-row items-center gap-8 lg:gap-10">
             <div class="lg:w-1/2 space-y-4 sm:space-y-5">
@@ -960,23 +992,19 @@
               </div>
             </div>
 
-            <!-- Dual Video Viewer -->
+            <!-- Web Video Mockup (Só Web) -->
             <div class="lg:w-1/2 w-full">
-              <div class="flex items-center justify-between bg-slate-900/90 p-1.5 rounded-xl border border-brand-darkBorder mb-3">
-                <div class="flex items-center gap-1">
-                  <button onclick="switchSlideMedia(6, 'web')" id="tab-web-6" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-brand-pink text-white flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">laptop_mac</span>
-                    <span>Vídeo Web</span>
-                  </button>
-                  <button onclick="switchSlideMedia(6, 'mobile')" id="tab-mob-6" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">smartphone</span>
-                    <span>Vídeo Mobile</span>
-                  </button>
-                </div>
-                <span class="text-[10px] font-mono text-slate-400 hidden sm:inline">2 Demonstrações</span>
+              <div class="flex items-center justify-between bg-slate-900/90 p-2 rounded-xl border border-brand-darkBorder mb-3">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-brand-pink/20 text-brand-pink border border-brand-pink/30 flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-sm">laptop_mac</span>
+                  <span>Vídeo Web</span>
+                </span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Demonstração Desktop
+                </span>
               </div>
 
-              <div id="media-web-6" class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
                 <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
                   <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
                   <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
@@ -985,23 +1013,9 @@
                 </div>
                 <div class="relative aspect-video bg-brand-darkBg flex items-center justify-center overflow-hidden rounded-b-xl">
                   <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                    <source src="../videos/ordemcerta_web.mp4" type="video/mp4" />
-                    <source src="../videos/video.mp4" type="video/mp4" />
+                    <source src="../videos/ordemcerta.mp4" type="video/mp4" />
                   </video>
                 </div>
-              </div>
-
-              <div id="media-mob-6" class="hidden rounded-2xl border border-brand-darkBorder bg-slate-900 p-4 shadow-2xl flex flex-col items-center justify-center">
-                <div class="mobile-mockup-frame w-full rounded-[2.5rem] border-4 border-slate-700 bg-slate-950 p-2 shadow-2xl relative overflow-hidden">
-                  <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto mb-2"></div>
-                  <div class="aspect-[9/18] bg-brand-darkBg rounded-2xl overflow-hidden flex items-center justify-center">
-                    <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                      <source src="../videos/ordemcerta_mobile.mp4" type="video/mp4" />
-                      <source src="../videos/video.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
-                <span class="text-[11px] font-mono text-slate-400 mt-2">📱 Visualização Vertical no Celular</span>
               </div>
             </div>
           </div>
@@ -1018,10 +1032,11 @@
             <button onclick="goToSlide(4)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 5"></button>
             <button onclick="goToSlide(5)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 6"></button>
             <button onclick="goToSlide(6)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 7"></button>
+            <button onclick="goToSlide(7)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 8"></button>
           </div>
 
           <div class="text-xs font-mono text-slate-400 text-center">
-            Projeto <span id="currentSlideNum" class="text-white font-bold">1</span> de 7 • <span class="text-brand-pink">Passe o mouse para pausar</span>
+            Projeto <span id="currentSlideNum" class="text-white font-bold">1</span> de 8 • <span class="text-brand-pink">Passe o mouse para pausar</span>
           </div>
         </div>
 

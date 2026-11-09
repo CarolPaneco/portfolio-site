@@ -139,6 +139,24 @@ portfolio-site/
 
 ---
 
+## 💳 Cardápio de Serviços & Investimento
+
+Soluções digitais completas com modelo transparente de implantação e manutenção contínua:
+
+| Solução | Implantação (Taxa Única) | Manutenção Mensal | O Que Inclui |
+| :--- | :--- | :--- | :--- |
+| **Landing Page** | **R$ 200,00** | **R$ 50,00 / mês** | Design responsivo exclusivo, WhatsApp, formulário, SEO inicial, custos de nuvem e suporte 24h com pequenos ajustes. |
+| **E-commerce + Gestão Total** | **R$ 1.000,00** | **R$ 500,00 / mês** | Loja virtual completa, carrinho, checkout, Painel Administrativo de Gestão (ERP), estoque, fluxo de caixa e suporte 24h. |
+| **CRM Multi-Módulos** | **R$ 600,00** | **R$ 300,00 / mês** | Gestão de clientes, funil/pipeline (Kanban), ordens de serviço, relatórios analíticos de produtividade e suporte 24h. |
+
+> **Diferenciais Inclusos:**
+> - 🎁 **Protótipo Inicial 100% Gratuito:** O cliente aprova a interface e o fluxo antes de pagar o valor de implantação.
+> - ☁️ **Custos de Servidor Cobertos:** A mensalidade cobre hospedagem, banco de dados e estabilidade contínua.
+> - 🕒 **Atendimento & Suporte 24h:** Canal direto para dúvidas, assistência e orientações técnicas.
+> - 🛠️ **Pequenas Alterações Sem Custo Extra:** Ajustes de dados, fotos, banners, produtos e textos inclusos na mensalidade.
+
+---
+
 ## 🛠️ Arsenal Tecnológico
 
 - **Desenvolvimento .NET & Backend:** C#, ASP.NET Core MVC, Entity Framework Core, Arquitetura .NET, Python, C++, REST APIs, POO.

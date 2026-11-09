@@ -102,6 +102,41 @@ portfolio-site/
 - **Recursos:** Aplicativo de gestão ágil com movimentação de cards Drag & Drop fluida, arquitetura adaptativa para Web e Mobile.
 - **Repositório:** [CarolPaneco/KANBAN](https://github.com/CarolPaneco/KANBAN)
 
+### 10. Ordem Certa — Gestão de Ordens de Serviço & Equipes
+- **Stack:** React 19, TanStack Router, Supabase, Google Maps API, Recharts, Tailwind CSS v4, Zod, Radix UI.
+- **Recursos:** Gestão completa de ordens de serviço (OS) com georreferenciamento de clientes no mapa, controle de insumos e estoque de materiais, relatórios analíticos de produtividade e formulários reativos tipados fim a fim.
+- **Repositório:** [CarolPaneco/Ordem-Certa](https://github.com/CarolPaneco/Ordem-Certa)
+
+### 11. ReMarTur Viagens — Portal de Resorts & Experiências
+- **Stack:** React 19, TanStack Router, Framer Motion, Tailwind CSS v4, Vite.
+- **Recursos:** Vitrine digital para grandes resorts termais (Olímpia, Barretos, Caldas Novas), filtros dinâmicos por capacidade (até 7 pessoas) e comodidades, animações fluidas de scroll com Framer Motion e cotador interativo que gera leads formatados no WhatsApp.
+- **Repositório:** [CarolPaneco/remartur-v3](https://github.com/CarolPaneco/remartur-v3)
+
+### 12. Studio Clara Romano — Nail Design & Agendamento Digital
+- **Stack:** React 19, TanStack Start (SSR), Nitro, TanStack Query, Vitest, Motion, Sharp, Tailwind CSS v4.
+- **Recursos:** Plataforma com Server-Side Rendering ultrarrápido, gaveta lateral interativa estilo sacola de procedimentos para escolha múltipla de serviços, cálculo em tempo real de valores/tempo e agendamento via WhatsApp.
+- **Site:** [studioclararomano.com](https://studioclararomano.com/) • **Repositório:** [CarolPaneco/cr](https://github.com/CarolPaneco/cr)
+
+### 13. Forneria Canto D' Itália — Tradição & Gastronomia Artesanal
+- **Stack:** HTML5 Semântico, Tailwind CSS Customizado, Cormorant Garamond, Glassmorphism, CSS Animations.
+- **Recursos:** Experiência imersiva para forneria artesanal em Olímpia/SP, exibição de pizzas de longa fermentação, carta de vinhos (adega), tour fotográfico pelo salão rústico e integração com delivery oficial e localização.
+- **Repositório:** [CarolPaneco/cantoditalia](https://github.com/CarolPaneco/cantoditalia)
+
+### 14. Hayané Beauty Studio — Estética Facial & Canvas 2D
+- **Stack:** JavaScript ES6+, HTML5 Canvas 2D, Física de Partículas, 3D Parallax, Tailwind CSS, Lucide.
+- **Recursos:** Web app com engine em Canvas 2D renderizando poeira dourada que reage ao mouse com física e gravidade, parallax 3D interativo por coordenadas do cursor, carrinho reativo de procedimentos com cálculo de orçamento e agendamento direto.
+- **Repositório:** [CarolPaneco/lash](https://github.com/CarolPaneco/lash)
+
+### 15. NFCeDesktop — Emissão Fiscal Desktop em .NET 8 WPF
+- **Stack:** C# 12, .NET 8 Windows, WPF, XAML, QuestPDF, QRCoder, Padrão SEFAZ, MVVM.
+- **Recursos:** Aplicação desktop corporativa para emissão, validação e impressão de Notas Fiscais de Consumidor Eletrônicas (NFC-e), geração vetorial de DANFE em PDF com QuestPDF e renderização de QR Code fiscal regulatório.
+- **Repositório:** [CarolPaneco/NFCeDesktop](https://github.com/CarolPaneco/NFCeDesktop)
+
+### 16. Automação SimpleFarm — RPA Agrícola em Nuvem
+- **Stack:** Python 3, Playwright Headless, Multithreading (25 threads), Pool de Proxies, Single Sign-On Microsoft, GitHub Actions.
+- **Recursos:** Robô de RPA em nuvem para extração diária do relatório agronômico R10 (Analítico do Talhão) no sistema SimpleFarm/GAtec da Tereos. Bypass de bloqueios geográficos via proxies rotativos, autenticação SSO e envio automatizado de planilhas por e-mail (SMTP).
+- **Repositório:** [CarolPaneco/automacao-simplefarm](https://github.com/CarolPaneco/automacao-simplefarm)
+
 ---
 
 ## 🛠️ Arsenal Tecnológico

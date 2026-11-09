@@ -144,13 +144,14 @@ portfolio-site/
 Para clientes e empresas em potencial, o site conta com uma landing page comercial dedicada e independente acessível em **[`/catalogo`](catalogo/index.html)** (`carolinepaneco.com/catalogo`).
 
 Ela conta com:
-- **Carrossel Automático de Demonstrações:** Demonstração visual de 6 projetos reais (Paula Presentes, Débora Doces, Studio Clara Romano, ReMarTur Viagens, Canto D'Itália, Ordem Certa) com barra de progresso temporal e pausa interativa no mouse.
-- **Simulador Interativo de Investimento:** Calculadora em tempo real para seleção de planos base e adicionais, gerando propostas diretas para o WhatsApp.
-- **Cardápio com Preços Transparentes:**
-  - **Landing Page:** R$ 200,00 criação + R$ 50,00/mês.
-  - **E-commerce + Gestão Total (ERP):** R$ 1.000,00 criação + R$ 500,00/mês.
-  - **CRM Multi-Módulos:** R$ 600,00 criação + R$ 300,00/mês.
-- **Garantias & Processo em 5 Etapas:** Protótipo inicial 100% gratuito, servidores e nuvem inclusos, atendimento 24h e pequenas alterações sem custo.
+- **Carrossel Automático de Demonstrações:** 7 projetos reais em destaque (**Débora Doces**, **Alevs**, **Paula Presentes**, **ReMarTur Viagens**, **Forneria Canto D'Itália**, **Hayané Beauty Studio**, **Ordem Certa**), cada um com **dois vídeos demonstrativos (Web no computador e Mobile no celular)**.
+- **Simulador Interativo com Neon Dinâmico:** Calculadora em tempo real que altera o destaque luminoso e calcula a proposta para envio direto ao WhatsApp.
+- **Catálogo com Preços Transparentes:**
+  - **Landing Page:** R$ 200,00 criação fixa + R$ 100,00 / mês *(Manutenção & Nuvem)*.
+  - **E-commerce + Gestão Total (ERP):** R$ 1.000,00 criação fixa + R$ 500,00 / mês *(Loja + Controle de Vendas/Estoque)*.
+  - **CRM Sob Medida:** R$ 600,00 criação fixa + R$ 300,00 / mês *(O mais personalizável, para financeiro, clientes, processos)*.
+- **Atendimento Direto & WhatsApp:** (17) 99173-4669.
+- **Garantias & Processo em 5 Etapas:** Protótipo inicial 100% gratuito (custo zero), servidores e nuvem inclusos, atendimento 24h e pequenas alterações sem custo.
 
 ---
 

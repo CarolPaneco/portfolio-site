@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Serviços & Soluções Digitais — Caroline Vitória Paneco</title>
+  <meta name="description" content="Cardápio de soluções em software, e-commerce com gestão integrada (ERP), CRM e landing pages de alta conversão. Protótipo inicial gratuito e suporte contínuo 24h." />
+  <meta name="author" content="Caroline Vitória Paneco" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              pink: '#ff3b7a',
+              pinkHover: '#e02864',
+              cyan: '#00d4ec',
+              purple: '#8a2be2',
+              darkBg: '#090d16',
+              darkSurface: '#101726',
+              darkBorder: '#1f2b42',
+              lightBg: '#f8fafc',
+              lightSurface: '#ffffff',
+              lightBorder: '#e2e8f0'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            headline: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 4s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            glow: {
+              '0%': { filter: 'drop-shadow(0 0 15px rgba(255, 59, 122, 0.3))' },
+              '100%': { filter: 'drop-shadow(0 0 35px rgba(0, 212, 236, 0.45))' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2b42;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff3b7a;
+    }
+
+    .tech-gradient {
+      background: linear-gradient(135deg, #ff3b7a 0%, #a855f7 50%, #00d4ec 100%);
+    }
+    .tech-gradient-subtle {
+      background: linear-gradient(135deg, rgba(255, 59, 122, 0.12) 0%, rgba(168, 85, 247, 0.12) 50%, rgba(0, 212, 236, 0.12) 100%);
+    }
+    .tech-border-glow {
+      box-shadow: 0 0 30px -5px rgba(255, 59, 122, 0.25);
+    }
+    .tech-glow-cyan {
+      box-shadow: 0 0 30px -5px rgba(0, 212, 236, 0.25);
+    }
+    
+    /* Device frames styling */
+    .mockup-window {
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Carousel progress bar transition */
+    .carousel-progress-bar {
+      transition: width 0.1s linear;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-darkBg text-slate-100 font-sans selection:bg-brand-pink selection:text-white relative min-h-screen overflow-x-hidden">
+
+  <!-- Interactive Dynamic Ambient Background Canvas -->
+  <canvas id="ambientCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
+
+  <!-- Glowing background gradient orbs -->
+  <div class="fixed top-1/4 -left-48 w-96 h-96 bg-brand-pink/20 rounded-full blur-[140px] pointer-events-none z-0"></div>
+  <div class="fixed top-2/3 -right-48 w-96 h-96 bg-brand-cyan/20 rounded-full blur-[140px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-10 left-1/3 w-80 h-80 bg-brand-purple/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+  <!-- Content Container (Above Canvas) -->
+  <div class="relative z-10">
+
+    <!-- ========================================== -->
+    <!-- TOP NAVIGATION BAR                         -->
+    <!-- ========================================== -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-brand-darkBg/80 border-b border-brand-darkBorder transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        <!-- Logo / Name & Tag -->
+        <a href="#inicio" class="flex items-center gap-3.5 group">
+          <div class="w-10 h-10 rounded-xl tech-gradient flex items-center justify-center text-white font-headline font-black text-lg shadow-lg group-hover:scale-105 transition-transform">
+            CP
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-headline font-black tracking-tight text-white text-base group-hover:text-brand-pink transition-colors">
+                Caroline Paneco
+              </span>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                Disponível
+              </span>
+            </div>
+            <p class="text-[11px] font-mono text-slate-400">Catálogo Digital & Serviços Sob Medida</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 font-headline text-xs font-semibold uppercase tracking-wider text-slate-300">
+          <a href="#exemplos" class="hover:text-brand-pink transition-colors">Trabalhos & Exemplos</a>
+          <a href="#planos" class="hover:text-brand-pink transition-colors">Cardápio de Planos</a>
+          <a href="#simulador" class="hover:text-brand-pink transition-colors">Simulador</a>
+          <a href="#processo" class="hover:text-brand-pink transition-colors">Como Funciona</a>
+          <a href="#faq" class="hover:text-brand-pink transition-colors">Dúvidas</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="flex items-center gap-3">
+          <!-- Back to Engineering Portfolio -->
+          <a href="../" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-brand-darkBorder bg-brand-darkSurface text-slate-300 hover:text-white hover:border-brand-pink text-xs font-mono transition-all" title="Ver portfólio completo de desenvolvedora">
+            <span>Portfólio Técnico</span>
+            <span class="material-symbols-outlined text-sm">open_in_new</span>
+          </a>
+
+          <!-- Direct WhatsApp CTA -->
+          <button onclick="openWhatsAppGeneral()" class="tech-gradient hover:opacity-95 text-white px-5 py-2.5 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-[0_0_25px_rgba(255,59,122,0.4)] transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Solicitar Protótipo</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <section id="inicio" class="pt-16 pb-20 px-6 max-w-7xl mx-auto text-center relative">
+      
+      <!-- Live Tag -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-pink/40 bg-brand-pink/10 text-brand-pink text-xs font-mono uppercase tracking-widest font-bold mb-6 animate-pulse-slow">
+        <span class="w-2 h-2 rounded-full bg-brand-pink"></span>
+        <span>Desenvolvimento Sob Medida • Design Exclusivo • Gestão Integrada</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-headline text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-5xl mx-auto leading-[1.1]">
+        Softwares & Lojas Virtuais Criados para
+        <span class="bg-gradient-to-r from-brand-pink via-purple-400 to-brand-cyan bg-clip-text text-transparent">
+          Vender Mais & Automatizar Sua Gestão.
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto mt-6 leading-relaxed font-normal">
+        Transforme atendimentos manuais e planilhas confusas em uma plataforma digital rápida, bonita e profissional.
+        <strong class="text-white font-semibold"> Você aprova um protótipo inicial gratuito</strong> antes de qualquer pagamento de implantação.
+      </p>
+
+      <!-- Main CTAs -->
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <button onclick="scrollToSection('planos')" class="tech-gradient text-white px-8 py-4 rounded-2xl font-headline font-bold text-sm uppercase tracking-wider shadow-[0_10px_35px_rgba(255,59,122,0.35)] hover:scale-105 hover:shadow-[0_15px_45px_rgba(255,59,122,0.5)] transition-all flex items-center gap-2">
+          <span>Ver Cardápio & Preços</span>
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </button>
+
+        <button onclick="scrollToSection('exemplos')" class="px-8 py-4 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface/80 hover:bg-brand-darkSurface hover:border-brand-cyan text-white font-headline font-bold text-sm uppercase tracking-wider transition-all flex items-center gap-2">
+          <span class="material-symbols-outlined text-brand-cyan text-lg">play_circle</span>
+          <span>Ver Demonstrações em Vídeo/Fotos</span>
+        </button>
+      </div>
+
+      <!-- Trust Pillars Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto text-left">
+        
+        <div class="p-5 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface/60 backdrop-blur-md flex items-center gap-3.5 hover:border-brand-pink/50 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-brand-pink/10 text-brand-pink flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl">card_giftcard</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-xs font-bold uppercase text-white">Protótipo 100% Gratuito</h4>
+            <p class="text-[11px] text-slate-400 mt-0.5">Você vê funcionando antes de pagar</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface/60 backdrop-blur-md flex items-center gap-3.5 hover:border-brand-cyan/50 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-brand-cyan/10 text-brand-cyan flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl">cloud_done</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-xs font-bold uppercase text-white">Servidor & Nuvem Inclusos</h4>
+            <p class="text-[11px] text-slate-400 mt-0.5">Sem surpresas de infraestrutura</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface/60 backdrop-blur-md flex items-center gap-3.5 hover:border-purple-500/50 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl">support_agent</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-xs font-bold uppercase text-white">Atendimento 24 Horas</h4>
+            <p class="text-[11px] text-slate-400 mt-0.5">Canal direto no WhatsApp</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface/60 backdrop-blur-md flex items-center gap-3.5 hover:border-emerald-500/50 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl">edit_note</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-xs font-bold uppercase text-white">Ajustes Sem Custo Extra</h4>
+            <p class="text-[11px] text-slate-400 mt-0.5">Banners, fotos e textos inclusos</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE AUTOMATED SHOWCASE CAROUSEL    -->
+    <!-- ========================================== -->
+    <section id="exemplos" class="py-20 px-6 max-w-7xl mx-auto border-t border-brand-darkBorder">
+      
+      <!-- Section Title -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-cyan/40 bg-brand-cyan/10 text-brand-cyan text-xs font-mono uppercase tracking-widest font-bold mb-3">
+            <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+            <span>Trabalhos & Demonstrações Reais</span>
+          </div>
+          <h2 class="font-headline text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Exemplos de Softwares que Já Construí
+          </h2>
+          <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
+            Soluções completas com lojas online, esteira de produção, gestão de clientes e alta taxa de conversão.
+          </p>
+        </div>
+
+        <!-- Carousel Controls Top -->
+        <div class="flex items-center gap-3">
+          <button id="carouselPrevBtn" onclick="prevSlide()" class="w-12 h-12 rounded-xl border border-brand-darkBorder bg-brand-darkSurface hover:border-brand-pink hover:text-brand-pink text-white flex items-center justify-center transition-all" aria-label="Slide anterior">
+            <span class="material-symbols-outlined">arrow_back</span>
+          </button>
+          
+          <button id="carouselPlayPauseBtn" onclick="toggleCarouselPlay()" class="px-4 h-12 rounded-xl border border-brand-darkBorder bg-brand-darkSurface hover:border-brand-cyan text-xs font-mono text-slate-300 flex items-center gap-2 transition-all">
+            <span id="playPauseIcon" class="material-symbols-outlined text-base">pause</span>
+            <span id="playPauseLabel">Pausar</span>
+          </button>
+
+          <button id="carouselNextBtn" onclick="nextSlide()" class="w-12 h-12 rounded-xl border border-brand-darkBorder bg-brand-darkSurface hover:border-brand-pink hover:text-brand-pink text-white flex items-center justify-center transition-all" aria-label="Próximo slide">
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Carousel Outer Wrapper -->
+      <div id="carouselContainer" class="relative rounded-3xl border border-brand-darkBorder bg-brand-darkSurface/90 overflow-hidden shadow-2xl backdrop-blur-xl group">
+        
+        <!-- Automated Timer Progress Line -->
+        <div class="h-1 bg-brand-darkBorder w-full overflow-hidden">
+          <div id="carouselProgressBar" class="h-full bg-gradient-to-r from-brand-pink to-brand-cyan w-0 carousel-progress-bar"></div>
+        </div>
+
+        <!-- Slides Viewport -->
+        <div id="slidesTrack" class="relative min-h-[560px] flex items-stretch">
+          
+          <!-- SLIDE 1: PAULA PRESENTES -->
+          <div class="carousel-slide w-full shrink-0 p-8 sm:p-12 flex flex-col lg:flex-row items-center gap-10">
+            <div class="lg:w-1/2 space-y-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-brand-pink/20 text-brand-pink border border-brand-pink/40 text-xs font-mono font-bold uppercase">
+                  E-commerce + ERP Integrado
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+                  Loja Virtual & Gestão Total
+                </span>
+              </div>
+              <h3 class="font-headline text-3xl sm:text-4xl font-black text-white">
+                Paula Presentes — Loja Virtual com Retaguarda de Vendas & Estoque
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Substituiu as anotações manuais e o atendimento desorganizado por uma plataforma centralizada: vitrine elegante com fotos e variações de presentes, carrinho interativo, cálculo de frete e um <strong>Painel Administrativo completo</strong> para fechamento de caixa diário, esteira de pedidos e controle de insumos.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-brand-pink text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">shopping_cart_checkout</span>
+                    Checkout Seguro
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Fluxo rápido sem perda de clientes</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-brand-cyan text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">inventory_2</span>
+                    ERP em Tempo Real
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Baixa automática de estoque e relatórios</p>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center gap-3">
+                <button onclick="selectPlanFromSlide('E-commerce + Gestão Total')" class="tech-gradient text-white px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
+                  <span>Quero um Sistema Igual a Este</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <span class="text-xs font-mono text-emerald-400 font-bold">R$ 1.000 taxa única + R$ 500/mês</span>
+              </div>
+            </div>
+
+            <!-- Slide Image Frame -->
+            <div class="lg:w-1/2 w-full relative">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden group/img">
+                <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <span class="ml-2 text-[10px]">paulapresentes.com.br • Loja & Gestão</span>
+                </div>
+                <img src="../img/inicial.png" alt="E-commerce Paula Presentes" class="w-full h-80 object-cover rounded-b-xl hover:scale-105 transition-transform duration-700" />
+                <div class="absolute bottom-4 right-4 bg-brand-darkBg/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-brand-darkBorder text-[11px] font-mono text-slate-300">
+                  📷 Demonstração Real
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 2: DÉBORA DOCES -->
+          <div class="carousel-slide w-full shrink-0 p-8 sm:p-12 hidden flex-col lg:flex-row items-center gap-10">
+            <div class="lg:w-1/2 space-y-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/40 text-xs font-mono font-bold uppercase">
+                  Cardápio Interativo & Confeitaria
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+                  Personalização Passo a Passo
+                </span>
+              </div>
+              <h3 class="font-headline text-3xl sm:text-4xl font-black text-white">
+                Débora Doces — Montador de Bolos Artesanais & Esteira de Cozinha
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Solução que acabou com as trocas confusas de mensagens de áudio para orçamentos. O cliente monta seu bolo escolhendo massas, múltiplos recheios, topo decorativo e data de entrega, com <strong>cálculo automático em tempo real</strong>. Os pedidos chegam estruturados direto na esteira de produção da cozinha.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-purple-400 text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">cake</span>
+                    Zero Erro de Pedido
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Cliente escolhe ingredientes sem falhas</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">schedule</span>
+                    Agenda de Entregas
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Controle de datas e horários de retirada</p>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center gap-3">
+                <button onclick="selectPlanFromSlide('E-commerce + Gestão Total')" class="tech-gradient text-white px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
+                  <span>Quero um Cardápio Interativo</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <span class="text-xs font-mono text-emerald-400 font-bold">R$ 1.000 taxa única + R$ 500/mês</span>
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full relative">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <span class="ml-2 text-[10px]">deboradoces.com.br • Cardápio & Esteira</span>
+                </div>
+                <div class="h-80 bg-gradient-to-br from-purple-950/40 via-brand-darkBg to-slate-900 flex flex-col items-center justify-center p-6 text-center">
+                  <span class="material-symbols-outlined text-6xl text-purple-400 mb-3 animate-float">cake</span>
+                  <h4 class="font-headline font-bold text-white text-lg">Personalizador Interativo de Encomendas</h4>
+                  <p class="text-xs text-slate-400 mt-2 max-w-sm">Massa especial, recheio duplo, cobertura artesanal e envio direto para a ordem de produção.</p>
+                  <span class="mt-4 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 font-mono text-[11px] font-bold">Fluxo 100% Automatizado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 3: STUDIO CLARA ROMANO -->
+          <div class="carousel-slide w-full shrink-0 p-8 sm:p-12 hidden flex-col lg:flex-row items-center gap-10">
+            <div class="lg:w-1/2 space-y-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40 text-xs font-mono font-bold uppercase">
+                  Landing Page de Alta Conversão
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+                  Site em Produção Real
+                </span>
+              </div>
+              <h3 class="font-headline text-3xl sm:text-4xl font-black text-white">
+                Studio Clara Romano — Nail Design & Agendamento Digital
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Plataforma no ar (<a href="https://studioclararomano.com" target="_blank" class="text-brand-cyan underline font-semibold">studioclararomano.com</a>) com carregamento ultrarrápido, design de luxo e uma <strong>gaveta lateral estilo sacola de procedimentos</strong>. A cliente seleciona serviços simultâneos com soma de tempo e valor, agendando instantaneamente no WhatsApp.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-brand-cyan text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">speed</span>
+                    Velocidade Instantânea
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Carrega em fração de segundos no celular</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-brand-pink text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                    Sacola de Procedimentos
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Cliente combina múltiplos serviços</p>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center gap-3">
+                <button onclick="selectPlanFromSlide('Landing Page')" class="tech-gradient text-white px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
+                  <span>Quero uma Landing Page Igual</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <span class="text-xs font-mono text-emerald-400 font-bold">R$ 200 taxa única + R$ 50/mês</span>
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full relative">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center justify-between px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                    <span class="ml-2 text-[10px]">studioclararomano.com</span>
+                  </div>
+                  <a href="https://studioclararomano.com" target="_blank" class="text-brand-cyan text-[11px] flex items-center gap-1 hover:underline">
+                    Visitar Site <span class="material-symbols-outlined text-xs">launch</span>
+                  </a>
+                </div>
+                <div class="h-80 bg-gradient-to-br from-brand-darkSurface via-slate-900 to-brand-darkBg flex flex-col items-center justify-center p-6 text-center">
+                  <span class="material-symbols-outlined text-6xl text-brand-pink mb-3 animate-pulse">spa</span>
+                  <h4 class="font-headline font-bold text-white text-lg">Experiência Digital Clara Romano</h4>
+                  <p class="text-xs text-slate-400 mt-2 max-w-sm">Catálogo de alongamento, blindagem, spa dos pés e conversão direta para o WhatsApp.</p>
+                  <span class="mt-4 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[11px] font-bold">● Ativo na Web</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 4: REMARTUR VIAGENS -->
+          <div class="carousel-slide w-full shrink-0 p-8 sm:p-12 hidden flex-col lg:flex-row items-center gap-10">
+            <div class="lg:w-1/2 space-y-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-xs font-mono font-bold uppercase">
+                  Portal Comercial & Cotador
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+                  Geração de Leads Qualificados
+                </span>
+              </div>
+              <h3 class="font-headline text-3xl sm:text-4xl font-black text-white">
+                ReMarTur Viagens — Portal de Resorts & Cotador Automático
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Vitrine comercial focada nos grandes resorts termais da região de Olímpia e Barretos. O visitante filtra por capacidade (até 7 pessoas), comodidades e recebe uma cotação formatada direto no WhatsApp do time de vendas, multiplicando a taxa de fechamento.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">hotel</span>
+                    Filtro por Família
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Busca inteligente por número de hóspedes</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-brand-pink text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                    Leads no WhatsApp
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Mensagem pronta para o corretor fechar</p>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center gap-3">
+                <button onclick="selectPlanFromSlide('Landing Page')" class="tech-gradient text-white px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
+                  <span>Quero um Portal Comercial</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <span class="text-xs font-mono text-emerald-400 font-bold">R$ 200 taxa única + R$ 50/mês</span>
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full relative">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <span class="ml-2 text-[10px]">remartur.com.br • Resorts & Lazer</span>
+                </div>
+                <div class="h-80 bg-gradient-to-br from-emerald-950/40 via-brand-darkBg to-slate-900 flex flex-col items-center justify-center p-6 text-center">
+                  <span class="material-symbols-outlined text-6xl text-emerald-400 mb-3 animate-float">beach_access</span>
+                  <h4 class="font-headline font-bold text-white text-lg">Vitrine & Cotador de Resorts</h4>
+                  <p class="text-xs text-slate-400 mt-2 max-w-sm">Filtros dinâmicos, fotos de alta qualidade e envio do cliente já pronto para comprar.</p>
+                  <span class="mt-4 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[11px] font-bold">Alta Conversão Comercial</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 5: FORNERIA CANTO D'ITÁLIA -->
+          <div class="carousel-slide w-full shrink-0 p-8 sm:p-12 hidden flex-col lg:flex-row items-center gap-10">
+            <div class="lg:w-1/2 space-y-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 text-xs font-mono font-bold uppercase">
+                  Gastronomia Artesanal
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+                  Cardápio Digital Sem Taxas de App
+                </span>
+              </div>
+              <h3 class="font-headline text-3xl sm:text-4xl font-black text-white">
+                Forneria Canto D'Itália — Cardápio Gourmet & Adega de Vinhos
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Experiência imersiva para forneria artesanal: tipografia refinada, fotos de pizzas de fermentação natural, carta de vinhos selecionados e botão de pedidos direto para o restaurante, permitindo <strong>economizar até 27% em taxas de aplicativos intermediários</strong>.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-amber-400 text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">local_pizza</span>
+                    Cardápio Elegante
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Fotos dos pratos e detalhes de ingredientes</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">attach_money</span>
+                    Sem Comissões
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Venda direta sem intermediários</p>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center gap-3">
+                <button onclick="selectPlanFromSlide('Landing Page')" class="tech-gradient text-white px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
+                  <span>Quero um Cardápio Próprio</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <span class="text-xs font-mono text-emerald-400 font-bold">R$ 200 taxa única + R$ 50/mês</span>
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full relative">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <span class="ml-2 text-[10px]">cantoditalia.com.br • Forneria & Vinhos</span>
+                </div>
+                <div class="h-80 bg-gradient-to-br from-amber-950/40 via-brand-darkBg to-slate-900 flex flex-col items-center justify-center p-6 text-center">
+                  <span class="material-symbols-outlined text-6xl text-amber-400 mb-3 animate-pulse">wine_bar</span>
+                  <h4 class="font-headline font-bold text-white text-lg">Forneria & Carta de Vinhos</h4>
+                  <p class="text-xs text-slate-400 mt-2 max-w-sm">Design com sofisticação italiana para valorizar o restaurante e atrair clientes de alto padrão.</p>
+                  <span class="mt-4 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-mono text-[11px] font-bold">Valorização de Marca</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 6: ORDEM CERTA (CRM) -->
+          <div class="carousel-slide w-full shrink-0 p-8 sm:p-12 hidden flex-col lg:flex-row items-center gap-10">
+            <div class="lg:w-1/2 space-y-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40 text-xs font-mono font-bold uppercase">
+                  CRM & Sistema Operacional
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+                  Quadro Kanban & Equipes
+                </span>
+              </div>
+              <h3 class="font-headline text-3xl sm:text-4xl font-black text-white">
+                Ordem Certa — Gestão de Ordens de Serviço, Clientes & Insumos
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Sistema sob medida para empresas de serviços técnicos, reformas e manutenções: cadastro unificado de clientes, pipeline de atendimentos em <strong>quadro Kanban interativo</strong>, controle de materiais gastos e gráficos analíticos de produtividade por técnico.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-brand-cyan text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">view_kanban</span>
+                    Quadro Kanban
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Acompanhamento visual do status do serviço</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-brand-darkBg/80 border border-brand-darkBorder">
+                  <div class="flex items-center gap-2 text-purple-400 text-xs font-bold font-mono">
+                    <span class="material-symbols-outlined text-sm">query_stats</span>
+                    Métricas de Produtividade
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1">Relatórios de faturamento e desempenho</p>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center gap-3">
+                <button onclick="selectPlanFromSlide('CRM Multi-Módulos')" class="tech-gradient text-white px-6 py-3 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all flex items-center gap-2">
+                  <span>Quero um CRM Sob Medida</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <span class="text-xs font-mono text-emerald-400 font-bold">R$ 600 taxa única + R$ 300/mês</span>
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full relative">
+              <div class="rounded-2xl border border-brand-darkBorder bg-slate-900 p-2 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800 text-xs font-mono text-slate-400">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <span class="ml-2 text-[10px]">ordemcerta.app • CRM & Kanban</span>
+                </div>
+                <div class="h-80 bg-gradient-to-br from-cyan-950/40 via-brand-darkBg to-slate-900 flex flex-col items-center justify-center p-6 text-center">
+                  <span class="material-symbols-outlined text-6xl text-brand-cyan mb-3 animate-float">dashboard_customize</span>
+                  <h4 class="font-headline font-bold text-white text-lg">Painel de Ordens de Serviço & Equipes</h4>
+                  <p class="text-xs text-slate-400 mt-2 max-w-sm">Módulo de clientes, alocação de técnicos, controle de materiais e gráficos de faturamento.</p>
+                  <span class="mt-4 px-3 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan font-mono text-[11px] font-bold">Gestão Operacional Total</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Indicators / Bullets Bottom -->
+        <div class="p-6 border-t border-brand-darkBorder bg-brand-darkBg/60 flex items-center justify-between">
+          <div class="flex items-center gap-2" id="carouselDots">
+            <button onclick="goToSlide(0)" class="dot-btn h-2.5 w-8 rounded-full bg-brand-pink transition-all" aria-label="Ir para slide 1"></button>
+            <button onclick="goToSlide(1)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 2"></button>
+            <button onclick="goToSlide(2)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 3"></button>
+            <button onclick="goToSlide(3)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 4"></button>
+            <button onclick="goToSlide(4)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 5"></button>
+            <button onclick="goToSlide(5)" class="dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all" aria-label="Ir para slide 6"></button>
+          </div>
+
+          <div class="text-xs font-mono text-slate-400">
+            Slide <span id="currentSlideNum" class="text-white font-bold">1</span> de 6 • <span class="text-brand-pink">Passe o mouse para pausar</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- CARDÁPIO DE SERVIÇOS & INVESTIMENTO        -->
+    <!-- ========================================== -->
+    <section id="planos" class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-darkBorder">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-pink/40 bg-brand-pink/10 text-brand-pink text-xs font-mono uppercase tracking-widest font-bold">
+          <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span>
+          <span>Cardápio de Trabalho & Preços Transparentes</span>
+        </div>
+        <h2 class="font-headline text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Escolha a Solução Ideal para o Seu Negócio
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+          Sem custos ocultos ou cobranças surpresa. Todo plano inclui protótipo inicial gratuito, infraestrutura em nuvem coberta e suporte contínuo com pequenas alterações inclusas.
+        </p>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- CARD 1: LANDING PAGE -->
+        <div class="rounded-3xl p-8 border border-brand-darkBorder bg-brand-darkSurface/90 flex flex-col justify-between hover:border-brand-pink/40 hover:shadow-xl transition-all shadow-md">
+          <div class="space-y-6">
+            
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brand-darkBg border border-brand-darkBorder text-[11px] font-mono font-bold uppercase text-slate-300">
+                Presença & Conversão
+              </span>
+              <span class="material-symbols-outlined text-2xl text-brand-pink">rocket_launch</span>
+            </div>
+
+            <div>
+              <h3 class="font-headline text-2xl font-black text-white">Landing Page</h3>
+              <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                Página única moderna, de alta velocidade e focada em transformar visitantes em contatos diretos no seu WhatsApp.
+              </p>
+            </div>
+
+            <!-- Price Display -->
+            <div class="p-5 rounded-2xl bg-brand-darkBg border border-brand-darkBorder space-y-1">
+              <div class="flex items-baseline gap-2">
+                <span class="font-headline text-4xl font-black text-white">R$ 200</span>
+                <span class="text-xs font-mono font-semibold text-slate-400">criação única fixa</span>
+              </div>
+              <div class="flex items-center gap-1.5 pt-1 text-emerald-400 font-mono text-xs font-bold">
+                <span>+ R$ 50,00 / mês</span>
+                <span class="text-[10px] text-slate-400 font-normal">(manutenção, nuvem & suporte)</span>
+              </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="space-y-3 text-xs text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Design exclusivo e 100% responsivo (otimizado para celular e PC)</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Botões inteligentes com link direto para seu WhatsApp</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Formulário de contato com envio automático para seu e-mail</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Otimização de velocidade instantânea e boas práticas de SEO</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-brand-pink shrink-0">stars</span>
+                <span class="font-bold text-white">Protótipo navegável 100% gratuito para aprovação</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-brand-cyan shrink-0">support_agent</span>
+                <span>Atendimento 24h & pequenas alterações inclusas</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-8">
+            <button onclick="requestPlanWhatsApp('Landing Page', 'R$ 200 setup + R$ 50/mês')" class="w-full py-4 px-6 rounded-xl border border-brand-darkBorder bg-brand-darkBg hover:border-brand-pink hover:text-brand-pink text-white font-headline font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 group">
+              <span>Solicitar Protótipo Gratuito</span>
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 2: E-COMMERCE + GESTÃO TOTAL (FEATURED) -->
+        <div class="rounded-3xl p-8 border-2 border-brand-pink relative bg-brand-darkSurface flex flex-col justify-between shadow-[0_20px_60px_rgba(255,59,122,0.22)] transform lg:-translate-y-3">
+          
+          <!-- Ribbon Top -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 tech-gradient text-white px-4 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest font-black flex items-center gap-1.5 shadow-md">
+            <span class="material-symbols-outlined text-xs">workspace_premium</span>
+            <span>Mais Completo • Vendas & ERP</span>
+          </div>
+
+          <div class="space-y-6 pt-2">
+            
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brand-pink/20 text-brand-pink border border-brand-pink/40 text-[11px] font-mono font-bold uppercase">
+                Vendas & Controle Total
+              </span>
+              <span class="material-symbols-outlined text-2xl text-brand-pink">storefront</span>
+            </div>
+
+            <div>
+              <h3 class="font-headline text-2xl font-black text-white">E-commerce + Gestão Total</h3>
+              <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                Loja virtual completa com carrinho, checkout e uma retaguarda administrativa (ERP) para controle de pedidos, estoque e caixa.
+              </p>
+            </div>
+
+            <!-- Price Display -->
+            <div class="p-5 rounded-2xl bg-brand-pink/10 border border-brand-pink/30 space-y-1">
+              <div class="flex items-baseline gap-2">
+                <span class="font-headline text-4xl font-black text-white">R$ 1.000</span>
+                <span class="text-xs font-mono font-semibold text-slate-300">criação única fixa</span>
+              </div>
+              <div class="flex items-center gap-1.5 pt-1 text-emerald-400 font-mono text-xs font-bold">
+                <span>+ R$ 500,00 / mês</span>
+                <span class="text-[10px] text-slate-400 font-normal">(manutenção, banco de dados & suporte)</span>
+              </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="space-y-3 text-xs text-slate-200">
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Catálogo dinâmico de produtos com fotos em alta resolução e variações</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Carrinho interativo, cálculo de cupons e checkout de compra seguro</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span class="font-bold text-white">Painel Administrativo Completo: controle total de pedidos e estoque</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Esteira de produção, fechamento de caixa e dados de clientes</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-brand-pink shrink-0">stars</span>
+                <span class="font-bold text-white">Protótipo navegável 100% gratuito para aprovação</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-brand-cyan shrink-0">support_agent</span>
+                <span>Atendimento 24h & atualizações de banners/produtos inclusas</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-8">
+            <button onclick="requestPlanWhatsApp('E-commerce + Gestão Total', 'R$ 1.000 setup + R$ 500/mês')" class="w-full tech-gradient text-white py-4 px-6 rounded-xl font-headline font-bold text-xs uppercase tracking-wider hover:opacity-95 hover:shadow-[0_0_30px_rgba(255,59,122,0.5)] transition-all flex items-center justify-center gap-2 group">
+              <span>Solicitar Protótipo Gratuito</span>
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 3: CRM COMPLETO (SISTEMA OPERACIONAL) -->
+        <div class="rounded-3xl p-8 border border-brand-darkBorder bg-brand-darkSurface/90 flex flex-col justify-between hover:border-brand-cyan/40 hover:shadow-xl transition-all shadow-md">
+          <div class="space-y-6">
+            
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brand-darkBg border border-brand-darkBorder text-[11px] font-mono font-bold uppercase text-slate-300">
+                Operação & Produtividade
+              </span>
+              <span class="material-symbols-outlined text-2xl text-brand-cyan">dashboard_customize</span>
+            </div>
+
+            <div>
+              <h3 class="font-headline text-2xl font-black text-white">CRM Multi-Módulos</h3>
+              <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                Sistema corporativo sob medida para gestão de clientes, funis comerciais, ordens de serviço (OS) e relatórios.
+              </p>
+            </div>
+
+            <!-- Price Display -->
+            <div class="p-5 rounded-2xl bg-brand-darkBg border border-brand-darkBorder space-y-1">
+              <div class="flex items-baseline gap-2">
+                <span class="font-headline text-4xl font-black text-white">R$ 600</span>
+                <span class="text-xs font-mono font-semibold text-slate-400">criação única fixa</span>
+              </div>
+              <div class="flex items-center gap-1.5 pt-1 text-emerald-400 font-mono text-xs font-bold">
+                <span>+ R$ 300,00 / mês</span>
+                <span class="text-[10px] text-slate-400 font-normal">(nuvem, banco de dados & suporte)</span>
+              </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="space-y-3 text-xs text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Módulo de Clientes, Contatos e Histórico de Atendimentos</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Pipeline / Funil de Vendas e Ordens de Serviço (Quadro Kanban)</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Gestão de Insumos, Materiais e Controle de Equipes Técnicas</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-emerald-400 shrink-0">check_circle</span>
+                <span>Dashboards analíticos de produtividade com gráficos dinâmicos</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-brand-pink shrink-0">stars</span>
+                <span class="font-bold text-white">Protótipo navegável 100% gratuito para aprovação</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-base text-brand-cyan shrink-0">support_agent</span>
+                <span>Atendimento 24h & ajustes contínuos inclusos na mensalidade</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-8">
+            <button onclick="requestPlanWhatsApp('CRM Multi-Módulos', 'R$ 600 setup + R$ 300/mês')" class="w-full py-4 px-6 rounded-xl border border-brand-darkBorder bg-brand-darkBg hover:border-brand-cyan hover:text-brand-cyan text-white font-headline font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 group">
+              <span>Solicitar Protótipo Gratuito</span>
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE BUDGET SIMULATOR               -->
+    <!-- ========================================== -->
+    <section id="simulador" class="py-20 px-6 max-w-5xl mx-auto">
+      
+      <div class="p-8 sm:p-12 rounded-3xl border border-brand-darkBorder bg-gradient-to-br from-brand-darkSurface via-slate-900 to-brand-darkBg shadow-2xl relative overflow-hidden">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+          <span class="px-3 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-mono font-bold uppercase tracking-wider">
+            Simulador Interativo
+          </span>
+          <h3 class="font-headline text-2xl sm:text-4xl font-black text-white">
+            Monte o Pacote Sob Medida para Seu Negócio
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Selecione a base do seu projeto e marque os recursos opcionais para calcular o investimento na hora.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          
+          <!-- Left: Options Selection -->
+          <div class="space-y-6">
+            
+            <!-- Step 1: Base Platform -->
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 font-bold mb-3">
+                1. Escolha o Tipo de Software Base:
+              </label>
+              <div class="space-y-2.5">
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-brand-darkBorder bg-brand-darkBg cursor-pointer hover:border-brand-pink transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="radio" name="basePlan" value="lp" checked onchange="calculateBudget()" class="text-brand-pink focus:ring-brand-pink" />
+                    <div>
+                      <div class="text-xs font-bold text-white">Landing Page de Alta Conversão</div>
+                      <div class="text-[11px] text-slate-400">Página única focada em WhatsApp</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-mono text-slate-300">R$ 200</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3.5 rounded-xl border-2 border-brand-pink bg-brand-darkBg cursor-pointer hover:border-brand-pink transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="radio" name="basePlan" value="ecom" onchange="calculateBudget()" class="text-brand-pink focus:ring-brand-pink" />
+                    <div>
+                      <div class="text-xs font-bold text-white flex items-center gap-1.5">
+                        E-commerce + Gestão Total (ERP)
+                        <span class="text-[9px] bg-brand-pink text-white px-1.5 py-0.2 rounded font-mono">Destaque</span>
+                      </div>
+                      <div class="text-[11px] text-slate-400">Loja + Painel de Vendas e Estoque</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-mono text-brand-pink font-bold">R$ 1.000</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-brand-darkBorder bg-brand-darkBg cursor-pointer hover:border-brand-cyan transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="radio" name="basePlan" value="crm" onchange="calculateBudget()" class="text-brand-cyan focus:ring-brand-cyan" />
+                    <div>
+                      <div class="text-xs font-bold text-white">CRM Multi-Módulos</div>
+                      <div class="text-[11px] text-slate-400">Kanban de OS, Clientes & Insumos</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-mono text-slate-300">R$ 600</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 2: Add-ons -->
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 font-bold mb-3">
+                2. Adicionais Opcionais:
+              </label>
+              <div class="space-y-2.5">
+                <label class="flex items-center justify-between p-3 rounded-xl border border-brand-darkBorder bg-brand-darkBg/70 cursor-pointer hover:border-slate-500 transition-all">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" id="addonMulti" onchange="calculateBudget()" class="rounded text-brand-pink" />
+                    <span class="text-xs text-slate-300">Módulo Multi-Filiais ou Equipes Técnicas</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-400">+ R$ 200</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl border border-brand-darkBorder bg-brand-darkBg/70 cursor-pointer hover:border-slate-500 transition-all">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" id="addonAi" onchange="calculateBudget()" class="rounded text-brand-pink" />
+                    <span class="text-xs text-slate-300">Integração com IA (Geração de Textos / Chatbot)</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-400">+ R$ 300</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl border border-brand-darkBorder bg-brand-darkBg/70 cursor-pointer hover:border-slate-500 transition-all">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" id="addonNotif" onchange="calculateBudget()" class="rounded text-brand-pink" />
+                    <span class="text-xs text-slate-300">Disparador Automático de E-mails / Status</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-400">+ R$ 150</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Summary Box -->
+          <div class="p-6 sm:p-8 rounded-2xl border border-brand-pink/30 bg-brand-darkBg/90 space-y-6">
+            <h4 class="font-headline text-lg font-bold text-white flex items-center justify-between">
+              <span>Resumo do Investimento</span>
+              <span class="material-symbols-outlined text-brand-pink text-xl">receipt_long</span>
+            </h4>
+
+            <div class="space-y-3 text-xs border-y border-brand-darkBorder py-4">
+              <div class="flex items-center justify-between text-slate-300">
+                <span>Protótipo Inicial Demonstrativo:</span>
+                <span class="text-emerald-400 font-mono font-bold uppercase">R$ 0,00 (Gratuito)</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-300">
+                <span>Taxa Única de Desenvolvimento:</span>
+                <span id="calcSetupTotal" class="text-white font-headline text-base font-black">R$ 200,00</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-300">
+                <span>Mensalidade (Nuvem + Suporte 24h):</span>
+                <span id="calcMonthlyTotal" class="text-emerald-400 font-mono font-bold">R$ 50,00 / mês</span>
+              </div>
+            </div>
+
+            <!-- What's included note -->
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-brand-darkBorder text-[11px] text-slate-400 space-y-1">
+              <div class="text-slate-200 font-bold flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-xs text-brand-pink">check</span>
+                Garantia Sem Risco:
+              </div>
+              <p>Você só paga o desenvolvimento após testar e aprovar o protótipo funcional.</p>
+            </div>
+
+            <!-- Submit to WhatsApp -->
+            <button onclick="sendSimulatedBudgetWhatsApp()" class="w-full tech-gradient text-white py-4 px-6 rounded-xl font-headline font-bold text-xs uppercase tracking-wider hover:opacity-95 hover:shadow-[0_0_25px_rgba(255,59,122,0.4)] transition-all flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-base">chat</span>
+              <span>Enviar Esta Proposta no WhatsApp</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 5-STEP ONBOARDING WORKFLOW                 -->
+    <!-- ========================================== -->
+    <section id="processo" class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-darkBorder">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full bg-brand-pink/10 border border-brand-pink/30 text-brand-pink text-xs font-mono font-bold uppercase tracking-wider">
+          Transparência Total
+        </span>
+        <h2 class="font-headline text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Como Funciona o Atendimento (Passo a Passo)
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">
+          Um fluxo seguro, ágil e sem riscos: você acompanha cada etapa da construção.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        
+        <!-- Step 1 -->
+        <div class="p-6 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface flex flex-col justify-between space-y-4 hover:border-brand-pink/50 transition-all shadow-md group">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-xl bg-brand-pink/10 text-brand-pink font-mono text-sm font-black flex items-center justify-center">01</span>
+            <span class="material-symbols-outlined text-slate-500 text-xl group-hover:text-brand-pink transition-colors">forum</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-sm font-bold text-white">1. Briefing Inicial</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Conversamos no WhatsApp para entender seu negócio, público, catálogo de produtos e os desafios que o software resolverá.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 rounded-2xl border-2 border-brand-pink bg-brand-darkSurface flex flex-col justify-between space-y-4 hover:shadow-[0_0_25px_rgba(255,59,122,0.25)] transition-all shadow-md relative group">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-xl bg-brand-pink text-white font-mono text-sm font-black flex items-center justify-center">02</span>
+            <span class="material-symbols-outlined text-brand-pink text-xl">draw</span>
+          </div>
+          <div>
+            <span class="inline-block px-2 py-0.5 rounded bg-brand-pink/20 text-brand-pink font-mono text-[10px] font-bold mb-1.5">
+              Custo Zero
+            </span>
+            <h4 class="font-headline text-sm font-bold text-white">2. Protótipo Gratuito</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Crio uma versão de demonstração inicial navegável para você experimentar o visual e o fluxo sem nenhum compromisso financeiro.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface flex flex-col justify-between space-y-4 hover:border-brand-cyan/50 transition-all shadow-md group">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-xl bg-brand-cyan/10 text-brand-cyan font-mono text-sm font-black flex items-center justify-center">03</span>
+            <span class="material-symbols-outlined text-slate-500 text-xl group-hover:text-brand-cyan transition-colors">check_circle</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-sm font-bold text-white">3. Aprovação & Setup</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Após sua total aprovação do protótipo, iniciamos o desenvolvimento completo, banco de dados seguro e montagem da infraestrutura.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-6 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface flex flex-col justify-between space-y-4 hover:border-emerald-500/50 transition-all shadow-md group">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 font-mono text-sm font-black flex items-center justify-center">04</span>
+            <span class="material-symbols-outlined text-slate-500 text-xl group-hover:text-emerald-400 transition-colors">rocket_launch</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-sm font-bold text-white">4. Entrega & Publicação</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              O sistema entra no ar com seu domínio oficial, testes rigorosos concluídos e orientações completas de uso da plataforma.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="p-6 rounded-2xl border border-brand-darkBorder bg-brand-darkSurface flex flex-col justify-between space-y-4 hover:border-purple-500/50 transition-all shadow-md group">
+          <div class="flex items-center justify-between">
+            <span class="w-9 h-9 rounded-xl bg-purple-500/10 text-purple-400 font-mono text-sm font-black flex items-center justify-center">05</span>
+            <span class="material-symbols-outlined text-slate-500 text-xl group-hover:text-purple-400 transition-colors">support_agent</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-sm font-bold text-white">5. Suporte 24h & Evolução</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Seu sistema permanece ativo, com estabilidade garantida, suporte no WhatsApp e pequenas alterações inclusas na mensalidade.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- FAQ ACCORDION                              -->
+    <!-- ========================================== -->
+    <section id="faq" class="py-20 px-6 max-w-4xl mx-auto border-t border-brand-darkBorder">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono font-bold uppercase tracking-wider">
+          Tire Suas Dúvidas
+        </span>
+        <h2 class="font-headline text-3xl sm:text-4xl font-black text-white">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        
+        <!-- Q1 -->
+        <div class="rounded-2xl border border-brand-darkBorder bg-brand-darkSurface overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-headline font-bold text-sm text-white hover:text-brand-pink transition-colors">
+            <span>O protótipo é realmente 100% gratuito?</span>
+            <span class="material-symbols-outlined text-slate-400 text-lg transition-transform faq-icon">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-xs text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            Sim! Eu monto uma demonstração visual navegável do seu projeto para você testar a dinâmica e aprovar o resultado antes de investir qualquer valor de desenvolvimento. Se por qualquer motivo não quiser prosseguir, não há custo algum.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="rounded-2xl border border-brand-darkBorder bg-brand-darkSurface overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-headline font-bold text-sm text-white hover:text-brand-pink transition-colors">
+            <span>O que está incluso na taxa mensal de manutenção?</span>
+            <span class="material-symbols-outlined text-slate-400 text-lg transition-transform faq-icon">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-xs text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            A mensalidade cobre toda a infraestrutura em nuvem (servidores rápidos, banco de dados seguro, certificado SSL contra ataques), monitoramento contínuo de estabilidade, suporte prioritário 24 horas no WhatsApp e <strong>pequenas alterações sem custo adicional</strong> (troca de fotos, banners, textos, preços e cadastro de produtos).
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="rounded-2xl border border-brand-darkBorder bg-brand-darkSurface overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-headline font-bold text-sm text-white hover:text-brand-pink transition-colors">
+            <span>O site funcionará bem no celular?</span>
+            <span class="material-symbols-outlined text-slate-400 text-lg transition-transform faq-icon">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-xs text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            Perfeitamente! Mais de 85% dos clientes navegam pelo smartphone. Todos os projetos são desenvolvidos com arquitetura <em>Mobile-First</em>, garantindo carregamento instantâneo, botões fáceis de tocar e fluxo de compra natural em qualquer tela.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="rounded-2xl border border-brand-darkBorder bg-brand-darkSurface overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-headline font-bold text-sm text-white hover:text-brand-pink transition-colors">
+            <span>Quanto tempo leva para o projeto ficar pronto?</span>
+            <span class="material-symbols-outlined text-slate-400 text-lg transition-transform faq-icon">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-xs text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            O protótipo inicial gratuito é entregue de 24 a 48 horas após nossa conversa inicial. Uma vez aprovado, landing pages ficam prontas em cerca de 3 a 5 dias úteis, e lojas virtuais completas com ERP em 10 a 15 dias úteis.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="rounded-2xl border border-brand-darkBorder bg-brand-darkSurface overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-headline font-bold text-sm text-white hover:text-brand-pink transition-colors">
+            <span>Preciso comprar domínio próprio (ex: suaempresa.com.br)?</span>
+            <span class="material-symbols-outlined text-slate-400 text-lg transition-transform faq-icon">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-xs text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            Caso você já tenha um domínio registrado, realizo toda a configuração e apontamento sem custo. Se ainda não tiver, oriento o registro oficial no Registro.br (custa em média R$ 40/ano) e deixo tudo 100% configurado para você.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- FINAL CTA / DIRECT CONTACT                 -->
+    <!-- ========================================== -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+      <div class="p-10 sm:p-14 rounded-3xl tech-border-glow bg-gradient-to-r from-brand-darkSurface via-slate-900 to-brand-darkBg text-center space-y-6 relative overflow-hidden">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-pink/40 bg-brand-pink/10 text-brand-pink text-xs font-mono uppercase tracking-widest font-bold">
+          <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span>
+          <span>Pronto para dar o próximo passo?</span>
+        </div>
+
+        <h2 class="font-headline text-3xl sm:text-5xl font-black text-white tracking-tight max-w-2xl mx-auto">
+          Solicite Seu Protótipo Gratuito Agora Mesmo
+        </h2>
+
+        <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
+          Sem burocracia, sem compromisso financeiro antecipado. Me chame no WhatsApp e vamos construir a solução digital que seu negócio precisa.
+        </p>
+
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+          <button onclick="openWhatsAppGeneral()" class="tech-gradient text-white px-8 py-4 rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-lg hover:scale-105 transition-all flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-lg">chat</span>
+            <span>Chamar no WhatsApp (17) 99781-3589</span>
+          </button>
+          
+          <a href="mailto:cpaneco@gmail.com" class="px-6 py-4 rounded-xl border border-brand-darkBorder bg-brand-darkSurface text-slate-300 hover:text-white hover:border-brand-pink font-headline font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined text-lg">mail</span>
+            <span>cpaneco@gmail.com</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer class="py-12 px-6 max-w-7xl mx-auto border-t border-brand-darkBorder flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-500 font-mono">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-lg tech-gradient flex items-center justify-center text-white font-bold text-xs">
+          CP
+        </div>
+        <span>© 2026 Caroline Vitória Paneco • Todos os direitos reservados.</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#inicio" class="hover:text-brand-pink transition-colors">Voltar ao Topo ↑</a>
+        <a href="../" target="_blank" class="hover:text-brand-pink transition-colors">Portfólio de Desenvolvedora ↗</a>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- FLOATING WHATSAPP BUTTON                   -->
+  <!-- ========================================== -->
+  <aside aria-label="Atendimento no WhatsApp" class="fixed bottom-6 right-6 z-50">
+    <button onclick="openWhatsAppGeneral()" class="flex items-center gap-2.5 p-3 sm:px-4 sm:py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white font-headline font-bold text-xs shadow-2xl hover:scale-105 transition-all group">
+      <span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">chat</span>
+      <span class="hidden sm:inline">Falar com Caroline</span>
+    </button>
+  </aside>
+
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT CONTROLLERS                     -->
+  <!-- ========================================== -->
+  <script>
+    // Configuration
+    const WHATSAPP_PHONE = "5517997813589"; // DDD 17 Olímpia/SP
+    const DEFAULT_EMAIL = "cpaneco@gmail.com";
+
+    // 1. WhatsApp Dispatcher
+    function openWhatsAppGeneral() {
+      const msg = encodeURIComponent("Olá Caroline! Acessei seu catálogo de serviços e gostaria de solicitar um protótipo gratuito para o meu negócio. Como podemos começar?");
+      window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, '_blank');
+    }
+
+    function requestPlanWhatsApp(planName, priceSummary) {
+      const msg = encodeURIComponent(`Olá Caroline! Vi seu catálogo de serviços e escolhi o plano: *${planName}* (${priceSummary}).\nGostaria de solicitar o meu protótipo inicial gratuito para avaliação.`);
+      window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, '_blank');
+    }
+
+    function selectPlanFromSlide(planName) {
+      requestPlanWhatsApp(planName, "visualizado na demonstração");
+    }
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 2. Automated Carousel Controller
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+    let carouselInterval = null;
+    let progressInterval = null;
+    let progressVal = 0;
+    let isPaused = false;
+    const SLIDE_DURATION_MS = 4500;
+
+    function showSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentSlide = index;
+
+      slides.forEach((s, idx) => {
+        if (idx === currentSlide) {
+          s.classList.remove('hidden');
+          s.classList.add('flex');
+        } else {
+          s.classList.add('hidden');
+          s.classList.remove('flex');
+        }
+      });
+
+      // Update dots
+      const dots = document.querySelectorAll('#carouselDots .dot-btn');
+      dots.forEach((d, idx) => {
+        if (idx === currentSlide) {
+          d.className = "dot-btn h-2.5 w-8 rounded-full bg-brand-pink transition-all";
+        } else {
+          d.className = "dot-btn h-2.5 w-3 rounded-full bg-slate-700 hover:bg-slate-500 transition-all";
+        }
+      });
+
+      const numEl = document.getElementById('currentSlideNum');
+      if (numEl) numEl.innerText = (currentSlide + 1);
+
+      resetProgressBar();
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function goToSlide(idx) {
+      showSlide(idx);
+    }
+
+    function resetProgressBar() {
+      progressVal = 0;
+      const bar = document.getElementById('carouselProgressBar');
+      if (bar) bar.style.width = '0%';
+    }
+
+    function startCarousel() {
+      stopCarousel();
+      isPaused = false;
+      updatePlayPauseButton();
+
+      const stepMs = 50;
+      const increment = (stepMs / SLIDE_DURATION_MS) * 100;
+
+      progressInterval = setInterval(() => {
+        if (!isPaused) {
+          progressVal += increment;
+          const bar = document.getElementById('carouselProgressBar');
+          if (bar) bar.style.width = Math.min(progressVal, 100) + '%';
+          if (progressVal >= 100) {
+            nextSlide();
+          }
+        }
+      }, stepMs);
+    }
+
+    function stopCarousel() {
+      if (progressInterval) clearInterval(progressInterval);
+    }
+
+    function toggleCarouselPlay() {
+      isPaused = !isPaused;
+      updatePlayPauseButton();
+    }
+
+    function updatePlayPauseButton() {
+      const icon = document.getElementById('playPauseIcon');
+      const label = document.getElementById('playPauseLabel');
+      if (isPaused) {
+        if (icon) icon.innerText = 'play_arrow';
+        if (label) label.innerText = 'Continuar';
+      } else {
+        if (icon) icon.innerText = 'pause';
+        if (label) label.innerText = 'Pausar';
+      }
+    }
+
+    // Pause on hover
+    const carouselEl = document.getElementById('carouselContainer');
+    if (carouselEl) {
+      carouselEl.addEventListener('mouseenter', () => { isPaused = true; updatePlayPauseButton(); });
+      carouselEl.addEventListener('mouseleave', () => { isPaused = false; updatePlayPauseButton(); });
+    }
+
+    // Touch Swipe Detection
+    let touchStartX = 0;
+    let touchEndX = 0;
+    if (carouselEl) {
+      carouselEl.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      carouselEl.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) nextSlide();
+        if (touchEndX - touchStartX > 50) prevSlide();
+      }, { passive: true });
+    }
+
+    // 3. Interactive Budget Calculator
+    function calculateBudget() {
+      let baseSetup = 200;
+      let baseMonthly = 50;
+
+      const selectedBase = document.querySelector('input[name="basePlan"]:checked');
+      if (selectedBase) {
+        if (selectedBase.value === 'ecom') {
+          baseSetup = 1000;
+          baseMonthly = 500;
+        } else if (selectedBase.value === 'crm') {
+          baseSetup = 600;
+          baseMonthly = 300;
+        }
+      }
+
+      let extraSetup = 0;
+      if (document.getElementById('addonMulti')?.checked) extraSetup += 200;
+      if (document.getElementById('addonAi')?.checked) extraSetup += 300;
+      if (document.getElementById('addonNotif')?.checked) extraSetup += 150;
+
+      const totalSetup = baseSetup + extraSetup;
+
+      const setupEl = document.getElementById('calcSetupTotal');
+      const monthlyEl = document.getElementById('calcMonthlyTotal');
+
+      if (setupEl) setupEl.innerText = `R$ ${totalSetup.toLocaleString('pt-BR')},00`;
+      if (monthlyEl) monthlyEl.innerText = `R$ ${baseMonthly.toLocaleString('pt-BR')},00 / mês`;
+    }
+
+    function sendSimulatedBudgetWhatsApp() {
+      const selectedBase = document.querySelector('input[name="basePlan"]:checked')?.value || 'lp';
+      let baseName = "Landing Page";
+      if (selectedBase === 'ecom') baseName = "E-commerce + Gestão Total (ERP)";
+      if (selectedBase === 'crm') baseName = "CRM Multi-Módulos";
+
+      const addons = [];
+      if (document.getElementById('addonMulti')?.checked) addons.push("Multi-Filiais (+R$200)");
+      if (document.getElementById('addonAi')?.checked) addons.push("Integração IA (+R$300)");
+      if (document.getElementById('addonNotif')?.checked) addons.push("Disparador Automático (+R$150)");
+
+      const setup = document.getElementById('calcSetupTotal')?.innerText || '';
+      const monthly = document.getElementById('calcMonthlyTotal')?.innerText || '';
+
+      const text = `Olá Caroline! Montei uma simulação no seu catálogo:\n- *Base:* ${baseName}\n- *Adicionais:* ${addons.length ? addons.join(', ') : 'Nenhum'}\n- *Desenvolvimento:* ${setup}\n- *Mensalidade:* ${monthly}\n\nGostaria de solicitar o protótipo gratuito dessa configuração!`;
+      window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    // 4. FAQ Accordion Toggle
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+
+      // Close all other faqs
+      document.querySelectorAll('#faqAccordion .faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('#faqAccordion .faq-icon').forEach(i => i.innerText = 'expand_more');
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        if (icon) icon.innerText = 'expand_less';
+      }
+    }
+
+    // 5. Dynamic Cybernetic Ambient Background Canvas
+    (function initAmbientCanvas() {
+      const canvas = document.getElementById('ambientCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+      const particleCount = 45;
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * 0.4;
+          this.vy = (Math.random() - 0.5) * 0.4;
+          this.radius = Math.random() * 2 + 1;
+          this.color = Math.random() > 0.5 ? 'rgba(255, 59, 122, ' : 'rgba(0, 212, 236, ';
+          this.alpha = Math.random() * 0.5 + 0.2;
+        }
+
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          if (this.x < 0) this.x = width;
+          if (this.x > width) this.x = 0;
+          if (this.y < 0) this.y = height;
+          if (this.y > height) this.y = 0;
+        }
+
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color + this.alpha + ')';
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 130) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(138, 43, 226, ${0.15 * (1 - dist / 130)})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    })();
+
+    // Initialize on DOM Ready
+    document.addEventListener('DOMContentLoaded', () => {
+      showSlide(0);
+      startCarousel();
+      calculateBudget();
+    });
+  </script>
+
+</body>
+</html>

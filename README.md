@@ -139,21 +139,18 @@ portfolio-site/
 
 ---
 
-## 💳 Cardápio de Serviços & Investimento
+## 💳 Catálogo Comercial & Serviços Digitais (`/catalogo`)
 
-Soluções digitais completas com modelo transparente de implantação e manutenção contínua:
+Para clientes e empresas em potencial, o site conta com uma landing page comercial dedicada e independente acessível em **[`/catalogo`](catalogo/index.html)** (`carolinepaneco.com/catalogo`).
 
-| Solução | Implantação (Taxa Única) | Manutenção Mensal | O Que Inclui |
-| :--- | :--- | :--- | :--- |
-| **Landing Page** | **R$ 200,00** | **R$ 50,00 / mês** | Design responsivo exclusivo, WhatsApp, formulário, SEO inicial, custos de nuvem e suporte 24h com pequenos ajustes. |
-| **E-commerce + Gestão Total** | **R$ 1.000,00** | **R$ 500,00 / mês** | Loja virtual completa, carrinho, checkout, Painel Administrativo de Gestão (ERP), estoque, fluxo de caixa e suporte 24h. |
-| **CRM Multi-Módulos** | **R$ 600,00** | **R$ 300,00 / mês** | Gestão de clientes, funil/pipeline (Kanban), ordens de serviço, relatórios analíticos de produtividade e suporte 24h. |
-
-> **Diferenciais Inclusos:**
-> - 🎁 **Protótipo Inicial 100% Gratuito:** O cliente aprova a interface e o fluxo antes de pagar o valor de implantação.
-> - ☁️ **Custos de Servidor Cobertos:** A mensalidade cobre hospedagem, banco de dados e estabilidade contínua.
-> - 🕒 **Atendimento & Suporte 24h:** Canal direto para dúvidas, assistência e orientações técnicas.
-> - 🛠️ **Pequenas Alterações Sem Custo Extra:** Ajustes de dados, fotos, banners, produtos e textos inclusos na mensalidade.
+Ela conta com:
+- **Carrossel Automático de Demonstrações:** Demonstração visual de 6 projetos reais (Paula Presentes, Débora Doces, Studio Clara Romano, ReMarTur Viagens, Canto D'Itália, Ordem Certa) com barra de progresso temporal e pausa interativa no mouse.
+- **Simulador Interativo de Investimento:** Calculadora em tempo real para seleção de planos base e adicionais, gerando propostas diretas para o WhatsApp.
+- **Cardápio com Preços Transparentes:**
+  - **Landing Page:** R$ 200,00 criação + R$ 50,00/mês.
+  - **E-commerce + Gestão Total (ERP):** R$ 1.000,00 criação + R$ 500,00/mês.
+  - **CRM Multi-Módulos:** R$ 600,00 criação + R$ 300,00/mês.
+- **Garantias & Processo em 5 Etapas:** Protótipo inicial 100% gratuito, servidores e nuvem inclusos, atendimento 24h e pequenas alterações sem custo.
 
 ---
 

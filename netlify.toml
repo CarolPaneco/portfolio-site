@@ -1,0 +1,15 @@
+# Netlify Configuration File
+[build]
+  # O site é estático (HTML/CSS/JS puro), não precisa de comando de compilação
+  publish = "."
+
+# Regras de redirecionamento para o Catálogo e URLs limpas
+[[redirects]]
+  from = "/catalogo"
+  to = "/catalogo/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/catalogo/*"
+  to = "/catalogo/:splat"
+  status = 200

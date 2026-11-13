@@ -362,16 +362,16 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
       <!-- ============================================== -->
-      <!-- 1. PAULA PRESENTES (E-COMMERCE MVC)            -->
+      <!-- 3. ALEVS (STREETWEAR FULL-STACK)               -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
+      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-purple/50 hover:shadow-[0_10px_40px_rgba(168,85,247,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
         <div class="space-y-5">
           
-          <!-- Media Hub: Video & Screenshots -->
+          <!-- Media Hub: Video & Screenshots Slot -->
           <div class="space-y-3">
             <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
               <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
-                <source src="videos/paulapresentes.mp4" type="video/mp4">
+                <source src="videos/alevs.mp4" type="video/mp4">
                 Seu navegador não suporta reprodução de vídeos.
               </video>
               <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
@@ -379,43 +379,52 @@
               </div>
             </div>
 
-            <!-- Screenshots Strip -->
-            <div class="grid grid-cols-3 gap-2">
-              <img src="img/inicial.png" alt="Tela Inicial" class="rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
-              <img src="img/detalhe.png" alt="Detalhe do Produto" class="rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
-              <img src="img/image.png" alt="Painel Admin" class="rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+            <!-- Screenshots Strip Slot -->
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+              <div class="p-2 rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-purple-600 dark:text-purple-400">storefront</span>
+                <span class="text-slate-800 dark:text-slate-200">Coleções</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-cyan-600 dark:text-brand-cyan">straighten</span>
+                <span class="text-slate-800 dark:text-slate-200">Medidas</span>
+              </div>
+              <div class="p-2 rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center h-16">
+                <span class="material-symbols-outlined text-sm text-emerald-600 dark:text-emerald-400">payments</span>
+                <span class="text-slate-800 dark:text-slate-200">Checkout</span>
+              </div>
             </div>
           </div>
 
           <!-- Badges -->
           <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">ASP.NET Core MVC</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">PostgreSQL</span>
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Entity Framework</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20 text-[10px] font-mono font-semibold uppercase">React 19 & TanStack Start</span>
+            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Supabase & Drizzle</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-mono font-semibold uppercase">Tailwind v4</span>
           </div>
 
-          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Paula Presentes E-commerce</h3>
+          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">ALEVS Streetwear</h3>
 
           <!-- Deep Case Study Sections -->
           <div class="space-y-3 text-xs leading-relaxed">
             <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
               <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="paulaIntent">
-                Automatizar e profissionalizar as operações de vendas online de artigos para presentes, substituindo pedidos manuais por um fluxo transacional centralizado, seguro e com gestão em tempo real.
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="alevsIntent">
+                Criar uma loja virtual autoral com navegação contínua e ultraveloz para o público jovem de streetwear, garantindo carregamento instantâneo, guia interativa de tamanhos e experiência de compra fluida.
               </p>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
               <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="paulaHow">
-                Estruturei o projeto no padrão MVC com separação em camadas, modelagem relacional no PostgreSQL com Entity Framework Core, autenticação com proteção CSRF, carrinho persistido por sessão e painel administrativo para controle de vendas, estoque e fechamento de caixa.
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="alevsHow">
+                Utilizei TanStack Start com React 19 e Vite 8 para Server-Side Rendering de alta performance. Modelei o banco no Supabase via Drizzle ORM com tipagem fim a fim, implementei busca com debounce, carrinho persistente no localStorage, cupons promocionais e checkout simulado em 3 etapas com validação Zod.
               </p>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
               <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
-              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="paulaSkills">
-                C# • ASP.NET Core MVC • EF Core • PostgreSQL • Modelagem Relacional • Segurança (CSRF/Auth) • Arquitetura em Camadas • Tailwind CSS.
+              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="alevsSkills">
+                React 19 • TanStack Start & Router • Supabase • Drizzle ORM • Zod Schemas • Vitest • Radix UI • Tailwind CSS v4.
               </p>
             </div>
           </div>
@@ -495,16 +504,16 @@
       </div>
 
       <!-- ============================================== -->
-      <!-- 3. ALEVS (STREETWEAR FULL-STACK)               -->
+      <!-- 10. ORDEM CERTA (FIELD SERVICE & WORK ORDERS)  -->
       <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-purple/50 hover:shadow-[0_10px_40px_rgba(168,85,247,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
+      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
         <div class="space-y-5">
           
-          <!-- Media Hub: Video & Screenshots Slot -->
+          <!-- Media Hub: Video & Screenshots -->
           <div class="space-y-3">
             <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
               <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
-                <source src="videos/alevs.mp4" type="video/mp4">
+                <source src="videos/ordemcerta.mp4" type="video/mp4">
                 Seu navegador não suporta reprodução de vídeos.
               </video>
               <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
@@ -512,52 +521,403 @@
               </div>
             </div>
 
-            <!-- Screenshots Strip Slot -->
-            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
-              <div class="p-2 rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center h-16">
-                <span class="material-symbols-outlined text-sm text-purple-600 dark:text-purple-400">storefront</span>
-                <span class="text-slate-800 dark:text-slate-200">Coleções</span>
+            <!-- Screenshots Gallery Grid -->
+            <div class="grid grid-cols-3 gap-2.5">
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/ordemcerta1.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">map</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Mapa & Rotas</span>
               </div>
-              <div class="p-2 rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center h-16">
-                <span class="material-symbols-outlined text-sm text-cyan-600 dark:text-brand-cyan">straighten</span>
-                <span class="text-slate-800 dark:text-slate-200">Medidas</span>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/ordemcerta2.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">inventory_2</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Materiais & OS</span>
               </div>
-              <div class="p-2 rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center h-16">
-                <span class="material-symbols-outlined text-sm text-emerald-600 dark:text-emerald-400">payments</span>
-                <span class="text-slate-800 dark:text-slate-200">Checkout</span>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/ordemcerta3.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">bar_chart</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Métricas & Recharts</span>
               </div>
             </div>
           </div>
 
-          <!-- Badges -->
+          <!-- Tags -->
           <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20 text-[10px] font-mono font-semibold uppercase">React 19 & TanStack Start</span>
-            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-[10px] font-mono font-semibold uppercase">Supabase & Drizzle</span>
-            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-mono font-semibold uppercase">Tailwind v4</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">React 19</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">TanStack Router</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Supabase</span>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-mono font-semibold uppercase">Google Maps API</span>
           </div>
 
-          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">ALEVS Streetwear</h3>
+          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Ordem Certa</h3>
 
-          <!-- Deep Case Study Sections -->
+          <!-- Engineering Case Study Breakdown -->
           <div class="space-y-3 text-xs leading-relaxed">
             <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
               <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="alevsIntent">
-                Criar uma loja virtual autoral com navegação contínua e ultraveloz para o público jovem de streetwear, garantindo carregamento instantâneo, guia interativa de tamanhos e experiência de compra fluida.
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="ordemCertaIntent">
+                Centralizar e otimizar a emissão, alocação e acompanhamento em campo de ordens de serviço, insumos de estoque e equipes operacionais com controle geográfico em tempo real.
               </p>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
               <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="alevsHow">
-                Utilizei TanStack Start com React 19 e Vite 8 para Server-Side Rendering de alta performance. Modelei o banco no Supabase via Drizzle ORM com tipagem fim a fim, implementei busca com debounce, carrinho persistente no localStorage, cupons promocionais e checkout simulado em 3 etapas com validação Zod.
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="ordemCertaHow">
+                Construí a aplicação utilizando React 19 com TanStack Router para roteamento tipado fim a fim. Integrei o Supabase para autenticação e banco relacional, a API do Google Maps para georreferenciamento de atendimentos, formulários reativos com React Hook Form + validação Zod, e dashboards analíticos com Recharts.
               </p>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
               <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
-              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="alevsSkills">
-                React 19 • TanStack Start & Router • Supabase • Drizzle ORM • Zod Schemas • Vitest • Radix UI • Tailwind CSS v4.
+              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="ordemCertaSkills">
+                React 19 • TanStack Router • Supabase • Google Maps API • Recharts • Zod • React Hook Form • Radix UI • Tailwind CSS v4.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+            <!-- ============================================== -->
+      <!-- 11. REMARTUR VIAGENS & RESORTS                 -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
+        <div class="space-y-5">
+          
+          <!-- Media Hub: Video & Screenshots -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
+                <source src="videos/remartur.mp4" type="video/mp4">
+                Seu navegador não suporta reprodução de vídeos.
+              </video>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
+              </div>
+            </div>
+
+            <!-- Screenshots Gallery Grid -->
+            <div class="grid grid-cols-3 gap-2.5">
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/remartur1.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">hotel</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Resorts & Filtros</span>
+              </div>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/remartur2.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">animation</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Framer Motion</span>
+              </div>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/remartur3.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">chat</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Lead WhatsApp</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">React 19</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">TanStack Router</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Framer Motion</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-mono font-semibold uppercase">WhatsApp API</span>
+          </div>
+
+          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">ReMarTur Viagens & Resorts</h3>
+
+          <!-- Engineering Case Study Breakdown -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="remarturIntent">
+                Criar uma vitrine digital imersiva e de alta conversão para reserva e cotação de pacotes exclusivos nos maiores resorts termais do Brasil (Olímpia, Barretos, Caldas Novas).
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="remarturHow">
+                Implementei TanStack Router com React 19 e Vite, estruturando um catálogo dinâmico de resorts com filtros de capacidade, amenidades e pensão. Desenvolvi animações de rolagem e transições suaves com Framer Motion, além de um cotador interativo que gera o lead diretamente no WhatsApp com dados de reserva pré-formatados.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="remarturSkills">
+                React 19 • TanStack Router • Framer Motion • Parallax UI • Tailwind CSS v4 • Geração de Leads • TypeScript.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 12. STUDIO CLARA ROMANO (LUXURY NAIL DESIGN)   -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
+        <div class="space-y-5">
+          
+          <!-- Media Hub: Video & Screenshots -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
+                <source src="videos/studio.mp4" type="video/mp4">
+                Seu navegador não suporta reprodução de vídeos.
+              </video>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
+              </div>
+            </div>
+
+            <!-- Screenshots Gallery Grid -->
+            <div class="grid grid-cols-3 gap-2.5">
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/cr1.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">shopping_bag</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Gaveta de Serviços</span>
+              </div>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/cr2.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">auto_awesome</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Design Editorial</span>
+              </div>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/cr3.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">bolt</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">SSR Nitro Speed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">React 19</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">TanStack Start (SSR)</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Nitro Engine</span>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-mono font-semibold uppercase">Vitest</span>
+          </div>
+
+          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Studio Clara Romano</h3>
+
+          <!-- Engineering Case Study Breakdown -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="crIntent">
+                Oferecer uma experiência de catálogo refinado e agendamento digital para studio de estética e nail design de luxo, eliminando dúvidas sobre serviços e otimizando o fluxo de pré-atendimento.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="crHow">
+                Arquitetei o projeto com TanStack Start e SSR alimentado por Nitro e React 19, garantindo carregamento instantâneo. Desenvolvi uma gaveta interativa lateral estilo sacola de procedimentos para seleção múltipla, cálculo automático de tempo/valores, otimização de imagens com Sharp e testes unitários com Vitest.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="crSkills">
+                React 19 • TanStack Start (SSR) • Nitro • TanStack Query • Vitest • Motion • Radix UI • Sharp • UX/UI Editorial.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 13. CANTO D' ITÁLIA (GASTRONOMY & VISUAL UI)   -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
+        <div class="space-y-5">
+          
+          <!-- Media Hub: Video & Screenshots -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
+                <source src="videos/cantoditalia.mp4" type="video/mp4">
+                Seu navegador não suporta reprodução de vídeos.
+              </video>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
+              </div>
+            </div>
+
+            <!-- Screenshots Gallery Grid -->
+            <div class="grid grid-cols-3 gap-2.5">
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/canto1.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">local_pizza</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Forneria & Pizzas</span>
+              </div>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/canto2.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">wine_bar</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Adega & Vinhos</span>
+              </div>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/canto3.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">restaurant</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Salão & Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">HTML5 Semântico</span>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-mono font-semibold uppercase">Tailwind Custom</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">Glassmorphism</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">UX Gastronômica</span>
+          </div>
+
+          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Forneria Canto D' Itália</h3>
+
+          <!-- Engineering Case Study Breakdown -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="cantoIntent">
+                Transmitir a atmosfera rústica, acolhedora e artesanal da forneria italiana em Olímpia/SP, apresentando pizzas de longa fermentação, adega de vinhos e conectando clientes ao cardápio digital e salão.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="cantoHow">
+                Desenvolvi uma interface fluida com paleta artesanal customizada (Terracotta, Gold e Farinha), combinando Cormorant Garamond com Plus Jakarta Sans. Apliquei técnicas de glassmorphism quente, efeitos de luz de forno com CSS keyframes, galeria fotográfica do salão e integração com cardápio de delivery oficial e geolocalização.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="cantoSkills">
+                HTML5 Semântico • CSS3 Avançado • Paletas Personalizadas no Tailwind • Animações Keyframe • Glassmorphism • Design de Alta Fidelidade.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 14. HAYANÉ BEAUTY (CANVAS 2D & AESTHETICS)     -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
+        <div class="space-y-5">
+          
+          <!-- Media Hub: Video & Screenshots -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
+                <source src="videos/haynebeauty.mp4" type="video/mp4">
+                Seu navegador não suporta reprodução de vídeos.
+              </video>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
+              </div>
+            </div>
+
+            <!-- Screenshots Gallery Grid -->
+            <div class="grid grid-cols-3 gap-2.5">
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/lash1.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">grain</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Partículas Canvas</span>
+              </div>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/lash2.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">shopping_cart</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Carrinho & Orçamento</span>
+              </div>
+              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/lash3.png')">
+                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">view_in_ar</span>
+                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Parallax 3D</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">JavaScript ES6+</span>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-mono font-semibold uppercase">Canvas 2D Physics</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">3D Parallax</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Tailwind CSS</span>
+          </div>
+
+          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Hayané Beauty Studio</h3>
+
+          <!-- Engineering Case Study Breakdown -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="lashIntent">
+                Criar uma experiência estética imersiva e interativa para studio de cílios, sobrancelhas e estética facial, combinando microinterações táteis com agendamento direto de procedimentos.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="lashHow">
+                Desenvolvi uma engine em Canvas 2D renderizando partículas de poeira estelar dourada que reagem à física do mouse com gravidade e dispersão. Projetei efeito de parallax 3D no hero através de transformações de perspectiva no cursor, carrinho reativo de procedimentos com cálculo de orçamento e acionamento direto via WhatsApp.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="lashSkills">
+                HTML5 Canvas • Física de Partículas em JS • Matemática Vetorial • Efeitos Parallax 3D • JavaScript Modular • Tailwind CSS.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 1. PAULA PRESENTES (E-COMMERCE MVC)            -->
+      <!-- ============================================== -->
+      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
+        <div class="space-y-5">
+          
+          <!-- Media Hub: Video & Screenshots -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
+                <source src="videos/paulapresentes.mp4" type="video/mp4">
+                Seu navegador não suporta reprodução de vídeos.
+              </video>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
+              </div>
+            </div>
+
+            <!-- Screenshots Strip -->
+            <div class="grid grid-cols-3 gap-2">
+              <img src="img/inicial.png" alt="Tela Inicial" class="rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+              <img src="img/detalhe.png" alt="Detalhe do Produto" class="rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+              <img src="img/image.png" alt="Painel Admin" class="rounded-lg border border-brand-lightBorder dark:border-brand-darkBorder h-16 w-full object-cover hover:scale-105 transition-transform cursor-pointer" onclick="openImageModal(this.src)" />
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[10px] font-mono font-semibold uppercase">ASP.NET Core MVC</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan border border-brand-cyan/20 text-[10px] font-mono font-semibold uppercase">PostgreSQL</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Entity Framework</span>
+          </div>
+
+          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Paula Presentes E-commerce</h3>
+
+          <!-- Deep Case Study Sections -->
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="paulaIntent">
+                Automatizar e profissionalizar as operações de vendas online de artigos para presentes, substituindo pedidos manuais por um fluxo transacional centralizado, seguro e com gestão em tempo real.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
+              <p class="text-slate-700 dark:text-slate-300" data-i18n="paulaHow">
+                Estruturei o projeto no padrão MVC com separação em camadas, modelagem relacional no PostgreSQL com Entity Framework Core, autenticação com proteção CSRF, carrinho persistido por sessão e painel administrativo para controle de vendas, estoque e fechamento de caixa.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
+              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
+              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="paulaSkills">
+                C# • ASP.NET Core MVC • EF Core • PostgreSQL • Modelagem Relacional • Segurança (CSRF/Auth) • Arquitetura em Camadas • Tailwind CSS.
               </p>
             </div>
           </div>
@@ -899,367 +1259,7 @@
         </div>
       </div>
 
-      
-
-      <!-- ============================================== -->
-      <!-- 10. ORDEM CERTA (FIELD SERVICE & WORK ORDERS)  -->
-      <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
-        <div class="space-y-5">
-          
-          <!-- Media Hub: Video & Screenshots -->
-          <div class="space-y-3">
-            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
-              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
-                <source src="videos/ordemcerta.mp4" type="video/mp4">
-                Seu navegador não suporta reprodução de vídeos.
-              </video>
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
-                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
-              </div>
-            </div>
-
-            <!-- Screenshots Gallery Grid -->
-            <div class="grid grid-cols-3 gap-2.5">
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/ordemcerta1.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">map</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Mapa & Rotas</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/ordemcerta2.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">inventory_2</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Materiais & OS</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/ordemcerta3.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">bar_chart</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Métricas & Recharts</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tags -->
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">React 19</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">TanStack Router</span>
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Supabase</span>
-            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-mono font-semibold uppercase">Google Maps API</span>
-          </div>
-
-          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Ordem Certa</h3>
-
-          <!-- Engineering Case Study Breakdown -->
-          <div class="space-y-3 text-xs leading-relaxed">
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="ordemCertaIntent">
-                Centralizar e otimizar a emissão, alocação e acompanhamento em campo de ordens de serviço, insumos de estoque e equipes operacionais com controle geográfico em tempo real.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="ordemCertaHow">
-                Construí a aplicação utilizando React 19 com TanStack Router para roteamento tipado fim a fim. Integrei o Supabase para autenticação e banco relacional, a API do Google Maps para georreferenciamento de atendimentos, formulários reativos com React Hook Form + validação Zod, e dashboards analíticos com Recharts.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
-              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="ordemCertaSkills">
-                React 19 • TanStack Router • Supabase • Google Maps API • Recharts • Zod • React Hook Form • Radix UI • Tailwind CSS v4.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ============================================== -->
-      <!-- 11. REMARTUR VIAGENS & RESORTS                 -->
-      <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
-        <div class="space-y-5">
-          
-          <!-- Media Hub: Video & Screenshots -->
-          <div class="space-y-3">
-            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
-              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
-                <source src="videos/remartur.mp4" type="video/mp4">
-                Seu navegador não suporta reprodução de vídeos.
-              </video>
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
-                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
-              </div>
-            </div>
-
-            <!-- Screenshots Gallery Grid -->
-            <div class="grid grid-cols-3 gap-2.5">
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/remartur1.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">hotel</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Resorts & Filtros</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/remartur2.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">animation</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Framer Motion</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/remartur3.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">chat</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Lead WhatsApp</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tags -->
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">React 19</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">TanStack Router</span>
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Framer Motion</span>
-            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-mono font-semibold uppercase">WhatsApp API</span>
-          </div>
-
-          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">ReMarTur Viagens & Resorts</h3>
-
-          <!-- Engineering Case Study Breakdown -->
-          <div class="space-y-3 text-xs leading-relaxed">
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="remarturIntent">
-                Criar uma vitrine digital imersiva e de alta conversão para reserva e cotação de pacotes exclusivos nos maiores resorts termais do Brasil (Olímpia, Barretos, Caldas Novas).
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="remarturHow">
-                Implementei TanStack Router com React 19 e Vite, estruturando um catálogo dinâmico de resorts com filtros de capacidade, amenidades e pensão. Desenvolvi animações de rolagem e transições suaves com Framer Motion, além de um cotador interativo que gera o lead diretamente no WhatsApp com dados de reserva pré-formatados.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
-              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="remarturSkills">
-                React 19 • TanStack Router • Framer Motion • Parallax UI • Tailwind CSS v4 • Geração de Leads • TypeScript.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ============================================== -->
-      <!-- 12. STUDIO CLARA ROMANO (LUXURY NAIL DESIGN)   -->
-      <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
-        <div class="space-y-5">
-          
-          <!-- Media Hub: Video & Screenshots -->
-          <div class="space-y-3">
-            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
-              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
-                <source src="videos/studio.mp4" type="video/mp4">
-                Seu navegador não suporta reprodução de vídeos.
-              </video>
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
-                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
-              </div>
-            </div>
-
-            <!-- Screenshots Gallery Grid -->
-            <div class="grid grid-cols-3 gap-2.5">
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/cr1.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">shopping_bag</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Gaveta de Serviços</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/cr2.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">auto_awesome</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Design Editorial</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/cr3.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">bolt</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">SSR Nitro Speed</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tags -->
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">React 19</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">TanStack Start (SSR)</span>
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Nitro Engine</span>
-            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-mono font-semibold uppercase">Vitest</span>
-          </div>
-
-          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Studio Clara Romano</h3>
-
-          <!-- Engineering Case Study Breakdown -->
-          <div class="space-y-3 text-xs leading-relaxed">
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="crIntent">
-                Oferecer uma experiência de catálogo refinado e agendamento digital para studio de estética e nail design de luxo, eliminando dúvidas sobre serviços e otimizando o fluxo de pré-atendimento.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="crHow">
-                Arquitetei o projeto com TanStack Start e SSR alimentado por Nitro e React 19, garantindo carregamento instantâneo. Desenvolvi uma gaveta interativa lateral estilo sacola de procedimentos para seleção múltipla, cálculo automático de tempo/valores, otimização de imagens com Sharp e testes unitários com Vitest.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
-              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="crSkills">
-                React 19 • TanStack Start (SSR) • Nitro • TanStack Query • Vitest • Motion • Radix UI • Sharp • UX/UI Editorial.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ============================================== -->
-      <!-- 13. CANTO D' ITÁLIA (GASTRONOMY & VISUAL UI)   -->
-      <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
-        <div class="space-y-5">
-          
-          <!-- Media Hub: Video & Screenshots -->
-          <div class="space-y-3">
-            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
-              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
-                <source src="videos/cantoditalia.mp4" type="video/mp4">
-                Seu navegador não suporta reprodução de vídeos.
-              </video>
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
-                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
-              </div>
-            </div>
-
-            <!-- Screenshots Gallery Grid -->
-            <div class="grid grid-cols-3 gap-2.5">
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/canto1.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">local_pizza</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Forneria & Pizzas</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/canto2.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">wine_bar</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Adega & Vinhos</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/canto3.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">restaurant</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Salão & Delivery</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tags -->
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">HTML5 Semântico</span>
-            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-mono font-semibold uppercase">Tailwind Custom</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">Glassmorphism</span>
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">UX Gastronômica</span>
-          </div>
-
-          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Forneria Canto D' Itália</h3>
-
-          <!-- Engineering Case Study Breakdown -->
-          <div class="space-y-3 text-xs leading-relaxed">
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="cantoIntent">
-                Transmitir a atmosfera rústica, acolhedora e artesanal da forneria italiana em Olímpia/SP, apresentando pizzas de longa fermentação, adega de vinhos e conectando clientes ao cardápio digital e salão.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="cantoHow">
-                Desenvolvi uma interface fluida com paleta artesanal customizada (Terracotta, Gold e Farinha), combinando Cormorant Garamond com Plus Jakarta Sans. Apliquei técnicas de glassmorphism quente, efeitos de luz de forno com CSS keyframes, galeria fotográfica do salão e integração com cardápio de delivery oficial e geolocalização.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
-              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="cantoSkills">
-                HTML5 Semântico • CSS3 Avançado • Paletas Personalizadas no Tailwind • Animações Keyframe • Glassmorphism • Design de Alta Fidelidade.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ============================================== -->
-      <!-- 14. HAYANÉ BEAUTY (CANVAS 2D & AESTHETICS)     -->
-      <!-- ============================================== -->
-      <div class="project-card group rounded-3xl p-7 border border-brand-lightBorder dark:border-brand-darkBorder bg-brand-lightSurface dark:bg-brand-darkSurface text-slate-900 dark:text-slate-100 flex flex-col justify-between hover:border-brand-pink/50 hover:shadow-[0_10px_40px_rgba(255,59,122,0.12)] transition-all duration-500 shadow-sm" data-category="web-dotnet">
-        <div class="space-y-5">
-          
-          <!-- Media Hub: Video & Screenshots -->
-          <div class="space-y-3">
-            <div class="rounded-2xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-black relative aspect-video shadow-inner">
-              <video class="w-full h-full object-cover" controls playsinline preload="metadata" autoplay muted>
-                <source src="videos/haynebeauty.mp4" type="video/mp4">
-                Seu navegador não suporta reprodução de vídeos.
-              </video>
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-brand-pink font-bold flex items-center gap-1.5 pointer-events-none">
-                <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span> Vídeo Demo
-              </div>
-            </div>
-
-            <!-- Screenshots Gallery Grid -->
-            <div class="grid grid-cols-3 gap-2.5">
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/lash1.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">grain</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Partículas Canvas</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/lash2.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">shopping_cart</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Carrinho & Orçamento</span>
-              </div>
-              <div class="aspect-video rounded-xl overflow-hidden border border-brand-lightBorder dark:border-brand-darkBorder bg-slate-100 dark:bg-brand-darkBg flex flex-col items-center justify-center p-2 text-center group/shot cursor-pointer hover:border-brand-cyan transition-colors" onclick="openImageModal(this.querySelector('img') ? this.querySelector('img').src : 'img/lash3.png')">
-                <span class="material-symbols-outlined text-lg text-slate-400 dark:text-slate-500 group-hover/shot:text-brand-cyan mb-1">view_in_ar</span>
-                <span class="text-[9px] font-mono text-slate-600 dark:text-slate-400 font-semibold leading-tight">Parallax 3D</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tags -->
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-brand-pink/10 text-brand-pink text-[10px] font-mono font-semibold uppercase">JavaScript ES6+</span>
-            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-mono font-semibold uppercase">Canvas 2D Physics</span>
-            <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 text-cyan-600 dark:text-brand-cyan text-[10px] font-mono font-semibold uppercase">3D Parallax</span>
-            <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[10px] font-mono font-semibold uppercase">Tailwind CSS</span>
-          </div>
-
-          <h3 class="font-headline text-2xl font-bold text-slate-900 dark:text-white">Hayané Beauty Studio</h3>
-
-          <!-- Engineering Case Study Breakdown -->
-          <div class="space-y-3 text-xs leading-relaxed">
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-brand-pink uppercase tracking-wider block mb-1" data-i18n="labelIntent">🎯 Intenção & Problema Resolvido</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="lashIntent">
-                Criar uma experiência estética imersiva e interativa para studio de cílios, sobrancelhas e estética facial, combinando microinterações táteis com agendamento direto de procedimentos.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-cyan-600 dark:text-brand-cyan uppercase tracking-wider block mb-1" data-i18n="labelHow">⚙️ Como Eu Fiz (Arquitetura & Métodos)</span>
-              <p class="text-slate-700 dark:text-slate-300" data-i18n="lashHow">
-                Desenvolvi uma engine em Canvas 2D renderizando partículas de poeira estelar dourada que reagem à física do mouse com gravidade e dispersão. Projetei efeito de parallax 3D no hero através de transformações de perspectiva no cursor, carrinho reativo de procedimentos com cálculo de orçamento e acionamento direto via WhatsApp.
-              </p>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-brand-darkBg border border-brand-lightBorder dark:border-brand-darkBorder">
-              <span class="font-headline font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block mb-1" data-i18n="labelSkillsMastered">🚀 Habilidades & Tecnologias Dominadas</span>
-              <p class="font-mono text-slate-700 dark:text-slate-300" data-i18n="lashSkills">
-                HTML5 Canvas • Física de Partículas em JS • Matemática Vetorial • Efeitos Parallax 3D • JavaScript Modular • Tailwind CSS.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
+  
 
 
     </div>

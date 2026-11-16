@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <!-- Signature Krol Dev Gradient -->
+    <linearGradient id="krolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b7a" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#00d4ec" />
+    </linearGradient>
+
+    <!-- Subtle Surface Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101726" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+
+    <!-- Ambient Glows -->
+    <radialGradient id="pinkGlow" cx="25%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#ff3b7a" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#ff3b7a" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="cyanGlow" cx="75%" cy="75%" r="50%">
+      <stop offset="0%" stop-color="#00d4ec" stop-opacity="0.24" />
+      <stop offset="100%" stop-color="#00d4ec" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow / Neon Glow for Symbol -->
+    <filter id="neonGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#ff3b7a" flood-opacity="0.35" />
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#00d4ec" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- Main Dark Container -->
+  <rect x="0" y="0" width="1080" height="1080" rx="220" fill="url(#bgGrad)" />
+
+  <!-- Ambient Orbs -->
+  <rect x="0" y="0" width="1080" height="1080" rx="220" fill="url(#pinkGlow)" />
+  <rect x="0" y="0" width="1080" height="1080" rx="220" fill="url(#cyanGlow)" />
+
+  <!-- Subtle Tech Grid Pattern -->
+  <g stroke="#1f2b42" stroke-width="1.5" opacity="0.32">
+    <line x1="270" y1="80" x2="270" y2="1000" />
+    <line x1="540" y1="80" x2="540" y2="1000" />
+    <line x1="810" y1="80" x2="810" y2="1000" />
+    <line x1="80" y1="270" x2="1000" y2="270" />
+    <line x1="80" y1="540" x2="1000" y2="540" />
+    <line x1="80" y1="810" x2="1000" y2="810" />
+  </g>
+
+  <!-- Inner Glass Frame -->
+  <rect x="52" y="52" width="976" height="976" rx="180" fill="none" stroke="#1f2b42" stroke-width="5" />
+
+  <!-- <K/> Vector Monogram (100% Centered & Balanced) -->
+  <g filter="url(#neonGlow)">
+    <!-- Left Chevron '<' -->
+    <path d="M 290 385 L 170 505 L 290 625" fill="none" stroke="url(#krolGrad)" stroke-width="54" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Letter 'K' -->
+    <path d="M 380 345 L 380 665" fill="none" stroke="#ffffff" stroke-width="58" stroke-linecap="round" />
+    <path d="M 548 352 L 398 502 L 556 665" fill="none" stroke="url(#krolGrad)" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Forward Slash '/' -->
+    <path d="M 712 335 L 632 675" fill="none" stroke="#cbd5e1" stroke-width="44" stroke-linecap="round" opacity="0.95" />
+
+    <!-- Right Chevron '>' -->
+    <path d="M 790 385 L 910 505 L 790 625" fill="none" stroke="url(#krolGrad)" stroke-width="54" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Bottom Studio Pill Label -->
+  <g transform="translate(540, 825)">
+    <rect x="-185" y="-34" width="370" height="62" rx="31" fill="#101726" stroke="#1f2b42" stroke-width="3" />
+    <circle cx="-135" cy="-3" r="8" fill="#ff3b7a" />
+    <text x="14" y="6" text-anchor="middle" fill="#f8fafc" font-family="'JetBrains Mono', 'Consolas', monospace" font-weight="700" font-size="26" letter-spacing="6">KROL DEV</text>
+  </g>
+</svg>

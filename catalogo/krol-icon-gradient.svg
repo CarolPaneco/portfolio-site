@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <!-- Signature Krol Dev Gradient -->
+    <linearGradient id="krolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b7a" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#00d4ec" />
+    </linearGradient>
+
+    <radialGradient id="topShine" cx="25%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.26" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#090d16" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Vibrant Gradient Tile -->
+  <rect x="0" y="0" width="1080" height="1080" rx="220" fill="url(#krolGrad)" />
+  <rect x="0" y="0" width="1080" height="1080" rx="220" fill="url(#topShine)" />
+
+  <!-- Subtle Inner Glass Border -->
+  <rect x="44" y="44" width="992" height="992" rx="184" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="5" />
+
+  <!-- Crisp White <K/> Monogram (Centered at Y=540) -->
+  <g filter="url(#textShadow)">
+    <!-- Left Chevron '<' -->
+    <path d="M 290 420 L 170 540 L 290 660" fill="none" stroke="#ffffff" stroke-width="56" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Letter 'K' -->
+    <path d="M 380 380 L 380 700" fill="none" stroke="#ffffff" stroke-width="60" stroke-linecap="round" />
+    <path d="M 548 387 L 398 537 L 556 700" fill="none" stroke="#ffffff" stroke-width="60" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Forward Slash '/' -->
+    <path d="M 712 370 L 632 710" fill="none" stroke="#ffffff" stroke-width="46" stroke-linecap="round" opacity="0.92" />
+
+    <!-- Right Chevron '>' -->
+    <path d="M 790 420 L 910 540 L 790 660" fill="none" stroke="#ffffff" stroke-width="56" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

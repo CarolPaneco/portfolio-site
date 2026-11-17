@@ -3,11 +3,37 @@
   # O site é estático (HTML/CSS/JS puro), não precisa de comando de compilação
   publish = "."
 
-# Regras de redirecionamento para o Catálogo e URLs limpas
+# Remove "index.html" caso alguém acesse /catalogo/index.html diretamente
+[[redirects]]
+  from = "/catalogo/index.html"
+  to = "/catalogo"
+  status = 301
+  force = true
+
+# Rotas limpas e mascaradas para a Krol Dev (mantém a URL limpa no navegador)
 [[redirects]]
   from = "/catalogo"
   to = "/catalogo/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/kroldev"
+  to = "/catalogo/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/krol"
+  to = "/catalogo/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/solucoes"
+  to = "/catalogo/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/catalogo/*"

@@ -1,2 +1,16 @@
-/catalogo /catalogo/index.html 200
-/catalogo/ /catalogo/index.html 200
+# Rotas limpas e mascaradas para o catálogo Krol Dev
+/catalogo/index.html  /catalogo  301!
+/catalogo             /catalogo/index.html  200!
+/catalogo/            /catalogo/index.html  200!
+/kroldev              /catalogo/index.html  200!
+/kroldev/             /catalogo/index.html  200!
+/krol                 /catalogo/index.html  200!
+/krol/                /catalogo/index.html  200!
+/solucoes             /catalogo/index.html  200!
+/solucoes/            /catalogo/index.html  200!
+
+# Ícones da Krol Dev acessíveis de qualquer rota mascarada
+/krol-icon.svg           /catalogo/krol-icon.svg           200
+/krol-icon-gradient.svg  /catalogo/krol-icon-gradient.svg  200
+/krol-icon-dark.png      /catalogo/krol-icon-dark.png      200
+/krol-icon-gradient.png  /catalogo/krol-icon-gradient.png  200
